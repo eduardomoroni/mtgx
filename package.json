@@ -34,7 +34,10 @@
     "standard": "10.0.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "testMatch": [
+      "**/tests/**/*.test.js?(x)"
+    ]
   },
   "standard": {
     "env": [
