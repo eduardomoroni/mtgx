@@ -9,8 +9,8 @@ warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 warn("Big PR") if git.lines_of_code > 500
 
 # Don't let testing shortcuts get into master by accident
-fail("fdescribe left in tests") if `grep -r fdescribe __tests__/ `.length > 1
-fail("fit left in tests") if `grep -r fit __tests__/ `.length > 1
+fail("fdescribe left in tests") if `grep -r fdescribe tests/ `.length > 1
+fail("fit left in tests") if `grep -r fit tests/ `.length > 1
 
 #TODO: We should send this message only if `bundle exec fastlane android deployAppetize` doesn't finished with an error
 message("<table> <tr> <td> <a href='http://bit.ly/mtgx-appetize'> <p align='center'> <img height='130' src='http://bit.ly/2vD4vJg'/> <br/> Nexus 5 </p></a> </td></tr></table>")
