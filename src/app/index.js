@@ -2,11 +2,9 @@
 
 import React, { Component } from 'react'
 import Config from 'react-native-config'
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native'
+import I18n from 'react-native-i18n'
+import { StyleSheet, Text, View } from 'react-native'
+import './configuration'
 
 export default class mtgx extends Component {
   render () {
@@ -24,6 +22,9 @@ export default class mtgx extends Component {
         </Text>
         <Text style={styles.instructions}>
           {Config.TEST_ENV}
+        </Text>
+        <Text style={styles.instructions}>
+          {I18n.t('test')}
         </Text>
       </View>
     )
