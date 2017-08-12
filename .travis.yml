@@ -23,7 +23,7 @@ after_success:
   - npm run update-coverage
   - bundle exec fastlane android deployAppetize
 after_script:
-  - bundle exec danger --show-appetize-app
+  - bundle exec danger
 env:
   global:
   - secure: hlSSf+COjkcF3YHSLakT0M+Qd8x7kMURnZssiNE1e/m201VKffKzOzI9g+1WO1G6H0FF1ggQCvZ6s/weugulZq5LR8BpowlJTDYwcNsocf/f9RWwIXwp3dyWelbTnHZxVcnOaDSV2BJGgiM67PorMxY+d9f0NvHsC9lKzXi8mZUb3dhSVPsuHR5hM8kZaURqo/YjV11/d7PHtvXu0T5XY5uFitxsEcAd+3/jkquyVolbbDNXwHJYrKveFXQ4lCt0CjyXdmRbN01GLJvKoEL6q2l0n48mcZYY17Kb/PhefA14yyqyLmMy+Hjvcjr0iTr1mHiOQ1qLaB2Hne2wl90J1T01eD/i73Nn53ZEP3K0Gluq99EchY9zUW1ZcroadBw/dlaD1UbbPi/Xl0B8Pnc5aYMZ7Nf2DRB4/oHqx8jvuHpLLFIKb21wvtmh5/cZjxZ2SR3Mdot7vYNso/yecvApspsglfbIrEeqe4zAzpEzqMyC6MhxQTLxbiJTBvkDzgxa3q2QLtO59G1qOM72KIiapTVdwIMxIKj0xcg1QSzjULKuh/qlk/NOOawZS1vEJu7V+sltBwUVmEXMdr7jqGA14W/EXbX9WMr4KihhFNgmvXb73y3VuXkLnH/ib912z01BFaeU6S5UuoXfR3Z1gz7VTgbJtEystCnsSYi8zxMzdQI=
