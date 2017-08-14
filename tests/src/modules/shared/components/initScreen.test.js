@@ -1,8 +1,7 @@
 import 'react-native'
 import React from 'react'
-import App from '../../../src/app'
+import App from '../../../../../src/modules/shared/components/initScreen'
 
-// Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer'
 
 it('renders correctly', () => {
