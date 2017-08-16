@@ -5,7 +5,7 @@ import English from './languages/english.json'
 import Portugues from './languages/portugues.json'
 import Espanol from './languages/espanol.json'
 
-export function initLocales() {
+export function initLocales () {
   I18n.fallbacks = true
 
   I18n.translations = {
