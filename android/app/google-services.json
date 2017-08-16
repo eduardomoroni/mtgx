@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "87527646885",
+    "firebase_url": "https://trading-card-manager.firebaseio.com",
+    "project_id": "trading-card-manager",
+    "storage_bucket": "trading-card-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87527646885:android:19c79ba10139ef58",
+        "android_client_info": {
+          "package_name": "com.mtgx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87527646885-qkmrq0ngtrub49ob1jgh5kme5uhjvj9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd2knuwjnzwq_h538p8lyFm_rwudQ-QCc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
