@@ -16,8 +16,10 @@
     "update-coverage": "npm run generate-coverage && codeclimate-test-reporter < ./coverage/lcov.info",
     "lint-check": "standard --verbose | snazzy",
     "lint-fix": "standard --fix --verbose | snazzy",
-    "precommit": "npm run lint-check",
-    "prepush": "jest --bail --forceExit --silent"
+    "flow-check": "flow --show-all-errors",
+    "flow-install-libdefs": "flow-typed install",
+    "precommit": "npm run lint-check && npm run flow-check",
+    "prepush": "npm run test-ci"
   },
   "dependencies": {
     "react": "16.0.0-alpha.12",
@@ -28,8 +30,11 @@
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "2.1.0",
     "codeclimate-test-reporter": "0.5.0",
+    "flow-bin": "0.49.1",
+    "flow-typed": "^2.1.5",
     "husky": "^0.14.3",
     "jest": "20.0.4",
     "react-test-renderer": "16.0.0-alpha.12",
@@ -45,6 +50,9 @@
   "standard": {
     "env": [
       "jest"
+    ],
+    "ignore": [
+      "flow-typed/"
     ]
   },
   "rnpm": {
