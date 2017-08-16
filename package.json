@@ -23,12 +23,14 @@
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
     "react-native-config": "0.6.0",
-    "react-native-i18n": "1.0.0"
+    "react-native-i18n": "1.0.0",
+    "react-native-navigation": "^1.1.194"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "2.1.0",
     "codeclimate-test-reporter": "0.5.0",
+    "husky": "^0.14.3",
     "jest": "20.0.4",
     "react-test-renderer": "16.0.0-alpha.12",
     "snazzy": "7.0.0",
