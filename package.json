@@ -28,7 +28,9 @@
     "react-native-config": "0.6.0",
     "react-native-firebase": "^2.1.2",
     "react-native-i18n": "1.0.0",
-    "react-native-navigation": "^1.1.194"
+    "react-native-navigation": "^1.1.194",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
