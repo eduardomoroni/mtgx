@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "immutable": "^3.8.1",
+    "nachos-ui": "^0.1.2",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
     "react-native-config": "0.6.0",
