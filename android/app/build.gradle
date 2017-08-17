@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply plugin: 'com.google.gms.google-services'
 
 import com.android.build.OutputFile
 
@@ -134,6 +135,12 @@ android {
 }
 
 dependencies {
+    compile(project(':react-native-firebase')) {
+      transitive = false
+    }
+
+    compile "com.google.firebase:firebase-core:11.0.4"
+    compile "com.google.firebase:firebase-auth:11.0.4"
     compile project(':react-native-navigation')
     compile project(':react-native-i18n')
     compile project(':react-native-config')

@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start-packager": "node node_modules/react-native/local-cli/cli.js start",
+    "post-install": "cd ios && pod install",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "log-ios": "react-native log-ios",
+    "log-ios": "react-native log-ios | grep -v __nw_connection_get_connected_socket_block_invoke",
     "log-android": "react-native log-android",
     "test": "jest",
     "test-watch": "jest --watch",
@@ -25,6 +26,7 @@
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
     "react-native-config": "0.6.0",
+    "react-native-firebase": "^2.1.2",
     "react-native-i18n": "1.0.0",
     "react-native-navigation": "^1.1.194"
   },

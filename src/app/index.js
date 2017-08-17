@@ -1,7 +1,8 @@
 // @flow
 
-import { startApp, registerScreens, initLocales } from './configuration'
+import { startApp, registerScreens, initLocales, initializeFirebase } from './configuration'
 
 initLocales()
 registerScreens()
+initializeFirebase()
 startApp()
