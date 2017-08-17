@@ -1,6 +1,6 @@
 import Immutable from 'immutable'
 import { createStore, applyMiddleware } from 'redux'
-import { rootReducer } from '../../redux/reducers'
+import { rootReducer } from '../redux/reducers/index'
 
 export function createMtgxStore () {
   const initialState = Immutable.Map()

@@ -1,1 +1,5 @@
-import './src/app'
+// @flow
+
+import { initializeApp } from './src/configuration'
+
+initializeApp()

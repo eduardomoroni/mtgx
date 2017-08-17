@@ -12,9 +12,6 @@ export default class InitScreen extends Component {
     return (
       <View>
         <H4>Example:</H4>
-        <Button type='success' style={btnStyle}>Success</Button>
-        <Button type='danger' style={btnStyle}>Danger</Button>
-        <Button style={btnStyle}>Primary</Button>
         <Button kind='squared' type='success' style={btnStyle}>
           Success
         </Button>

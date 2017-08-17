@@ -6,10 +6,10 @@ import { startApp } from './navigation'
 import { initializeFirebase } from './firebase'
 import { setNachosThemes } from './themes'
 
-export default {
-  initLocales,
-  registerScreens,
-  startApp,
-  initializeFirebase,
-  setNachosThemes
+export function initializeApp () {
+  initLocales()
+  setNachosThemes()
+  registerScreens()
+  initializeFirebase()
+  startApp()
 }
