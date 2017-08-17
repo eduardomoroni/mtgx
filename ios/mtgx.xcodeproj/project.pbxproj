@@ -42,8 +42,8 @@
 		A791516C9F2149459BB0440A /* libjschelpers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8DA3884E694611A16F9E3C /* libjschelpers.a */; };
 		B0BF6379A2B043B6A4105EBB /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68445A1117734BE5AF956452 /* libReactNativeConfig.a */; };
 		B6D9CD6BF0FB4DD594AC4D88 /* libyoga.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C90FE9F4944029AD5616B9 /* libyoga.a */; };
-		CD52110B1F45355100837119 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD52110A1F45355100837119 /* GoogleService-Info.plist */; };
 		CD7FC4361F420A710073A03E /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7FC4351F4207D40073A03E /* libReactNativeNavigation.a */; };
+		CDA2B3421F45393100DC1560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDA2B3411F45393000DC1560 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -326,8 +326,8 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		92630AD2E1A6435FB3D107AC /* libReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReact.a; sourceTree = "<group>"; };
 		95C90FE9F4944029AD5616B9 /* libyoga.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libyoga.a; sourceTree = "<group>"; };
-		CD52110A1F45355100837119 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD7FC4301F4207D40073A03E /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
+		CDA2B3411F45393000DC1560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "mtgx/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E3B1E59D8A334D169AFC0F90 /* libcxxreact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libcxxreact.a; sourceTree = "<group>"; };
 		EAE930D3CB42A2B10944E4E9 /* Pods-mtgx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mtgx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mtgx/Pods-mtgx.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8DA3884E694611A16F9E3C /* libjschelpers.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libjschelpers.a; sourceTree = "<group>"; };
@@ -553,7 +553,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				CD52110A1F45355100837119 /* GoogleService-Info.plist */,
+				CDA2B3411F45393000DC1560 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* mtgx */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* mtgxTests */,
@@ -1047,7 +1047,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				CD52110B1F45355100837119 /* GoogleService-Info.plist in Resources */,
+				CDA2B3421F45393100DC1560 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
