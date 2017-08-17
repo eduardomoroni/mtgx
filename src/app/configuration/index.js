@@ -1,6 +1,13 @@
 // @flow
 
-export { initLocales } from './i18n'
-export { registerScreens } from './screens'
-export { startApp } from './navigation'
-export { initializeFirebase } from './firebase'
+import { initLocales } from './i18n'
+import { registerScreens } from './screens'
+import { startApp } from './navigation'
+import { initializeFirebase } from './firebase'
+
+export default {
+  initLocales,
+  registerScreens,
+  startApp,
+  initializeFirebase
+}
