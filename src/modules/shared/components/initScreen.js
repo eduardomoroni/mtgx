@@ -4,8 +4,32 @@ import React, { Component } from 'react'
 import Config from 'react-native-config'
 import I18n from 'react-native-i18n'
 import { StyleSheet, Text, View } from 'react-native'
+import { H4, Button } from 'nachos-ui'
 
 export default class InitScreen extends Component {
+  renderButton () {
+    const btnStyle = { margin: 15 }
+    return (
+      <View>
+        <H4>Example:</H4>
+        <Button kind='squared' type='success' style={btnStyle}>
+          Success
+        </Button>
+        <Button kind='squared' type='danger' style={btnStyle}>
+          Danger
+        </Button>
+        <Button
+          kind='squared'
+          iconName='md-cloud-download'
+          style={btnStyle}
+        >
+          Primary
+        </Button>
+        <H4 align='center'>Disabled style</H4>
+      </View>
+    )
+  }
+
   render () {
     return (
       <View style={styles.container}>
@@ -25,6 +49,7 @@ export default class InitScreen extends Component {
         <Text style={styles.instructions}>
           {I18n.t('test')}
         </Text>
+        {this.renderButton()}
       </View>
     )
   }

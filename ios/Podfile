@@ -16,6 +16,7 @@ target 'mtgx' do
     'RCTWebSocket',
     # Add any other subspecs you want to use in your project
   ]
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   pod 'Firebase/Core'
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
   pod 'Firebase/Auth'

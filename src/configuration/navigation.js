@@ -19,7 +19,7 @@ const tabs = [
     label: 'Init Screen',
     screen: 'mtgx.init',
     // $FlowFixMe -> Figure out how to stub this
-    icon: require('../../assets/icons/swap.png'),
+    icon: require('../assets/icons/swap.png'),
     navigatorStyle: {
       navBarHidden: true
     }
