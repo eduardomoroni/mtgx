@@ -16,8 +16,8 @@ const theme = {
 
 const tabs = [
   {
-    label: 'Init Screen',
-    screen: 'mtgx.init',
+    label: 'Login Screen',
+    screen: 'authentication.login',
     // $FlowFixMe -> Figure out how to stub this
     icon: require('../assets/icons/swap.png'),
     navigatorStyle: {

@@ -1,5 +1,11 @@
-import RNFirebase from 'react-native-firebase'
+import { initialize } from '../services/firebase'
 
 export function initializeFirebase () {
-  RNFirebase.initializeApp({ debug: true })
+  const config = {
+    debug: __DEV__ ? '*' : false,
+    errorOnMissingPlayServices: false,
+    persistence: true
+  }
+
+  initialize(config)
 }
