@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authentication reducer should have a snapshot 1`] = `
+User {
+  "email": "",
+  "emailVerified": "",
+  "providerData": "",
+  "uid": "",
+}
+`;

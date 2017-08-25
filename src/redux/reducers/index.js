@@ -1,13 +1,16 @@
 import { Record } from 'immutable'
-import FooReducer from './foo'
 import { combineReducers } from 'redux-immutable'
+import AuthenticationReducer, { initialState as authInitialState } from './authenticationReducer'
+import MessageReducer, { initialState as messageInitialState } from './messageReducer'
 
 const reducers = {
-  foo: FooReducer
+  authentication: AuthenticationReducer,
+  message: MessageReducer
 }
 
-const records = {
-  foo: undefined
+export const initialState = {
+  authentication: authInitialState,
+  message: messageInitialState
 }
 
-export const rootReducer = combineReducers(reducers, Record(records))
+export const rootReducer = combineReducers(reducers, Record(initialState))
