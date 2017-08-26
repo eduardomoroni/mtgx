@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import I18n from 'react-native-i18n'
 import { View } from 'react-native'
 import { Input, Button } from 'nachos-ui'

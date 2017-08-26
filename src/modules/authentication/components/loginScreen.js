@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import I18n from 'react-native-i18n'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import { View, TouchableOpacity } from 'react-native'
 import { H1, Strong } from 'nachos-ui'
 import { styles } from './styles/loginScreen.style'
