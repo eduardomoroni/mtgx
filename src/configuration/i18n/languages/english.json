@@ -1,3 +1,5 @@
 {
-  "test": "Testing"
+  "test": "Testing",
+  "EMAIL_RESETED_SUCCESSFULLY": "EMAIL_RESETED_SUCCESSFULLY",
+  "USER_SIGNED_OUT": "USER_SIGNED_OUT"
 }

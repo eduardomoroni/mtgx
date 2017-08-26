@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root reducer initial state should have a snapshot 1`] = `
+Object {
+  "authentication": User {
+    "email": "",
+    "emailVerified": "",
+    "providerData": "",
+    "uid": "",
+  },
+  "message": "",
+}
+`;
