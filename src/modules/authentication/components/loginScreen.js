@@ -2,12 +2,17 @@
 
 import React, { Component } from 'react'
 import I18n from 'react-native-i18n'
+import { PropTypes } from 'prop-types'
 import { View, TouchableOpacity } from 'react-native'
 import { H1, Strong } from 'nachos-ui'
-import { styles } from './styles/loginScreenStyle'
+import { styles } from './styles/loginScreen.style'
 import { EmailPasswordForm } from './emailPasswordForm'
 
 export class LoginScreen extends Component {
+  static propTypes = {
+    logUserIn: PropTypes.func.isRequired
+  }
+
   onSignInPressed = async (email: string, password: string) => {
     this.props.logUserIn(email, password)
   }
