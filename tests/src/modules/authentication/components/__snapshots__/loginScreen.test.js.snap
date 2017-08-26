@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginScreen /> Should have a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <H1>
+    [missing "en.LOGIN" translation]
+  </H1>
+  <EmailPasswordForm
+    buttonCallback={[Function]}
+    buttonText="[missing \\"en.LOGIN\\" translation]"
+  />
+  <View
+    style={
+      Object {
+        "marginTop": 75,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      focusedOpacity={0.7}
+      onPress={[Function]}
+    >
+      <Strong
+        style={
+          Array [
+            Object {
+              "margin": 15,
+            },
+          ]
+        }
+      >
+        [missing "en.FORGOT_YOUR_PASSWORD?" translation]
+      </Strong>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      focusedOpacity={0.7}
+      onPress={[Function]}
+    >
+      <Strong
+        style={
+          Array [
+            Object {
+              "margin": 15,
+            },
+          ]
+        }
+      >
+        [missing "en.DONT_HAVE_ACCOUNT?" translation]
+      </Strong>
+    </TouchableOpacity>
+  </View>
+</View>
+`;

@@ -1,9 +1,11 @@
+// @flow
+
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import I18n from 'react-native-i18n'
 import { View } from 'react-native'
 import { Input, Button } from 'nachos-ui'
-import { styles } from './styles/emailPasswordFormStyle'
+import { styles } from './styles/emailPasswordForm.style'
 
 export class EmailPasswordForm extends Component {
   state = {
@@ -19,6 +21,7 @@ export class EmailPasswordForm extends Component {
   render () {
     const { buttonCallback, buttonText } = this.props
     const { email, password } = this.state
+
     return (
       <View>
         <Input
