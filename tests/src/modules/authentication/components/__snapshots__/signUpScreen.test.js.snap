@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignUpScreen /> should have a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <H1>
+    [missing "en.SIGNUP" translation]
+  </H1>
+  <EmailPasswordForm
+    buttonCallback={[Function]}
+    buttonText="[missing \\"en.SIGNUP\\" translation]"
+  />
+</View>
+`;

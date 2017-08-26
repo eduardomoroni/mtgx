@@ -17,10 +17,12 @@ export class LoginScreen extends Component {
     this.props.logUserIn(email, password)
   }
 
-  onSignUpPressed = async () => {
+  onSignUpPressed = () => {
+    this.props.navigator.push({screen: 'authentication.signup'})
   }
 
-  onForgotPasswordPressed = async () => {
+  onForgotPasswordPressed = () => {
+    this.props.navigator.push({screen: 'authentication.forgotpassword'})
   }
 
   render () {

@@ -13,17 +13,14 @@ export class LoginScreenContainer extends Component {
   }
 
   render () {
+    const { logUserIn, navigator } = this.props
     return (
-      <LoginScreen logUserIn={this.props.logUserIn} />
+      <LoginScreen logUserIn={logUserIn} navigator={navigator} />
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log('===> state', state.toJS())
-  return {
-  }
-}
+const mapStateToProps = (state) => ({})
 
 const mapDispatchToProps = (dispatch: Dispatch<*>) => {
   return {
