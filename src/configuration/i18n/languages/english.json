@@ -1,5 +1,10 @@
 {
   "test": "Testing",
   "EMAIL_RESETED_SUCCESSFULLY": "EMAIL_RESETED_SUCCESSFULLY",
-  "USER_SIGNED_OUT": "USER_SIGNED_OUT"
+  "USER_SIGNED_OUT": "USER_SIGNED_OUT",
+  "EMAIL": "Email",
+  "PASSWORD": "Password",
+  "LOGIN": "Login",
+  "FORGOT_YOUR_PASSWORD?": "Forgot your password?",
+  "DONT_HAVE_ACCOUNT?": "Dont you have account yet?"
 }

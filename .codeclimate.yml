@@ -11,6 +11,7 @@ engines:
   eslint:
     enabled: true
     channel: "eslint-3"
+    plugin: "standard"
     checks:
       complexity:
         enabled: true

@@ -1,75 +1,44 @@
 // @flow
 
 import React, { Component } from 'react'
-import Config from 'react-native-config'
 import I18n from 'react-native-i18n'
-import { StyleSheet, Text, View } from 'react-native'
-import { H4, Button } from 'nachos-ui'
+import { View, TouchableOpacity } from 'react-native'
+import { H1, Strong } from 'nachos-ui'
+import { styles } from './styles/loginScreenStyle'
+import { EmailPasswordForm } from './emailPasswordForm'
 
 export class LoginScreen extends Component {
-  renderButton () {
-    const btnStyle = { margin: 15 }
-    return (
-      <View>
-        <H4>Example:</H4>
-        <Button kind='squared' type='success' style={btnStyle}>
-          Success
-        </Button>
-        <Button kind='squared' type='danger' style={btnStyle}>
-          Danger
-        </Button>
-        <Button
-          kind='squared'
-          iconName='md-cloud-download'
-          style={btnStyle}
-        >
-          Primary
-        </Button>
-        <H4 align='center'>Disabled style</H4>
-      </View>
-    )
+  onSignInPressed = async (email: string, password: string) => {
+    this.props.logUserIn(email, password)
+  }
+
+  onSignUpPressed = async () => {
+  }
+
+  onForgotPasswordPressed = async () => {
   }
 
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-        <Text style={styles.instructions}>
-          {Config.TEST_ENV}
-        </Text>
-        <Text style={styles.instructions}>
-          {I18n.t('test')}
-        </Text>
-        {this.renderButton()}
+        <H1>{I18n.t('LOGIN')}</H1>
+        <EmailPasswordForm
+          buttonText={I18n.t('LOGIN')}
+          buttonCallback={this.onSignInPressed}
+        />
+        <View style={styles.footer}>
+          <TouchableOpacity onPress={this.onForgotPasswordPressed}>
+            <Strong style={[styles.strong]}>
+              {I18n.t('FORGOT_YOUR_PASSWORD?')}
+            </Strong>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.onSignUpPressed}>
+            <Strong style={[styles.strong]}>
+              {I18n.t('DONT_HAVE_ACCOUNT?')}
+            </Strong>
+          </TouchableOpacity>
+        </View>
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
-  }
-})
