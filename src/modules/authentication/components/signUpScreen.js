@@ -5,7 +5,7 @@ import I18n from 'react-native-i18n'
 import PropTypes from 'prop-types'
 import { View } from 'react-native'
 import { H1 } from 'nachos-ui'
-import { styles } from './styles/loginScreen.style'
+import { styles } from './styles/signUpScreen.style'
 import { EmailPasswordForm } from './emailPasswordForm'
 
 export class SignUpScreen extends Component {

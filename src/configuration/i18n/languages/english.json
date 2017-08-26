@@ -7,5 +7,6 @@
   "LOGIN": "Login",
   "FORGOT_YOUR_PASSWORD?": "Forgot your password?",
   "DONT_HAVE_ACCOUNT?": "Dont you have account yet?",
-  "SIGNUP": "Sign up"
+  "SIGNUP": "Sign up",
+  "RESET_PASSWORD": "Reset your password"
 }
