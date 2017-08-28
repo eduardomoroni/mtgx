@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification /> should have a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ff505c",
+      "height": 100,
+      "margin": 10,
+      "padding": 16,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 18,
+        "textAlign": "center",
+      }
+    }
+  >
+    In-App Notification
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "marginTop": 10,
+        "textAlign": "center",
+      }
+    }
+  >
+    Test message
+  </Text>
+</View>
+`;
