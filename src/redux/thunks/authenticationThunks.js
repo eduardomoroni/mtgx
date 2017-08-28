@@ -1,6 +1,7 @@
 import I18n from 'react-native-i18n'
 import { setUser } from '../actions/authenticationActions'
 import { showMessage } from '../actions/alertActions'
+import { warn } from '../../services/logger'
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -10,22 +11,37 @@ import {
 
 export function createUser (email, password) {
   return async (dispatch) => {
-    const user = await createUserWithEmailAndPassword(email, password)
-    dispatch(setUser(user))
+    try {
+      const user = await createUserWithEmailAndPassword(email, password)
+      dispatch(setUser(user))
+    } catch (error) {
+      warn('Error occured during user sign up: ', error)
+      dispatch(showMessage(error.message))
+    }
   }
 }
 
 export function signInUser (email, password) {
   return async (dispatch) => {
-    const user = await signInWithEmailAndPassword(email, password)
-    dispatch(setUser(user))
+    try {
+      const user = await signInWithEmailAndPassword(email, password)
+      dispatch(setUser(user))
+    } catch (error) {
+      warn('Error occured during user sign in: ', error)
+      dispatch(showMessage(error.message))
+    }
   }
 }
 
 export function resetUserPassword (email) {
   return async (dispatch) => {
-    await sendPasswordResetEmail(email)
-    dispatch(showMessage(I18n.t('EMAIL_RESETED_SUCCESSFULLY')))
+    try {
+      await sendPasswordResetEmail(email)
+      dispatch(showMessage(I18n.t('EMAIL_RESETED_SUCCESSFULLY')))
+    } catch (error) {
+      warn('Error occured during reset password: ', error)
+      dispatch(showMessage(error.message))
+    }
   }
 }
 

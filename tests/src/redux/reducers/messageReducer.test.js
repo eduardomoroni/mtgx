@@ -1,4 +1,4 @@
-import { showMessage } from '../../../../src/redux/actions/alertActions'
+import { showMessage, clearMessage } from '../../../../src/redux/actions/alertActions'
 import MessageReducer, { initialState } from '../../../../src/redux/reducers/messageReducer'
 
 describe('Message reducer', () => {
@@ -12,5 +12,12 @@ describe('Message reducer', () => {
     const state = MessageReducer(initialState, action)
 
     expect(state).toEqual(message)
+  })
+
+  it('CLEAR_MESSAGE action type should return to initial state', () => {
+    const state = MessageReducer(initialState, showMessage('Anything'))
+    const clearedState = MessageReducer(state, clearMessage())
+
+    expect(clearedState).toEqual(initialState)
   })
 })

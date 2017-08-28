@@ -14,11 +14,8 @@ import * as Authentication from '../../../../src/services/firebase/authenticatio
 jest.mock('../../../../src/services/firebase/authentication')
 
 describe('Authentication thunks', () => {
+  const errorMessage = 'TEST EXCEPTION - JUST IGNORE'
   const mockDispatch = jest.fn()
-
-  beforeEach(() => {
-    mockDispatch.mockClear()
-  })
 
   it('should send a message during user signout', async () => {
     Authentication.signOut = jest.fn(() => Promise.resolve())
@@ -58,5 +55,28 @@ describe('Authentication thunks', () => {
     await thunk(mockDispatch)
 
     expect(mockDispatch).toHaveBeenCalledWith(expectedAction)
+  })
+
+  describe('in case of exception', () => {
+    beforeAll(() => {
+      Object.keys(Authentication).forEach(key => {
+        Authentication[key] = jest.fn(() => Promise.reject(new Error(errorMessage)))
+      })
+    })
+
+    it('should send a message on signIn', async () => {
+      await signInUser()(mockDispatch)
+      expect(mockDispatch).toHaveBeenCalledWith(showMessage(errorMessage))
+    })
+
+    it('should send a message on signUp', async () => {
+      await createUser()(mockDispatch)
+      expect(mockDispatch).toHaveBeenCalledWith(showMessage(errorMessage))
+    })
+
+    it('should send a message on reset password', async () => {
+      await resetUserPassword()(mockDispatch)
+      expect(mockDispatch).toHaveBeenCalledWith(showMessage(errorMessage))
+    })
   })
 })
