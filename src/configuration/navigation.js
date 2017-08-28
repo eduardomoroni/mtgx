@@ -30,7 +30,10 @@ export const tabBasedAppParams = {
   tabs,
   animationType: 'fade',
   tabsStyle: theme,
-  appStyle: theme
+  appStyle: theme,
+  drawer: {
+    left: { screen: 'app.drawer' }
+  }
 }
 
 export function startApp () {

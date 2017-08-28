@@ -8,6 +8,7 @@ import LoginScreen from '../modules/authentication/containers/loginContainer'
 import SignUpScreen from '../modules/authentication/containers/signUpContainer'
 import ForgotPasswordScreen from '../modules/authentication/containers/forgotPasswordContainer'
 import NotificationScreen from '../modules/shared/containers/notificationContainer'
+import DrawerContainer from '../modules/shared/containers/drawerContainer'
 
 export function registerScreens () {
   const store = createMtgxStore()
@@ -15,4 +16,5 @@ export function registerScreens () {
   Navigation.registerComponent('authentication.signup', () => SignUpScreen, store, Provider)
   Navigation.registerComponent('authentication.forgotpassword', () => ForgotPasswordScreen, store, Provider)
   Navigation.registerComponent('notification', () => NotificationScreen, store, Provider)
+  Navigation.registerComponent('app.drawer', () => DrawerContainer, store, Provider)
 }

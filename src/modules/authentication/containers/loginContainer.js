@@ -14,6 +14,20 @@ class LoginScreenContainer extends Component {
     message: PropTypes.string
   }
 
+  constructor (props) {
+    super(props)
+    this.props.navigator.setOnNavigatorEvent(this.handleDeepLink)
+  }
+
+  // TODO: It'd be better having all deeplinks in one file
+  handleDeepLink = (event) => {
+    if (event.type === 'DeepLink') {
+      if (event.link === 'authentication.login') {
+        this.props.navigator.resetTo({ screen: event.link })
+      }
+    }
+  }
+
   componentWillReceiveProps (nextProps) {
     if (this.props.message !== nextProps.message) {
       this.props.navigator.showInAppNotification(inAppNotification)
