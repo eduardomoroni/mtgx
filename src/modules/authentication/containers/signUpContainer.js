@@ -6,10 +6,18 @@ import PropTypes from 'prop-types'
 import type { Dispatch } from 'redux'
 import { SignUpScreen } from '../components/signUpScreen'
 import { createUser } from '../../../redux/thunks/authenticationThunks'
+import { inAppNotification } from '../../../constants/navigation'
 
 class SignUpScreenContainer extends Component {
   static propTypes = {
-    signUpUser: PropTypes.func.isRequired
+    signUpUser: PropTypes.func.isRequired,
+    message: PropTypes.string
+  }
+
+  componentWillReceiveProps (nextProps) {
+    if (this.props.message !== nextProps.message) {
+      this.props.navigator.showInAppNotification(inAppNotification)
+    }
   }
 
   render () {
@@ -19,12 +27,8 @@ class SignUpScreenContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({})
-
-const mapDispatchToProps = (dispatch: Dispatch<*>) => {
-  return {
-    signUpUser: (email, password) => dispatch(createUser(email, password))
-  }
-}
-
+const mapStateToProps = (state) => ({ message: state.get('message') })
+const mapDispatchToProps = (dispatch: Dispatch<*>) => ({
+  signUpUser: (email, password) => dispatch(createUser(email, password))
+})
 export default connect(mapStateToProps, mapDispatchToProps)(SignUpScreenContainer)
