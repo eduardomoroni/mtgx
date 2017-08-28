@@ -5,6 +5,7 @@ import { registerScreens } from './screens'
 import { startApp } from './navigation'
 import { initializeFirebase } from './firebase'
 import { setNachosThemes } from './themes'
+import { changeRealm } from '../services/realm'
 
 export function initializeApp () {
   initLocales()
@@ -12,4 +13,5 @@ export function initializeApp () {
   registerScreens()
   initializeFirebase()
   startApp()
+  changeRealm()
 }
