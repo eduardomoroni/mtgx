@@ -23,6 +23,7 @@ public class MainApplication extends NavigationApplication {
   protected List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+            new RealmReactPackage(),
         new ReactNativeI18n(),
         new ReactNativeConfigPackage(),
         new RNFirebasePackage(),
