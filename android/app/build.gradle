@@ -136,6 +136,7 @@ android {
 }
 
 dependencies {
+    compile project(':realm')
     compile(project(':react-native-firebase')) {
       transitive = false
     }
