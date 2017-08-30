@@ -23,6 +23,14 @@ export class Drawer extends Component {
         >
           {I18n.t('LOGIN')}
         </Button>
+        <Button
+          kind='squared'
+          type='success'
+          style={{ width: 300 }}
+          onPress={() => this.props.navigateTo('card.search')}
+        >
+          {I18n.t('SEARCH')}
+        </Button>
       </View>
     )
   }

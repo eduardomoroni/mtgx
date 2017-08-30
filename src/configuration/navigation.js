@@ -16,8 +16,8 @@ const theme = {
 
 const tabs = [
   {
-    label: 'Login Screen',
-    screen: 'authentication.login',
+    label: 'Card Search Screen',
+    screen: 'card.search',
     // $FlowFixMe -> Figure out how to stub this
     icon: require('../assets/icons/swap.png'),
     navigatorStyle: {

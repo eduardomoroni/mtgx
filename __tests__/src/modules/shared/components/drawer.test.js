@@ -15,7 +15,7 @@ describe('<Drawer />', () => {
   })
 
   it('should navigate to signin on press', () => {
-    wrapper.find(Button).simulate('press')
+    wrapper.find(Button).at(0).simulate('press')
     expect(props.navigateTo).toHaveBeenCalledWith('authentication.login')
   })
 })
