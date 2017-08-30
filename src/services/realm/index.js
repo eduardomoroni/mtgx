@@ -7,7 +7,9 @@ import { defaultConfig } from '../../configuration/realm'
 let realm
 
 // TODO: Improve this
-type RealmResults = { [string]: Object }
+type RealmResults = { [string]: any }
+type RealmObject = Object
+type RealmList = Object // TBD
 type keyType = number | string
 
 export {
@@ -24,10 +26,11 @@ export {
 
 function changeRealm (realmConfig: Object = defaultConfig) {
   // TODO: Descobrir a diferença entre new Realm e Realm.open
+  // https://realm.io/docs/javascript/1.10.0/api/Realm.html
   realm = new Realm(realmConfig)
 }
 
-function write (callback: Function) {
+function write (callback: Function): void {
   realm.write(callback)
 }
 
@@ -35,27 +38,26 @@ function findAll (collection: string): RealmResults {
   return realm.objects(collection)
 }
 
-function closeRealm () {
+function closeRealm (): void {
   realm.close()
 }
 
-function objectForPrimaryKey (collection: string, key: keyType) {
+function objectForPrimaryKey (collection: string, key: keyType): ?RealmObject {
   return realm.objectForPrimaryKey(collection, key)
 }
 
-function remove (realmObject: Object) {
-  write(() => {
-    realm.delete(realmObject)
-  })
+function remove (realmObject: RealmObject | Array<RealmObject> | RealmList | RealmResults) {
+  write(() => { realm.delete(realmObject) })
 }
 
-function findBy (collection: string, query: string, ...args?: Array<any>) {
+function findBy (collection: string, query: string, ...args?: Array<string | number>) {
   return findAll(collection).filtered(query, ...args)
 }
 
-function create (type: string, properties: Object, update?: boolean = true): Object {
+function create (type: string, properties: Object, update?: boolean = true): ?RealmObject {
   let inserted = null
 
+  // TODO: This function shouldn't return null
   write(() => {
     inserted = realm.create(type, properties, update)
   })
@@ -67,10 +69,14 @@ function distinctValues (collection: string) {
   return inheritanceToArray(findAll(collection).snapshot())
 }
 
-function deleteAll () {
-  write(() => { realm.deleteAll() })
+function removeFromCollection (collection: string, key: keyType) {
+  const objectToRemove = objectForPrimaryKey(collection, key)
+  if (objectToRemove) {
+    remove(objectToRemove)
+  }
 }
 
-function removeFromCollection (collection: string, key: keyType) {
-  remove(objectForPrimaryKey(collection, key))
+function deleteAll () {
+  // WARNING: This will delete all objects in the Realm!
+  write(() => { realm.deleteAll() })
 }
