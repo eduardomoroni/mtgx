@@ -10,11 +10,11 @@ exports[`<LoginScreen /> Should have a snapshot 1`] = `
   }
 >
   <H1>
-    [missing "en.LOGIN" translation]
+    I18n.t(LOGIN)
   </H1>
   <EmailPasswordForm
     buttonCallback={[Function]}
-    buttonText="[missing \\"en.LOGIN\\" translation]"
+    buttonText="I18n.t(LOGIN)"
   />
   <View
     style={
@@ -37,7 +37,7 @@ exports[`<LoginScreen /> Should have a snapshot 1`] = `
           ]
         }
       >
-        [missing "en.FORGOT_YOUR_PASSWORD?" translation]
+        I18n.t(FORGOT_YOUR_PASSWORD?)
       </Strong>
     </TouchableOpacity>
     <TouchableOpacity
@@ -54,7 +54,7 @@ exports[`<LoginScreen /> Should have a snapshot 1`] = `
           ]
         }
       >
-        [missing "en.DONT_HAVE_ACCOUNT?" translation]
+        I18n.t(DONT_HAVE_ACCOUNT?)
       </Strong>
     </TouchableOpacity>
   </View>

@@ -10,6 +10,7 @@
     "log-ios": "react-native log-ios | grep -v __nw_connection_get_connected_socket_block_invoke",
     "log-android": "react-native log-android",
     "test": "jest",
+    "test-integration": "jest ./test/integration/",
     "test-watch": "jest --watch",
     "test-ci": "jest --forceExit",
     "update-snapshot": "jest -u -t snapshot",
@@ -62,7 +63,11 @@
     "preset": "react-native",
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
     "testMatch": [
-      "**/tests/**/*.test.js?(x)"
+      "**/__tests__/**/*.test.js?(x)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/"
     ]
   },
   "standard": {
