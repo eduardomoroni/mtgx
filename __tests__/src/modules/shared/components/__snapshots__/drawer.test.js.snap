@@ -34,7 +34,7 @@ exports[`<Drawer /> should have a snapshot 1`] = `
     type="success"
     uppercase={true}
   >
-    [missing "en.LOGIN" translation]
+    I18n.t(LOGIN)
   </Button>
 </View>
 `;

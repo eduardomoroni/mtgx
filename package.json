@@ -10,7 +10,6 @@
     "log-ios": "react-native log-ios | grep -v __nw_connection_get_connected_socket_block_invoke",
     "log-android": "react-native log-android",
     "test": "jest",
-    "test-integration": "jest ./test/integration/",
     "test-watch": "jest --watch",
     "test-ci": "jest --forceExit",
     "update-snapshot": "jest -u -t snapshot",
