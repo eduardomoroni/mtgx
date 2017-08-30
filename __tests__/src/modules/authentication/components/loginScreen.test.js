@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react'
 import { shallow } from 'enzyme'
 import { LoginScreen } from '../../../../../src/modules/authentication/components/loginScreen'

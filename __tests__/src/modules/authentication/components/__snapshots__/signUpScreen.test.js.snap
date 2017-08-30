@@ -10,11 +10,11 @@ exports[`<SignUpScreen /> should have a snapshot 1`] = `
   }
 >
   <H1>
-    [missing "en.SIGNUP" translation]
+    I18n.t(SIGNUP)
   </H1>
   <EmailPasswordForm
     buttonCallback={[Function]}
-    buttonText="[missing \\"en.SIGNUP\\" translation]"
+    buttonText="I18n.t(SIGNUP)"
   />
 </View>
 `;
