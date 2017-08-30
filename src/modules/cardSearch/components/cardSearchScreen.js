@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
+import { ManaSymbol } from './manaSymbol'
 
 import { styles } from './styles/cardSearch.styles'
 
@@ -7,9 +8,7 @@ export class CardSearchScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text>
-          Olá
-        </Text>
+        <ManaSymbol color='blue' />
       </View>
     )
   }
