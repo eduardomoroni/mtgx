@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ManaSymbol /> Should have a snapshot 1`] = `
+<Image
+  source={1}
+/>
+`;
