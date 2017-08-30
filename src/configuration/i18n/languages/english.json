@@ -8,5 +8,6 @@
   "FORGOT_YOUR_PASSWORD?": "Forgot your password?",
   "DONT_HAVE_ACCOUNT?": "Dont you have account yet?",
   "SIGNUP": "Sign up",
-  "RESET_PASSWORD": "Reset your password"
+  "RESET_PASSWORD": "Reset your password",
+  "SEARCH": "Search for a card"
 }

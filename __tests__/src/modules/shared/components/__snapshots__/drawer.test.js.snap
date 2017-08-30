@@ -4,10 +4,8 @@ exports[`<Drawer /> should have a snapshot 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
       "backgroundColor": "#ffffff",
       "flex": 1,
-      "justifyContent": "center",
       "width": 300,
     }
   }
@@ -35,6 +33,30 @@ exports[`<Drawer /> should have a snapshot 1`] = `
     uppercase={true}
   >
     I18n.t(LOGIN)
+  </Button>
+  <Button
+    activeOpacity={0.8}
+    disabled={false}
+    disabledStyle={
+      Object {
+        "opacity": 0.3,
+      }
+    }
+    iconPosition="right"
+    kind="squared"
+    onLongPress={[Function]}
+    onPress={[Function]}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Object {
+        "width": 300,
+      }
+    }
+    type="success"
+    uppercase={true}
+  >
+    I18n.t(SEARCH)
   </Button>
 </View>
 `;
