@@ -8,13 +8,9 @@ exports[`<CardSearchScreen /> Should have a snapshot 1`] = `
     }
   }
 >
-  <ManaSymbolBar
-    input={
-      Object {
-        "onChange": [Function],
-        "value": "TESTE",
-      }
-    }
+  <Field
+    component={[Function]}
+    name="cardColors"
   />
 </View>
 `;
