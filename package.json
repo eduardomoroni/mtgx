@@ -20,8 +20,8 @@
     "lint-fix": "standard --fix --verbose | snazzy",
     "flow-check": "flow --show-all-errors",
     "flow-install-libdefs": "flow-typed install",
-    "precommit": "npm run lint-check && npm run flow-check",
-    "prepush": "npm run test-ci",
+    "precommit": "npm run lint-check",
+    "prepush": "npm run lint-check && npm run flow-check && npm run test-ci",
     "commitmsg": "validate-commit-msg"
   },
   "dependencies": {
