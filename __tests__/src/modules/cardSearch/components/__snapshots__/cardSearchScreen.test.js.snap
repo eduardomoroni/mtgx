@@ -8,8 +8,13 @@ exports[`<CardSearchScreen /> Should have a snapshot 1`] = `
     }
   }
 >
-  <ManaSymbol
-    color="blue"
+  <ManaSymbolBar
+    input={
+      Object {
+        "onChange": [Function],
+        "value": "TESTE",
+      }
+    }
   />
 </View>
 `;
