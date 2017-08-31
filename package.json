@@ -12,6 +12,7 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "test-ci": "jest --forceExit",
+    "commitizen": "git cz",
     "update-snapshot": "jest -u -t snapshot",
     "generate-coverage": "jest --coverage --silent --noStackTrace",
     "update-coverage": "npm run generate-coverage && codeclimate-test-reporter < ./coverage/lcov.info",
@@ -97,21 +98,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "validate-commit-msg": {
-    "types": [
-      "feat",
-      "fix",
-      "docs",
-      "style",
-      "refactor",
-      "perf",
-      "test",
-      "chore",
-      "revert"
-    ],
-    "warnOnFail": true,
-    "maxSubjectLength": 100,
-    "helpMessage": "You should consider follow commit message pattern"
   }
 }
