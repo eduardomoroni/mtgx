@@ -2,8 +2,10 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import mana from '../../../assets/manas'
 import { Image } from 'react-native'
+
+// $FlowFixMe Required module not found
+import mana from '../../../assets/manas'
 
 export const validColors = ['black', 'blue', 'green', 'red', 'white']
 
