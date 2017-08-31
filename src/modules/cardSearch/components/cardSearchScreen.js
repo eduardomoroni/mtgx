@@ -7,7 +7,6 @@ import { Field } from 'redux-form/immutable'
 import { styles } from './styles/cardSearch.styles'
 
 export class CardSearchScreen extends Component {
-
   static propTypes = {
     colors: PropTypes.arrayOf(PropTypes.string)
   }
