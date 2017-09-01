@@ -4,7 +4,7 @@ import _ from 'lodash'
 import PropTypes from 'prop-types'
 
 import { ManaSymbol, validColors } from './manaSymbol'
-import { styles } from './styles/manaSymbolBar.test'
+import { styles } from './styles/manaSymbolBar.styles'
 
 export class ManaSymbolBar extends PureComponent {
   static propTypes = {
@@ -14,17 +14,18 @@ export class ManaSymbolBar extends PureComponent {
     })
   }
 
-  renderManaSymbol = (color: string) => {
+  toggleColor = (color) => {
     const { onChange, value } = this.props.input
-    const selectedColors = value
-    const isSelected = selectedColors.includes(color)
-    const toggleColor = (color) => { onChange(_.xor(selectedColors, [color])) }
+    return onChange(_.xor(value, [color]))
+  }
+
+  renderManaSymbol = (color: string) => {
+    const { value } = this.props.input
+    const isSelected = value.includes(color)
 
     return (
-      <TouchableOpacity key={color} onPressOut={() => toggleColor(color)} >
-        <ManaSymbol color={color}
-          style={[styles.manaIcon, {opacity: isSelected ? 1 : 0.25}]}
-        />
+      <TouchableOpacity key={color} onPressOut={() => this.toggleColor(color)} >
+        <ManaSymbol color={color} isSelected={isSelected} />
       </TouchableOpacity>
     )
   }
