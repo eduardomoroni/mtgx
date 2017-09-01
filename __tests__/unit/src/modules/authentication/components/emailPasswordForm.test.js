@@ -3,7 +3,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Button } from 'nachos-ui'
-import { EmailPasswordForm } from '../../../../../src/modules/authentication/components/emailPasswordForm'
+import { EmailPasswordForm } from '../../../../../../src/modules/authentication/components/emailPasswordForm'
 
 const props = {
   buttonText: 'TEST LABEL',

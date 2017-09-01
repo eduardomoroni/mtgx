@@ -1,5 +1,5 @@
-import { showMessage, clearMessage } from '../../../../src/redux/actions/alertActions'
-import MessageReducer, { initialState } from '../../../../src/redux/reducers/messageReducer'
+import { showMessage, clearMessage } from '../../../../../src/redux/actions/alertActions'
+import MessageReducer, { initialState } from '../../../../../src/redux/reducers/messageReducer'
 
 describe('Message reducer', () => {
   it('should have a snapshot', async () => {

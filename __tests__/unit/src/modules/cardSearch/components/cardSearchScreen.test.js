@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { CardSearchScreen } from '../../../../../src/modules/cardSearch/components/cardSearchScreen'
+import { CardSearchScreen } from '../../../../../../src/modules/cardSearch/components/cardSearchScreen'
 
 describe('<CardSearchScreen />', () => {
   it('Should have a snapshot', () => {

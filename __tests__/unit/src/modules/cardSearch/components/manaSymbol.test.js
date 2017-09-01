@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { ManaSymbol } from '../../../../../src/modules/cardSearch/components/manaSymbol'
+import { ManaSymbol } from '../../../../../../src/modules/cardSearch/components/manaSymbol'
 
 const props = {
   isSelected: true,

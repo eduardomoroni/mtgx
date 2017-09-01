@@ -1,4 +1,4 @@
-import { initialState } from '../../../../src/redux/reducers'
+import { initialState } from '../../../../../src/redux/reducers'
 
 describe('Root reducer initial state', () => {
   it('should have a snapshot', async () => {

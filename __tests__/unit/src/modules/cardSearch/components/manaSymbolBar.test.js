@@ -1,8 +1,8 @@
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import { shallow } from 'enzyme'
-import { ManaSymbolBar } from '../../../../../src/modules/cardSearch/components/manaSymbolBar'
-import { ManaSymbol } from '../../../../../src/modules/cardSearch/components/manaSymbol'
+import { ManaSymbolBar } from '../../../../../../src/modules/cardSearch/components/manaSymbolBar'
+import { ManaSymbol } from '../../../../../../src/modules/cardSearch/components/manaSymbol'
 
 const props = {
   input: {

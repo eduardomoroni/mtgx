@@ -3,7 +3,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Button } from 'nachos-ui'
-import { Drawer } from '../../../../../src/modules/shared/components/drawer'
+import { Drawer } from '../../../../../../src/modules/shared/components/drawer'
 
 const props = { navigateTo: jest.fn() }
 

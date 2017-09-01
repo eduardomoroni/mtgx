@@ -1,5 +1,5 @@
-import { showMessage, clearMessage } from '../../../../src/redux/actions/alertActions'
-import { SHOW_MESSAGE, CLEAR_MESSAGE } from '../../../../src/redux/types'
+import { showMessage, clearMessage } from '../../../../../src/redux/actions/alertActions'
+import { SHOW_MESSAGE, CLEAR_MESSAGE } from '../../../../../src/redux/types'
 
 describe('Alert Actions', () => {
   it('should create action for show a message', () => {

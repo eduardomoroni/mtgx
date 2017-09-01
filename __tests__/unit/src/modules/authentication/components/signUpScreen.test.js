@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { SignUpScreen } from '../../../../../src/modules/authentication/components/signUpScreen'
-import { EmailPasswordForm } from '../../../../../src/modules/authentication/components/emailPasswordForm'
+import { SignUpScreen } from '../../../../../../src/modules/authentication/components/signUpScreen'
+import { EmailPasswordForm } from '../../../../../../src/modules/authentication/components/emailPasswordForm'
 
 const props = {
   signUpUser: jest.fn()

@@ -1,7 +1,7 @@
-import { setUser } from '../../../../src/redux/actions/authenticationActions'
-import { firebaseUser } from '../../../fixtures/firebaseUserFixture'
-import { User } from '../../../../src/services/firebase/user'
-import AuthenticationReducer, { initialState } from '../../../../src/redux/reducers/authenticationReducer'
+import { setUser } from '../../../../../src/redux/actions/authenticationActions'
+import { firebaseUser } from '../../../../fixtures/firebaseUserFixture'
+import { User } from '../../../../../src/services/firebase/user'
+import AuthenticationReducer, { initialState } from '../../../../../src/redux/reducers/authenticationReducer'
 
 describe('Authentication reducer', () => {
   it('should have a snapshot', async () => {

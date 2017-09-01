@@ -3,7 +3,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Button } from 'nachos-ui'
-import { ForgotPasswordScreen } from '../../../../../src/modules/authentication/components/forgotPasswordScreen'
+import { ForgotPasswordScreen } from '../../../../../../src/modules/authentication/components/forgotPasswordScreen'
 
 const props = {
   resetPassword: jest.fn()
