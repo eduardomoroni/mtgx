@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ManaSymbolBar /> Should have a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    focusedOpacity={0.7}
+    onPressOut={[Function]}
+  >
+    <ManaSymbol
+      color="black"
+      isSelected={false}
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    focusedOpacity={0.7}
+    onPressOut={[Function]}
+  >
+    <ManaSymbol
+      color="blue"
+      isSelected={true}
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    focusedOpacity={0.7}
+    onPressOut={[Function]}
+  >
+    <ManaSymbol
+      color="green"
+      isSelected={false}
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    focusedOpacity={0.7}
+    onPressOut={[Function]}
+  >
+    <ManaSymbol
+      color="red"
+      isSelected={true}
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    focusedOpacity={0.7}
+    onPressOut={[Function]}
+  >
+    <ManaSymbol
+      color="white"
+      isSelected={false}
+    />
+  </TouchableOpacity>
+</View>
+`;
