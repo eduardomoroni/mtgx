@@ -15,18 +15,7 @@ exports[`<ManaSymbolBar /> Should have a snapshot 1`] = `
   >
     <ManaSymbol
       color="black"
-      style={
-        Array [
-          Object {
-            "height": 30,
-            "marginHorizontal": 5,
-            "width": 30,
-          },
-          Object {
-            "opacity": 0.25,
-          },
-        ]
-      }
+      isSelected={false}
     />
   </TouchableOpacity>
   <TouchableOpacity
@@ -36,18 +25,7 @@ exports[`<ManaSymbolBar /> Should have a snapshot 1`] = `
   >
     <ManaSymbol
       color="blue"
-      style={
-        Array [
-          Object {
-            "height": 30,
-            "marginHorizontal": 5,
-            "width": 30,
-          },
-          Object {
-            "opacity": 0.25,
-          },
-        ]
-      }
+      isSelected={true}
     />
   </TouchableOpacity>
   <TouchableOpacity
@@ -57,18 +35,7 @@ exports[`<ManaSymbolBar /> Should have a snapshot 1`] = `
   >
     <ManaSymbol
       color="green"
-      style={
-        Array [
-          Object {
-            "height": 30,
-            "marginHorizontal": 5,
-            "width": 30,
-          },
-          Object {
-            "opacity": 0.25,
-          },
-        ]
-      }
+      isSelected={false}
     />
   </TouchableOpacity>
   <TouchableOpacity
@@ -78,18 +45,7 @@ exports[`<ManaSymbolBar /> Should have a snapshot 1`] = `
   >
     <ManaSymbol
       color="red"
-      style={
-        Array [
-          Object {
-            "height": 30,
-            "marginHorizontal": 5,
-            "width": 30,
-          },
-          Object {
-            "opacity": 0.25,
-          },
-        ]
-      }
+      isSelected={true}
     />
   </TouchableOpacity>
   <TouchableOpacity
@@ -99,18 +55,7 @@ exports[`<ManaSymbolBar /> Should have a snapshot 1`] = `
   >
     <ManaSymbol
       color="white"
-      style={
-        Array [
-          Object {
-            "height": 30,
-            "marginHorizontal": 5,
-            "width": 30,
-          },
-          Object {
-            "opacity": 0.25,
-          },
-        ]
-      }
+      isSelected={false}
     />
   </TouchableOpacity>
 </View>

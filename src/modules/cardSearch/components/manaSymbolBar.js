@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { View, TouchableOpacity } from 'react-native'
 import _ from 'lodash'
-import PropTypes from 'prop-types'
+import PropTypes, { string } from 'prop-types'
 
 import { ManaSymbol, validColors } from './manaSymbol'
 import { styles } from './styles/manaSymbolBar.styles'
@@ -10,7 +10,7 @@ export class ManaSymbolBar extends PureComponent {
   static propTypes = {
     input: PropTypes.shape({
       onChange: PropTypes.func.isRequired,
-      value: PropTypes.oneOfType(PropTypes.arrayOf(PropTypes.string), PropTypes.string).isRequired
+      value: PropTypes.oneOfType([PropTypes.arrayOf(string), string]).isRequired
     })
   }
 
