@@ -16,6 +16,7 @@ export default {
   panther: '#161616',
   charcoal: '#595959',
   coal: '#2d2d2d',
+  grey: 'grey',
   bloodOrange: '#fb5f26',
   snow: 'white',
   ember: 'rgba(164, 0, 48, 0.5)',
