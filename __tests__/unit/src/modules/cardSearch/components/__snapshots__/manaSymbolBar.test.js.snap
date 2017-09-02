@@ -4,7 +4,14 @@ exports[`<ManaSymbolBar /> Should have a snapshot 1`] = `
 <View
   style={
     Object {
-      "flex": 1,
+      "alignItems": "center",
+      "borderColor": "rgba(0, 0, 0, 0.4)",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "justifyContent": "space-between",
+      "marginBottom": 5,
     }
   }
 >
