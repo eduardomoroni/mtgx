@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalToggle /> should have a snapshot 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "rgba(0, 0, 0, 0.4)",
+        "borderRadius": 3,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "height": 40,
+        "justifyContent": "center",
+        "marginBottom": 5,
+      },
+      Object {},
+    ]
+  }
+>
+  <InputLabel
+    label="Label"
+    onPress={[Function]}
+  />
+</TouchableOpacity>
+`;

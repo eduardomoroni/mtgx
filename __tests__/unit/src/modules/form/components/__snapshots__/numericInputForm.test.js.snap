@@ -33,9 +33,12 @@ exports[`<NumericInputForm /> android component should have a snapshot 1`] = `
   <InputPicker
     dropdownItems={
       Array [
-        "a",
-        "b",
-        "c",
+        "",
+        "<",
+        "<=",
+        "=",
+        ">=",
+        "=",
       ]
     }
     onValueChange={[Function]}
@@ -60,13 +63,6 @@ exports[`<NumericInputForm /> android component should have a snapshot 1`] = `
 
 exports[`<NumericInputForm /> iOS component should have a snapshot 1`] = `
 <iOS
-  dropdownItems={
-    Array [
-      "a",
-      "b",
-      "c",
-    ]
-  }
   input={
     Object {
       "name": "label",
