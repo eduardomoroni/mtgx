@@ -8,6 +8,7 @@ import { sharedStyles } from './styles/shared.styles'
 // TODO: This dropdown needs to be implemented
 export class DropdownInputForm extends Component {
   render () {
+    console.log('===> this.props is: ', this.props)
     const { onChange, name } = this.props.input
 
     return (

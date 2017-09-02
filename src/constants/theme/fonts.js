@@ -1,7 +1,5 @@
 // @flow
 
-import colors from './colors'
-
 const type = {
   base: 'HelveticaNeue',
   bold: 'HelveticaNeue-Bold',
@@ -59,11 +57,7 @@ const style = {
   }
 }
 
-const typography = {
-  fontFamily: type.mtg,
-  fontSize: size.medium,
-  color: colors.black
-}
+const typography = {}
 
 export default {
   type,

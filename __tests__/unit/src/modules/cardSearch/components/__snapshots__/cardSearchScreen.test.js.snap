@@ -10,7 +10,83 @@ exports[`<CardSearchScreen /> Should have a snapshot 1`] = `
 >
   <Field
     component={[Function]}
-    name="cardColors"
+    name="COLORS"
+  />
+  <Field
+    component={[Function]}
+    name="COLOR_IDENTITY"
+  />
+  <Field
+    component={[Function]}
+    name="TYPE"
+  />
+  <Field
+    component={[Function]}
+    name="SUB_TYPE"
+  />
+  <Field
+    component={[Function]}
+    dropdownItems={
+      Array [
+        "",
+        "<",
+        "<=",
+        "=",
+        ">=",
+        "=",
+      ]
+    }
+    name="POWER"
+  />
+  <Field
+    component={[Function]}
+    dropdownItems={
+      Array [
+        "",
+        "<",
+        "<=",
+        "=",
+        ">=",
+        "=",
+      ]
+    }
+    name="TOUGHNESS"
+  />
+  <Field
+    component={[Function]}
+    dropdownItems={
+      Array [
+        "",
+        "<",
+        "<=",
+        "=",
+        ">=",
+        "=",
+      ]
+    }
+    name="CMC"
+  />
+  <Field
+    component={[Function]}
+    name="CARD_NAME"
+  />
+  <Field
+    component={[Function]}
+    name="CARD_TEXT"
+  />
+  <Field
+    component={[Function]}
+    name="FLAVOR_TEXT"
+  />
+  <Field
+    component={[Function]}
+    name="ARTIST"
+  />
+  <Field
+    component={[Function]}
+    keyboardType="numeric"
+    maxLength={3}
+    name="COLLECTION_NUMBER"
   />
 </View>
 `;

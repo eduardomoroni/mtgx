@@ -9,5 +9,16 @@
   "DONT_HAVE_ACCOUNT?": "Dont you have account yet?",
   "SIGNUP": "Sign up",
   "RESET_PASSWORD": "Reset your password",
-  "SEARCH": "Search for a card"
+  "SEARCH": "Search for a card",
+  "SUB_TYPE":  "Sub type",
+  "TYPE": "Card type",
+  "POWER": "Power",
+  "CMC": "CMC",
+  "TOUGHNESS": "Toughness",
+  "CARD_NAME": "Name",
+  "CARD_TEXT": "Text",
+  "COLOR_IDENTITY": "Color identity",
+  "FLAVOR_TEXT": "Flavor text",
+  "ARTIST": "Artist",
+  "COLLECTION_NUMBER": "Collection #"
 }
