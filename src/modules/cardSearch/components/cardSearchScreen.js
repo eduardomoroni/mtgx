@@ -17,7 +17,7 @@ import {
 
 import { styles } from './styles/cardSearch.styles'
 
-const cardSearchModals = {
+export const cardSearchModals = {
   RARITY: 0,
   SET: 1,
   FORMAT: 2
