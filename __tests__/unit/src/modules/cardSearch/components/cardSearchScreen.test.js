@@ -4,8 +4,12 @@ import { CardSearchScreen, cardSearchModals } from '../../../../../../src/module
 import Modal from 'react-native-modal'
 import { Field } from 'redux-form/immutable'
 
+const props = {
+  handleSubmit: jest.fn()
+}
+
 describe('<CardSearchScreen />', () => {
-  const wrapper = shallow(<CardSearchScreen />)
+  const wrapper = shallow(<CardSearchScreen {...props} />)
   const modalId = 'RARITY'
 
   it('should have a snapshot', () => {
