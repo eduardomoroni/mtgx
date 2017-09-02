@@ -1,6 +1,6 @@
 // @flow
 
-import { colors } from './'
+import colors from './colors'
 
 const type = {
   base: 'HelveticaNeue',

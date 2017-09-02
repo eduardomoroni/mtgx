@@ -7,6 +7,15 @@ import { InputLabel, InputPicker } from './index'
 import { sharedStyles } from './styles/shared.styles'
 
 export class DropdownInputForm extends Component {
+  static propTypes = {
+    dropdownItems: PropTypes.arrayOf(PropTypes.string).isRequired,
+    selectedValue: PropTypes.string,
+    input: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      onChange: PropTypes.func.isRequired
+    })
+  }
+
   render () {
     const { input, dropdownItems, selectedValue } = this.props
     const { onChange, name } = input
@@ -24,11 +33,4 @@ export class DropdownInputForm extends Component {
   }
 }
 
-DropdownInputForm.propTypes = {
-  dropdownItems: PropTypes.arrayOf(PropTypes.string).isRequired,
-  selectedValue: PropTypes.string,
-  input: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
-  })
-}
+export default DropdownInputForm

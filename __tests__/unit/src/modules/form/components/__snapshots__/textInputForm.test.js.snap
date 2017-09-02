@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputForm /> should have a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "rgba(0, 0, 0, 0.4)",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "justifyContent": "space-between",
+      "marginBottom": 5,
+    }
+  }
+>
+  <InputLabel
+    label="label"
+    onPress={[Function]}
+  />
+  <TextInput
+    autoCapitalize="characters"
+    autoCorrect={false}
+    keyboardType="default"
+    maxLength={5}
+    onChangeText={[Function]}
+    returnKeyType="next"
+    style={
+      Object {
+        "color": "#000000",
+        "flex": 1,
+        "fontFamily": "MTGX",
+        "fontSize": 14,
+        "justifyContent": "flex-end",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;

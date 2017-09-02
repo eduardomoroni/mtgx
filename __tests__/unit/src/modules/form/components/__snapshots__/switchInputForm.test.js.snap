@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SwitchInputForm /> should have a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "rgba(0, 0, 0, 0.4)",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 40,
+      "justifyContent": "space-between",
+      "marginBottom": 5,
+    }
+  }
+>
+  <InputLabel
+    label="label"
+    onPress={[Function]}
+  />
+  <Switch
+    disabled={false}
+    onValueChange={[Function]}
+    value={true}
+  />
+</View>
+`;
