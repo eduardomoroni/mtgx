@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { string, arrayOf, func } from 'prop-types'
+import { string, arrayOf } from 'prop-types'
 import { View } from 'react-native'
 import { ManaSymbolBar } from './manaSymbolBar'
 import { Field } from 'redux-form/immutable'
+import { Button } from 'nachos-ui'
 import Modal from 'react-native-modal'
+import I18n from 'react-native-i18n'
 
 import {
   TextInputForm,
@@ -14,6 +16,12 @@ import {
 } from '../../form/components'
 
 import { styles } from './styles/cardSearch.styles'
+
+const cardSearchModals = {
+  RARITY: 0,
+  SET: 1,
+  FORMAT: 2
+}
 
 export class CardSearchScreen extends Component {
   static propTypes = {
@@ -27,32 +35,44 @@ export class CardSearchScreen extends Component {
     formats: arrayOf(string),
     rarities: arrayOf(string),
     subtypes: arrayOf(string),
-    colorsIdentity: arrayOf(string),
-    showModal: func
+    colorsIdentity: arrayOf(string)
   }
+
+  state = { visibleModal: '' }
+  showModal = (modalId: string) => () => this.setState({ visibleModal: cardSearchModals[modalId] })
+  hideModal = () => this.setState({ visibleModal: '' })
 
   openModal = (fieldName, items) => {
     // TODO: wix/react-native-navigation has built-in Modal, Why are we using an external one?
+    const { hideModal } = this
     return (
-      <Modal isVisible onModalHide={() => this.props.showModal('')} >
+      <Modal onModalHide={hideModal} onBackdropPress={hideModal} onBackButtonPress={hideModal} isVisible >
         <Field name={fieldName} component={MultiSelect} items={items} />
+        <Button
+          kind='squared'
+          type='success'
+          onPress={hideModal}
+        >
+          {I18n.t('CLOSE')}
+        </Button>
       </Modal>
     )
   }
 
-  switchModals = () => {
-    const { visibleModal, formats, sets, rarities } = this.props
+  renderModal = () => {
+    const { formats, sets, rarities } = this.props
+    const { visibleModal } = this.state
 
     switch (visibleModal) {
-      case 'cardRarity':
-        return this.openModal('cardRarity', rarities)
-      case 'cardSet':
-        return this.openModal('cardSet', sets)
-      case 'cardFormat':
-        return this.openModal('cardFormat', formats)
-      default:
-        return <View />
+      case cardSearchModals['RARITY']:
+        return this.openModal('RARITY', rarities)
+      case cardSearchModals['SET']:
+        return this.openModal('SET', sets)
+      case cardSearchModals['FORMAT']:
+        return this.openModal('FORMAT', formats)
     }
+
+    return <View />
   }
 
   renderThreeColumnsLine = (fieldOne, fieldTwo, fieldThree) => {
@@ -84,7 +104,6 @@ export class CardSearchScreen extends Component {
       colors,
       subType,
       subTypes,
-      showModal,
       colorsIdentity
     } = this.props
 
@@ -112,13 +131,13 @@ export class CardSearchScreen extends Component {
           )}
           {/* TODO: Implement Modal */}
           {this.renderThreeColumnsLine(
-            <ModalToggle label='RARITY' onPress={() => showModal} selected={rarity} />,
-            <ModalToggle label='SET' onPress={() => showModal} selected={set} />,
-            <ModalToggle label='FORMAT' onPress={() => showModal} selected={format} />
+            <ModalToggle label='RARITY' onPress={this.showModal('RARITY')} selected={rarity} />,
+            <ModalToggle label='SET' onPress={this.showModal('SET')} selected={set} />,
+            <ModalToggle label='FORMAT' onPress={this.showModal('FORMAT')} selected={format} />
           )}
         </View>
         <View style={styles.containerFooter} />
-        {this.switchModals()}
+        {this.renderModal()}
       </View>
     )
   }
