@@ -23,5 +23,6 @@
   "COLLECTION_NUMBER": "Collection #",
   "RARITY": "Rarity",
   "SET": "Set",
-  "FORMAT": "Format"
+  "FORMAT": "Format",
+  "CLOSE": "Close"
 }
