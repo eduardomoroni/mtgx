@@ -22,10 +22,7 @@ exports[`<NumericInputForm /> should have a snapshot 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": "#000000",
         "flex": -1,
-        "fontFamily": "MTGX",
-        "fontSize": 14,
         "justifyContent": "flex-start",
         "marginLeft": 5,
       }
@@ -51,10 +48,8 @@ exports[`<NumericInputForm /> should have a snapshot 1`] = `
     returnKeyType="next"
     style={
       Object {
-        "color": "#000000",
+        "color": "grey",
         "flex": 1,
-        "fontFamily": "MTGX",
-        "fontSize": 14,
         "justifyContent": "flex-end",
       }
     }

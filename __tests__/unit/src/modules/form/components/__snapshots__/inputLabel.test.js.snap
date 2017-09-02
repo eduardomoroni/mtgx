@@ -9,10 +9,7 @@ exports[`<InputLabel /> should have a snapshot 1`] = `
   onPress={[Function]}
   style={
     Object {
-      "color": "#000000",
       "flex": -1,
-      "fontFamily": "MTGX",
-      "fontSize": 14,
       "justifyContent": "flex-start",
       "marginLeft": 5,
     }

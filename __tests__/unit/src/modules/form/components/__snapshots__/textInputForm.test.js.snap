@@ -28,10 +28,8 @@ exports[`<TextInputForm /> should have a snapshot 1`] = `
     returnKeyType="next"
     style={
       Object {
-        "color": "#000000",
+        "color": "grey",
         "flex": 1,
-        "fontFamily": "MTGX",
-        "fontSize": 14,
         "justifyContent": "flex-end",
       }
     }
