@@ -2,6 +2,7 @@
 
 import { TextInput } from 'react-native'
 import React from 'react'
+// $FlowFixMe
 import { InputPicker } from '../../../../../../src/modules/form/components'
 import { NumericInputForm } from '../../../../../../src/modules/form/components/numericInputForm.android'
 import { NumericInputForm as iOS } from '../../../../../../src/modules/form/components/numericInputForm.ios'
