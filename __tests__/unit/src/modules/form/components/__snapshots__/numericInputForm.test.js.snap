@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NumericInputForm /> should have a snapshot 1`] = `
+exports[`<NumericInputForm /> android component should have a snapshot 1`] = `
 <View
   style={
     Object {
@@ -56,4 +56,26 @@ exports[`<NumericInputForm /> should have a snapshot 1`] = `
     underlineColorAndroid="transparent"
   />
 </View>
+`;
+
+exports[`<NumericInputForm /> iOS component should have a snapshot 1`] = `
+<iOS
+  dropdownItems={
+    Array [
+      "a",
+      "b",
+      "c",
+    ]
+  }
+  input={
+    Object {
+      "name": "label",
+      "onChange": [Function],
+      "value": Object {
+        "number": 1,
+        "operator": ">",
+      },
+    }
+  }
+/>
 `;

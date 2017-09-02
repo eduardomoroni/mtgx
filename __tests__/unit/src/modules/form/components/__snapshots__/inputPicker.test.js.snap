@@ -7,7 +7,6 @@ exports[`<InputPicker /> should have a snapshot 1`] = `
   selectedValue="b"
   style={
     Object {
-      "color": "grey",
       "flex": 1,
       "justifyContent": "flex-end",
     }

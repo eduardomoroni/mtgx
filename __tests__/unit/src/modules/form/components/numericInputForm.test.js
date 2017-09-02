@@ -2,7 +2,10 @@
 
 import { TextInput } from 'react-native'
 import React from 'react'
-import { NumericInputForm, InputPicker } from '../../../../../../src/modules/form/components'
+import { InputPicker } from '../../../../../../src/modules/form/components'
+import { NumericInputForm } from '../../../../../../src/modules/form/components/numericInputForm.android'
+import { NumericInputForm as iOS } from '../../../../../../src/modules/form/components/numericInputForm.ios'
+
 import { shallow } from 'enzyme'
 
 const props = {
@@ -15,28 +18,39 @@ const props = {
 }
 
 describe('<NumericInputForm />', () => {
-  const wrapper = shallow(<NumericInputForm {...props} />)
+  // TODO: To de defined
+  describe('iOS component', () => {
+    const wrapper = shallow(<iOS {...props} />)
 
-  it('should have a snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
+    it('should have a snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 
-  it('should render properly', () => {
-    const { onChange } = props.input
-    const textInputProps = wrapper.find(TextInput).props()
-    const inputPickerProps = wrapper.find(InputPicker).props()
-    expect(inputPickerProps.dropdownItems).toEqual(props.dropdownItems)
-    expect(inputPickerProps.selectedValue).toEqual(props.input.value.operator)
+  describe('android component', () => {
+    const wrapper = shallow(<NumericInputForm {...props} />)
 
-    inputPickerProps.onValueChange('b')
-    expect(onChange).toBeCalledWith({number: 1, operator: 'b'})
+    it('should have a snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
 
-    textInputProps.onChangeText('10')
-    expect(onChange).lastCalledWith({number: 10, operator: '>'})
-  })
+    it('should render properly', () => {
+      const { onChange } = props.input
+      const textInputProps = wrapper.find(TextInput).props()
+      const inputPickerProps = wrapper.find(InputPicker).props()
+      expect(inputPickerProps.dropdownItems).toEqual(props.dropdownItems)
+      expect(inputPickerProps.selectedValue).toEqual(props.input.value.operator)
 
-  it('should initialize picker case input.value is undefined', () => {
-    const wrapper = shallow(<NumericInputForm {...props} input={{value: undefined}} />)
-    expect(wrapper.find(InputPicker).prop('selectedValue')).toEqual('')
+      inputPickerProps.onValueChange('b')
+      expect(onChange).toBeCalledWith({number: 1, operator: 'b'})
+
+      textInputProps.onChangeText('10')
+      expect(onChange).lastCalledWith({number: 10, operator: '>'})
+    })
+
+    it('should initialize picker case input.value is undefined', () => {
+      const wrapper = shallow(<NumericInputForm {...props} input={{value: undefined}} />)
+      expect(wrapper.find(InputPicker).prop('selectedValue')).toEqual('')
+    })
   })
 })
