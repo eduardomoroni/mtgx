@@ -10,7 +10,7 @@ export class TextInputForm extends PureComponent {
   static propTypes = {
     keyboardType: TextInput.propTypes.keyboardType,
     maxLength: TextInput.propTypes.maxLength,
-    input: React.PropTypes.shape({
+    input: PropTypes.shape({
       name: PropTypes.string.isRequired,
       onChange: PropTypes.func.isRequired
     })

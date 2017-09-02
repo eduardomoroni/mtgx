@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputPicker /> should have a snapshot 1`] = `
+<Picker
+  mode="dialog"
+  onValueChange={[Function]}
+  selectedValue="b"
+  style={
+    Object {
+      "color": "grey",
+      "flex": 1,
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <PickerItem
+    label="a"
+    value="a"
+  />
+  <PickerItem
+    label="b"
+    value="b"
+  />
+  <PickerItem
+    label="c"
+    value="c"
+  />
+</Picker>
+`;

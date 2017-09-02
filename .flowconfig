@@ -19,6 +19,9 @@
 .*/Libraries/react-native/React.js
 .*/Libraries/react-native/ReactNative.js
 
+;Work around to ignore flows error: Required module not found
+./flow-typed/ignore
+
 [include]
 <PROJECT_ROOT>/src/**/*.js
 

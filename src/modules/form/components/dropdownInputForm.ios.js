@@ -23,3 +23,5 @@ export class DropdownInputForm extends Component {
     )
   }
 }
+
+export default DropdownInputForm
