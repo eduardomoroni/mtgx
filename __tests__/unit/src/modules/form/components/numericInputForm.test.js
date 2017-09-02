@@ -2,15 +2,14 @@
 
 import { TextInput } from 'react-native'
 import React from 'react'
-// $FlowFixMe
 import { InputPicker } from '../../../../../../src/modules/form/components'
+// $FlowFixMe
 import { NumericInputForm } from '../../../../../../src/modules/form/components/numericInputForm.android'
 import { NumericInputForm as iOS } from '../../../../../../src/modules/form/components/numericInputForm.ios'
 
 import { shallow } from 'enzyme'
 
 const props = {
-  dropdownItems: ['a', 'b', 'c'],
   input: {
     onChange: jest.fn(),
     name: 'label',
@@ -18,6 +17,7 @@ const props = {
   }
 }
 
+// TODO: This whole component should be revisited
 describe('<NumericInputForm />', () => {
   // TODO: To de defined
   describe('iOS component', () => {
@@ -39,7 +39,6 @@ describe('<NumericInputForm />', () => {
       const { onChange } = props.input
       const textInputProps = wrapper.find(TextInput).props()
       const inputPickerProps = wrapper.find(InputPicker).props()
-      expect(inputPickerProps.dropdownItems).toEqual(props.dropdownItems)
       expect(inputPickerProps.selectedValue).toEqual(props.input.value.operator)
 
       inputPickerProps.onValueChange('b')

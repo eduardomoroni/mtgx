@@ -8,85 +8,222 @@ exports[`<CardSearchScreen /> Should have a snapshot 1`] = `
     }
   }
 >
-  <Field
-    component={[Function]}
-    name="COLORS"
-  />
-  <Field
-    component={[Function]}
-    name="COLOR_IDENTITY"
-  />
-  <Field
-    component={[Function]}
-    name="TYPE"
-  />
-  <Field
-    component={[Function]}
-    name="SUB_TYPE"
-  />
-  <Field
-    component={[Function]}
-    dropdownItems={
-      Array [
-        "",
-        "<",
-        "<=",
-        "=",
-        ">=",
-        "=",
-      ]
+  <View
+    style={
+      Object {
+        "marginHorizontal": 10,
+        "paddingTop": 69,
+      }
     }
-    name="POWER"
-  />
-  <Field
-    component={[Function]}
-    dropdownItems={
-      Array [
-        "",
-        "<",
-        "<=",
-        "=",
-        ">=",
-        "=",
-      ]
+  >
+    <Field
+      component={[Function]}
+      name="COLORS"
+    />
+    <Field
+      component={[Function]}
+      name="COLOR_IDENTITY"
+    />
+    <Field
+      component={[Function]}
+      name="CARD_NAME"
+    />
+    <Field
+      component={[Function]}
+      name="CARD_TEXT"
+    />
+    <Field
+      component={[Function]}
+      name="FLAVOR_TEXT"
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-start",
+            "marginRight": 1.6666666666666667,
+          }
+        }
+      >
+        <Field
+          component={[Function]}
+          name="TYPE"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-end",
+            "marginLeft": 1.6666666666666667,
+          }
+        }
+      >
+        <Field
+          component={[Function]}
+          name="SUB_TYPE"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-start",
+            "marginRight": 1.6666666666666667,
+          }
+        }
+      >
+        <Field
+          component={[Function]}
+          name="ARTIST"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-end",
+            "marginLeft": 1.6666666666666667,
+          }
+        }
+      >
+        <Field
+          component={[Function]}
+          keyboardType="numeric"
+          maxLength={3}
+          name="COLLECTION_NUMBER"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-start",
+            "marginRight": 1.6666666666666667,
+          }
+        }
+      >
+        <Field
+          component={[Function]}
+          name="POWER"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 1.6666666666666667,
+          }
+        }
+      >
+        <Field
+          component={[Function]}
+          name="TOUGHNESS"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-end",
+            "marginLeft": 1.6666666666666667,
+          }
+        }
+      >
+        <Field
+          component={[Function]}
+          name="CMC"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-start",
+            "marginRight": 1.6666666666666667,
+          }
+        }
+      >
+        <ModalToggle
+          label="RARITY"
+          onPress={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 1.6666666666666667,
+          }
+        }
+      >
+        <ModalToggle
+          label="SET"
+          onPress={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-end",
+            "marginLeft": 1.6666666666666667,
+          }
+        }
+      >
+        <ModalToggle
+          label="FORMAT"
+          onPress={[Function]}
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
     }
-    name="TOUGHNESS"
-  />
-  <Field
-    component={[Function]}
-    dropdownItems={
-      Array [
-        "",
-        "<",
-        "<=",
-        "=",
-        ">=",
-        "=",
-      ]
-    }
-    name="CMC"
-  />
-  <Field
-    component={[Function]}
-    name="CARD_NAME"
-  />
-  <Field
-    component={[Function]}
-    name="CARD_TEXT"
-  />
-  <Field
-    component={[Function]}
-    name="FLAVOR_TEXT"
-  />
-  <Field
-    component={[Function]}
-    name="ARTIST"
-  />
-  <Field
-    component={[Function]}
-    keyboardType="numeric"
-    maxLength={3}
-    name="COLLECTION_NUMBER"
   />
 </View>
 `;

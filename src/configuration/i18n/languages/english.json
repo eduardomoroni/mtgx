@@ -20,5 +20,8 @@
   "COLOR_IDENTITY": "Color identity",
   "FLAVOR_TEXT": "Flavor text",
   "ARTIST": "Artist",
-  "COLLECTION_NUMBER": "Collection #"
+  "COLLECTION_NUMBER": "Collection #",
+  "RARITY": "Rarity",
+  "SET": "Set",
+  "FORMAT": "Format"
 }

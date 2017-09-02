@@ -1,17 +1,12 @@
 // @flow
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { TextInput, Text, View } from 'react-native'
 import I18n from 'react-native-i18n'
 import { sharedStyles } from './styles/shared.styles'
 
 // TODO: Need to refactor hard this component
 export class NumericInputForm extends Component {
-  static propTypes = {
-    dropdownItems: PropTypes.arrayOf(PropTypes.string).isRequired
-  }
-
   changeNumber = (newValue: string) => {
     const { onChange, value } = this.props.input
 

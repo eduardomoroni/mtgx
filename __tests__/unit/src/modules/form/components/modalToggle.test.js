@@ -11,20 +11,20 @@ const props = {
 }
 
 describe('<ModalToggle />', () => {
-  it('Snapshot', () => {
+  it('should have a snapshot', () => {
     const wrapper = shallow(<ModalToggle {...props} />)
     expect(wrapper.props().style[1]).toEqual({})
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('Should change background color in case of some selected value', () => {
+  it('should change background color in case of some selected value', () => {
     const wrapper = shallow(<ModalToggle {...props} selected={['blue']} />)
     expect(wrapper.props().style[1]).toEqual({ backgroundColor: 'cornsilk' })
   })
 
   it('onPress should call onPress prop function passing label as param', () => {
     const wrapper = shallow(<ModalToggle {...props} />)
-    // Invoking onPress on component and child
+
     wrapper.props().onPress()
     wrapper.props().children.props.onPress()
 
@@ -33,4 +33,3 @@ describe('<ModalToggle />', () => {
     expect(props.onPress.mock.calls).toHaveLength(2)
   })
 })
-
