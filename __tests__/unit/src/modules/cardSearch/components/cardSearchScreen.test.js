@@ -29,4 +29,8 @@ describe('<CardSearchScreen />', () => {
     hideModal()
     expect(wrapper.state('visibleModal')).toEqual('')
   })
+
+  it('should search for cards on button press', () => {
+    // TBD
+  })
 })

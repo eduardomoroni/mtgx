@@ -8,6 +8,8 @@ import { styles } from './styles/manaSymbolBar.styles'
 
 export class ManaSymbolBar extends PureComponent {
   static propTypes = {
+    // TODO: We aren't using that field, it should initialize ManaSymbolBar with some ManaSymbols selected
+    selectedColors: PropTypes.arrayOf(PropTypes.string),
     input: PropTypes.shape({
       onChange: PropTypes.func.isRequired,
       value: PropTypes.oneOfType([PropTypes.arrayOf(string), string]).isRequired
@@ -29,7 +31,6 @@ export class ManaSymbolBar extends PureComponent {
       </TouchableOpacity>
     )
   }
-
   render () {
     return (
       <View style={styles.container}>
