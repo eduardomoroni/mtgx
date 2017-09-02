@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-import PropTypes, { string } from 'prop-types'
+import { string, arrayOf, func } from 'prop-types'
 import { View } from 'react-native'
 import { ManaSymbolBar } from './manaSymbolBar'
 import { Field } from 'redux-form/immutable'
+import Modal from 'react-native-modal'
 
 import {
   TextInputForm,
   NumericInputForm,
   DropdownInputForm,
-  ModalToggle
+  ModalToggle,
+  MultiSelect
 } from '../../form/components'
 
 import { styles } from './styles/cardSearch.styles'
@@ -16,14 +18,41 @@ import { styles } from './styles/cardSearch.styles'
 export class CardSearchScreen extends Component {
   static propTypes = {
     type: string,
-    types: PropTypes.arrayOf(string),
     rarity: string,
     format: string,
-    colors: PropTypes.arrayOf(string),
-    subType: PropTypes.string,
-    subtypes: PropTypes.arrayOf(string),
-    showModal: PropTypes.func,
-    colorsIdentity: PropTypes.arrayOf(string)
+    subType: string,
+    sets: arrayOf(string),
+    types: arrayOf(string),
+    colors: arrayOf(string),
+    formats: arrayOf(string),
+    rarities: arrayOf(string),
+    subtypes: arrayOf(string),
+    colorsIdentity: arrayOf(string),
+    showModal: func
+  }
+
+  openModal = (fieldName, items) => {
+    // TODO: wix/react-native-navigation has built-in Modal, Why are we using an external one?
+    return (
+      <Modal isVisible onModalHide={() => this.props.showModal('')} >
+        <Field name={fieldName} component={MultiSelect} items={items} />
+      </Modal>
+    )
+  }
+
+  switchModals = () => {
+    const { visibleModal, formats, sets, rarities } = this.props
+
+    switch (visibleModal) {
+      case 'cardRarity':
+        return this.openModal('cardRarity', rarities)
+      case 'cardSet':
+        return this.openModal('cardSet', sets)
+      case 'cardFormat':
+        return this.openModal('cardFormat', formats)
+      default:
+        return <View />
+    }
   }
 
   renderThreeColumnsLine = (fieldOne, fieldTwo, fieldThree) => {
@@ -89,6 +118,7 @@ export class CardSearchScreen extends Component {
           )}
         </View>
         <View style={styles.containerFooter} />
+        {this.switchModals()}
       </View>
     )
   }

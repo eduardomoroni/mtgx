@@ -4603,7 +4603,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.5.9:
+prop-types@15.5.10, prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.5.9:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -4714,6 +4714,12 @@ react-dom@next:
     object-assign "^4.1.0"
     prop-types "^15.5.6"
 
+react-native-animatable@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.2.3.tgz#d0f0bd694833b934f3aaa1275739228b786ecb4b"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-config@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.6.0.tgz#0f71631ab5ac4b568637dcb8e9f6ab85ffb380ed"
@@ -4728,6 +4734,13 @@ react-native-firebase@^2.1.2:
 react-native-i18n@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-i18n/-/react-native-i18n-1.0.0.tgz#0c407d9ebb846aae1aa5e05de6503008553f02fd"
+
+react-native-modal@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-3.1.0.tgz#3e6911152e9dcd6e15457cf0c24d7fd833c4a57a"
+  dependencies:
+    prop-types "15.5.10"
+    react-native-animatable "^1.2.3"
 
 react-native-navigation@^1.1.194:
   version "1.1.194"

@@ -225,5 +225,6 @@ exports[`<CardSearchScreen /> Should have a snapshot 1`] = `
       }
     }
   />
+  <View />
 </View>
 `;
