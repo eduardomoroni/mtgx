@@ -6,6 +6,7 @@ import { Field } from 'redux-form/immutable'
 import { Button } from 'nachos-ui'
 import Modal from 'react-native-modal'
 import I18n from 'react-native-i18n'
+import { Map } from 'immutable'
 
 import {
   TextInputForm,
@@ -29,16 +30,15 @@ export class CardSearchScreen extends Component {
     rarity: string,
     format: string,
     subType: string,
-    searchCards: func,
-    // redux-form injects this property
-    handleSubmit: func.isRequired,
-    sets: arrayOf(string),
-    types: arrayOf(string),
     colors: arrayOf(string),
-    formats: arrayOf(string),
-    rarities: arrayOf(string),
-    subtypes: arrayOf(string),
-    colorsIdentity: arrayOf(string)
+    colorsIdentity: arrayOf(string),
+    sets: arrayOf(string).isRequired,
+    types: arrayOf(string).isRequired,
+    formats: arrayOf(string).isRequired,
+    rarities: arrayOf(string).isRequired,
+    subTypes: arrayOf(string).isRequired,
+    handleSubmit: func.isRequired,
+    submitCardSearchForm: func.isRequired
   }
 
   state = { visibleModal: '' }
@@ -74,12 +74,12 @@ export class CardSearchScreen extends Component {
     return null
   }
 
-  renderThreeColumnsLine = (fieldOne, fieldTwo, fieldThree) => {
+  renderThreeColumnsLine = (leftColumn, middleColumn, rightColumn) => {
     return (
       <View style={styles.multipleFieldsPerLine}>
-        <View style={styles.leftField}>{ fieldOne }</View>
-        <View style={styles.middleField}>{ fieldTwo }</View>
-        <View style={styles.rightField}>{ fieldThree }</View>
+        <View style={styles.leftField}>{ leftColumn }</View>
+        <View style={styles.middleField}>{ middleColumn }</View>
+        <View style={styles.rightField}>{ rightColumn }</View>
       </View>
     )
   }
@@ -93,9 +93,9 @@ export class CardSearchScreen extends Component {
     )
   }
 
-  searchForCards = (formFields) => {
+  onSubmit = (formFields: Map) => {
     Keyboard.dismiss()
-    this.props.searchCards(formFields)
+    this.props.submitCardSearchForm(formFields)
   }
 
   render () {
@@ -112,16 +112,24 @@ export class CardSearchScreen extends Component {
       handleSubmit
     } = this.props
 
+    const {
+      showModal,
+      renderTwoColumnsLine,
+      renderThreeColumnsLine,
+      onSubmit
+    } = this
+
     return (
       <View style={styles.container}>
+        {this.renderModal()}
         <View style={styles.formContainer}>
           <Field name='CARD_NAME' component={TextInputForm} />
           <Field name='CARD_TEXT' component={TextInputForm} />
-          {this.renderTwoColumnsLine(
+          {renderTwoColumnsLine(
             <Field name='TYPE' component={DropdownInputForm} dropdownItems={types} selectedValue={type} />,
             <Field name='SUB_TYPE' component={DropdownInputForm} dropdownItems={subTypes} selectedValue={subType} />
           )}
-          {this.renderThreeColumnsLine(
+          {renderThreeColumnsLine(
             <Field name='POWER' component={NumericInputForm} />,
             <Field name='TOUGHNESS' component={NumericInputForm} />,
             <Field name='CMC' component={NumericInputForm} />
@@ -129,27 +137,22 @@ export class CardSearchScreen extends Component {
           <Field name='COLORS' component={ManaSymbolBar} selectedColor={colors} />
           {/* TODO: render an horizontal divider */}
           <Field name='FLAVOR_TEXT' component={TextInputForm} />
-          {this.renderTwoColumnsLine(
+          {renderTwoColumnsLine(
             <Field name='ARTIST' component={TextInputForm} />,
             <Field name='COLLECTION_NUMBER' component={TextInputForm} keyboardType={'numeric'} maxLength={3} />
           )}
-          {this.renderThreeColumnsLine(
-            <ModalToggle label='RARITY' onPress={this.showModal('RARITY')} selected={rarity} />,
-            <ModalToggle label='SET' onPress={this.showModal('SET')} selected={set} />,
-            <ModalToggle label='FORMAT' onPress={this.showModal('FORMAT')} selected={format} />
+          {renderThreeColumnsLine(
+            <ModalToggle label='RARITY' onPress={showModal('RARITY')} selected={rarity} />,
+            <ModalToggle label='SET' onPress={showModal('SET')} selected={set} />,
+            <ModalToggle label='FORMAT' onPress={showModal('FORMAT')} selected={format} />
           )}
           <Field name='COLOR_IDENTITY' component={ManaSymbolBar} selectedColor={colorsIdentity} />
         </View>
         <View style={styles.containerFooter}>
-          <Button
-            kind='squared'
-            iconName='ios-search'
-            onPress={handleSubmit(this.searchForCards)}
-          >
+          <Button kind='squared' iconName='ios-search' onPress={handleSubmit(onSubmit)} >
             {I18n.t('SEARCH')}
           </Button>
         </View>
-        {this.renderModal()}
       </View>
     )
   }
