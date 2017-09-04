@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { styles } from './styles/inputPicker.styles'
@@ -14,7 +16,7 @@ export class InputPicker extends PureComponent {
     selectedValue: ''
   }
 
-  renderPickerItem = (value, key) => {
+  renderPickerItem = (value: number, key: string) => {
     return <Picker.Item label={value} value={value} key={key} />
   }
 

@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react'
 import { string, arrayOf, func } from 'prop-types'
 import { View, Keyboard } from 'react-native'
@@ -10,9 +12,12 @@ import { Map } from 'immutable'
 
 import {
   TextInputForm,
-  NumericInputForm,
-  DropdownInputForm,
   ModalToggle,
+  // $FlowFixMe
+  DropdownInputForm,
+  // $FlowFixMe
+  NumericInputForm,
+  // $FlowFixMe
   MultiSelect
 } from '../../form/components'
 
