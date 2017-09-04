@@ -43,6 +43,11 @@ exports[`<CardSearchScreen /> should have a snapshot 1`] = `
       >
         <Field
           component={[Function]}
+          dropdownItems={
+            Array [
+              "type",
+            ]
+          }
           name="TYPE"
         />
       </View>
@@ -57,6 +62,11 @@ exports[`<CardSearchScreen /> should have a snapshot 1`] = `
       >
         <Field
           component={[Function]}
+          dropdownItems={
+            Array [
+              "subType",
+            ]
+          }
           name="SUB_TYPE"
         />
       </View>

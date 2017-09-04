@@ -45,7 +45,7 @@ export class CardSearchScreen extends Component {
   showModal = (modalId: string) => () => this.setState({ visibleModal: cardSearchModals[modalId] })
   hideModal = () => this.setState({ visibleModal: '' })
 
-  openModal = (fieldName, items) => {
+  openModal = (fieldName: string, items: Array<string>) => {
     // TODO: wix/react-native-navigation has built-in Modal, Why are we using an external one?
     const { hideModal } = this
     return (

@@ -5,7 +5,13 @@ import Modal from 'react-native-modal'
 import { Field } from 'redux-form/immutable'
 
 const props = {
-  handleSubmit: jest.fn()
+  sets: ['set'],
+  types: ['type'],
+  formats: ['format'],
+  rarities: ['rarity'],
+  subTypes: ['subType'],
+  handleSubmit: jest.fn(),
+  submitCardSearchForm: jest.fn()
 }
 
 describe('<CardSearchScreen />', () => {
