@@ -1,6 +1,10 @@
 import { Map } from 'immutable'
 
 export const formFields = Map({
+  COLLECTION_NUMBER: '1',
+})
+
+const test = Map({
   POWER: {number: 0, operator: '='},
   ARTIST: 'ARTIST',
   COLLECTION_NUMBER: '12',

@@ -4,17 +4,18 @@ import _ from 'lodash'
 import { cardType } from './representation/card'
 import * as RealmService from './'
 import {
-  jsonToRealmCard,
-  placeholdersToSymbols,
+  toRealmCard,
   convertCardFormToRealmQueries
 } from './conversion'
 
+const cardCollection = 'Card'
+
 const queryByForm = (form) => {
   const realmQueries = convertCardFormToRealmQueries(form)
-  let results = RealmService.findAll('Card')
+  let results = findAllCards()
 
-  _.each(realmQueries, (query) => {
-    if (query !== undefined && query.length > 0) {
+  _.each(realmQueries, query => {
+    if (query) {
       results = results.filtered(query)
     }
   })
@@ -23,15 +24,15 @@ const queryByForm = (form) => {
 }
 
 const saveCard = (card, update = true) => {
-  RealmService.create('Card', card, update)
+  RealmService.create(cardCollection, card, update)
 }
 
 const findCardByID = (multiverseid: number) : cardType => {
-  return RealmService.objectForPrimaryKey('Card', multiverseid)
+  return RealmService.objectForPrimaryKey(cardCollection, multiverseid)
 }
 
 const findAllCards = () => {
-  return RealmService.findAll('Card')
+  return RealmService.findAll(cardCollection)
 }
 
 const sortCards = (cards, sorting) => {
@@ -39,12 +40,10 @@ const sortCards = (cards, sorting) => {
   return cards.sorted(field, reversed)
 }
 
-const importFromJSON = (mtgJson) => {
-  mtgJson.cards.forEach((card) => {
-    card.text = placeholdersToSymbols(card.text)
-    const cardAsRealmObject = jsonToRealmCard(card)
+const importFromJSON = (mtgJSON) => {
+  mtgJSON.cards.forEach(card => {
     try {
-      saveCard(cardAsRealmObject, true)
+      saveCard(toRealmCard(card), true)
     } catch (e) {
       console.error(`Failed to insert ${card.name}:`, e)
       throw (e)

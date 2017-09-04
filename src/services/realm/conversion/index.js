@@ -1,6 +1,7 @@
 // @flow
 
 import _ from 'lodash'
+import { placeholdersToSymbols } from './placeholder'
 
 const convertionMap = {
   types: 'type',
@@ -44,7 +45,6 @@ const isArrayOfString = (key) => {
   return convertionMap[key]
 }
 
-export { placeholdersToSymbols } from './placeholder'
 
 export const inheritanceToArray = (realmRepresentation: Object) => {
   const detectKeyValue = (obj) => {
@@ -56,8 +56,9 @@ export const inheritanceToArray = (realmRepresentation: Object) => {
   return _.toArray(withoutFieldName)
 }
 
-export const jsonToRealmCard = (jsonCard: Object) => {
+export const toRealmCard = (jsonCard: Object) => {
   let realmObject = _.cloneDeep(jsonCard)
+  realmObject.text = placeholdersToSymbols(jsonCard.text)
 
   _.forEach(realmObject, (value, key) => {
     if (isArrayOfString(key)) {

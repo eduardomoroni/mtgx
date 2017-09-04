@@ -1,6 +1,7 @@
 import { initializeDatabase, cleanDatabase } from '../../configuration/realm'
 import CardsJSON from '../../../../assets/AER-X.json'
 import { cardFixture } from '../../../../fixtures/realmCardsFixture'
+import { formFields } from '../../../../fixtures/cardSearchFormFixture'
 import {
   queryByForm,
   findCardByID,
@@ -19,12 +20,14 @@ describe('Realm Card Service', () => {
     cleanDatabase()
   })
 
-  xit('should query cards filtering by card search form', () => {
-    expect(queryByForm({})).toEqual(true)
+  it('should query cards filtering by card search form', () => {
+    console.log('===> formFields is: ', formFields)
+    const result = queryByForm(formFields)
+    expect(result).toHaveLength(1)
   })
 
   xit('should sort query results', () => {
-    expect(sortCards({})).toEqual(null)
+    expect(sortCards(formFields)).toEqual(null)
   })
 
   it('should import cards from JSON file', async () => {
