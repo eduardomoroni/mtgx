@@ -1,4 +1,4 @@
-import { toArray, toRealmArray } from '../../../../../../src/services/realm/conversion'
+import { toArray, toRealmArray, realmKeyValueObjectArray } from '../../../../../../src/services/realm/conversion'
 
 describe('Realm conversions', () => {
   it('should convert inheritance realm representation to string array', () => {
@@ -18,5 +18,15 @@ describe('Realm conversions', () => {
     const realmRepresentation = {'printings': [{'printing': 'AER'}, {'printing': 'EDM'}]}
 
     expect(toRealmArray(objWithStringArray)).toEqual(realmRepresentation)
+  })
+
+  it('should realmKeyValueObjectArray', () => {
+    const array = ['AER', 'EDM']
+    const key = 'printings'
+    const expectedArray = [{'printing': 'AER'}, {'printing': 'EDM'}]
+
+    const keyValueArray = realmKeyValueObjectArray(key, array)
+
+    expect(keyValueArray).toEqual(expectedArray)
   })
 })

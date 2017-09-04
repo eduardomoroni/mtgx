@@ -1,38 +1,30 @@
 import _ from 'lodash'
 import { placeholdersToSymbols } from './placeholder'
+import { realmKeyValueObjectArray } from './'
 
-const convertionMap = {
-  types: 'type',
-  subtypes: 'subType',
-  colors: 'color',
-  colorIdentity: 'colorIdentity',
-  printings: 'printing',
-  supertypes: 'superType'
+function isNumeric (num) {
+  return !isNaN(num)
 }
 
-const shouldBeAndInt = (key) => {
-  const intProperties = ['cmc', 'multiverseid', 'power', 'toughness']
-  return intProperties.includes(key)
+function isArrayOfStrings (array) {
+  return Array.isArray(array) && typeof array[0] === 'string'
 }
 
-const isArrayOfString = (key) => {
-  return convertionMap[key]
-}
-
-// TODO: Refactor this with toRealmArray
 export const toRealmCard = (jsonCard: Object) => {
   let realmObject = _.cloneDeep(jsonCard)
-  realmObject.text = placeholdersToSymbols(jsonCard.text)
 
-  _.forEach(realmObject, (value, key) => {
-    if (isArrayOfString(key)) {
-      realmObject[key] = _.map(jsonCard[key], fieldValue => {
-        return {[convertionMap[key]]: fieldValue}
-      })
-    } else if (shouldBeAndInt(key)) {
-      realmObject[key] = parseInt(value) // TODO: Test this
-    }
-  })
+  if (jsonCard.text) {
+    realmObject.text = placeholdersToSymbols(jsonCard.text)
+  }
+
+  Object.entries(realmObject)
+    .forEach(([key, value]) => {
+      if (isNumeric(value)) {
+        realmObject[key] = parseInt(value)
+      } else if (isArrayOfStrings(value)) {
+        realmObject[key] = realmKeyValueObjectArray(key, value)
+      }
+    })
 
   return realmObject
 }

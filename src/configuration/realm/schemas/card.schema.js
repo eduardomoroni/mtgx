@@ -7,7 +7,7 @@ export const cardSchema = {
     'artist': 'string',
     'id': 'string',
     'name': 'string',
-    'number': 'string',
+    'number': 'int',
     'rarity': 'string',
     'type': 'string',
     'imageName': {type: 'string', optional: true},

@@ -20,7 +20,7 @@ const singularize = (pluralWord: string) => {
   return convert[pluralWord]
 }
 
-const realmKeyValueObjectArray = (key: string, array: Array<string>) => {
+export const realmKeyValueObjectArray = (key: string, array: Array<string>) => {
   return array.map(value => {
     return { [singularize(key)]: value }
   })

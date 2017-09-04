@@ -12,7 +12,7 @@ export const cardFixture = {
   manaCost: '{4}{W}',
   multiverseid: 423668,
   name: 'Aerial Modification',
-  number: '1',
+  number: 1,
   rarity: 'Uncommon',
   subtypes: [{subType: 'Aura'}],
   text: 'Enchant creature or Vehicle\nAs long as enchanted permanent is a Vehicle, it\'s a creature in addition to its other types.\nEnchanted creature gets +2/+2 and has flying.',
