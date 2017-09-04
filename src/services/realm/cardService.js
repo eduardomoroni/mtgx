@@ -1,6 +1,5 @@
 // @flow
 
-import _ from 'lodash'
 import { cardType } from './representation/card'
 import * as RealmService from './'
 import {
@@ -9,19 +8,6 @@ import {
 } from './conversion'
 
 const cardCollection = 'Card'
-
-const queryByForm = (form) => {
-  const realmQueries = convertCardFormToRealmQueries(form)
-  let results = findAllCards()
-
-  _.each(realmQueries, query => {
-    if (query) {
-      results = results.filtered(query)
-    }
-  })
-
-  return results
-}
 
 const saveCard = (card, update = true) => {
   RealmService.create(cardCollection, card, update)
@@ -33,6 +19,11 @@ const findCardByID = (multiverseid: number) : cardType => {
 
 const findAllCards = () => {
   return RealmService.findAll(cardCollection)
+}
+
+const queryByForm = async (formFields) => {
+  const realmQueries = convertCardFormToRealmQueries(formFields)
+  return findAllCards().filtered(realmQueries.join(' AND '))
 }
 
 const importFromJSON = (mtgJSON) => {

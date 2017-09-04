@@ -1,6 +1,3 @@
-// TODO: create this
-export const cardsFixture = {}
-
 export const cardFixture = {
   artist: 'Jung Park',
   cmc: 5,

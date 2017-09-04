@@ -1,5 +1,19 @@
 import { Map } from 'immutable'
 
+export const aerialModificationForm = Map({
+  COLLECTION_NUMBER: '1',
+  ARTIST: 'Jung Park',
+  COLORS: ['White'],
+  CMC: {number: 5, operator: '<='},
+  SUB_TYPE: 'Aura',
+  COLOR_IDENTITY: ['W'],
+  CARD_NAME: 'Aerial Modification',
+  TYPE: 'Enchantment',
+  CARD_TEXT: 'Enchant',
+  RARITY: ['Uncommon'],
+  SET: ['AER']
+})
+
 export const formFields = Map({
   COLLECTION_NUMBER: '1',
   POWER: {number: 0, operator: '='},
