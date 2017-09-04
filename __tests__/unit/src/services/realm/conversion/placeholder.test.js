@@ -20,6 +20,4 @@ describe('Realm placeholder conversion', () => {
   it('should return empty string if receives undefined arg', () => {
     expect(placeholdersToSymbols(undefined)).toBe('')
   })
-
 })
-

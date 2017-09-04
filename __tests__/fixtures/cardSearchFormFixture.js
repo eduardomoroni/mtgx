@@ -1,7 +1,7 @@
 import { Map } from 'immutable'
 
 export const formFields = Map({
-  COLLECTION_NUMBER: '1',
+  COLLECTION_NUMBER: '1'
 })
 
 const test = Map({

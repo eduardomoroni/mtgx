@@ -2,10 +2,9 @@
 
 export const placeholdersToSymbols = (cardText) => {
   const curlyBracesRegex = /[{}]+/
-  const newCardText = (cardText || '').split(curlyBracesRegex)
+  return (cardText || '').split(curlyBracesRegex)
     .map(a => convertionMap[a] || a)
     .join('')
-  return newCardText
 }
 
 function unicodeChar (value) {
