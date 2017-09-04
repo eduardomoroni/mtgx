@@ -1,13 +1,9 @@
 import { Map } from 'immutable'
 
 export const formFields = Map({
-  COLLECTION_NUMBER: '1'
-})
-
-const test = Map({
+  COLLECTION_NUMBER: '1',
   POWER: {number: 0, operator: '='},
   ARTIST: 'ARTIST',
-  COLLECTION_NUMBER: '12',
   FLAVOR_TEXT: 'FLAVOR',
   COLORS: ['blue', 'red'],
   TOUGHNESS: {number: 1, operator: '>'},

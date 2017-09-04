@@ -1,7 +1,7 @@
 // @flow
 
 import Realm from 'realm'
-import { inheritanceToArray } from './conversion'
+import { toArray } from './conversion'
 import { defaultConfig } from '../../configuration/realm'
 
 let realm
@@ -64,7 +64,7 @@ function create (type: string, properties: Object, update?: boolean = true): ?Re
 }
 
 function distinctValues (collection: string) {
-  return inheritanceToArray(findAll(collection).snapshot())
+  return toArray(findAll(collection).snapshot())
 }
 
 function removeFromCollection (collection: string, key: keyType) {

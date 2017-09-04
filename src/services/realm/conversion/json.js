@@ -19,6 +19,7 @@ const isArrayOfString = (key) => {
   return convertionMap[key]
 }
 
+// TODO: Refactor this with toRealmArray
 export const toRealmCard = (jsonCard: Object) => {
   let realmObject = _.cloneDeep(jsonCard)
   realmObject.text = placeholdersToSymbols(jsonCard.text)
