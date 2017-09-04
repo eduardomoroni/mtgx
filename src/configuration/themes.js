@@ -1,3 +1,5 @@
+// @flow
+
 import { themeManager } from 'nachos-ui'
 
 const buttonTheme = themeManager.getStyle('Button')
