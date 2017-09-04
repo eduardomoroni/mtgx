@@ -17,3 +17,21 @@ export const formFields = Map({
   SET: ['Khans of Tarkir'],
   FORMAT: ['Legacy', 'Modern']
 })
+
+export const formFieldsQuery = [
+  'number = "1"',
+  'power = 0',
+  'artist CONTAINS[c] "ARTIST"',
+  'flavor CONTAINS[c] "FLAVOR"',
+  'colors.color = "blue" OR colors.color = "red"',
+  'toughness > 1',
+  'cmc < 5',
+  'subtypes.subType = "SUBTYPE"',
+  'colorIdentity.colorIdentity = "green" OR colorIdentity.colorIdentity = "black" OR colorIdentity.colorIdentity = "white"',
+  'name CONTAINS[c] "NAME"',
+  'types.type = "TYPE"',
+  'text CONTAINS[c] "TEXT"',
+  'rarity = "Uncommon" OR rarity = "Mythic Rare"',
+  'printings.printing = "Khans of Tarkir"',
+  'legalities.format = "Legacy" OR legalities.format = "Modern"'
+]

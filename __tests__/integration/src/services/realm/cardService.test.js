@@ -19,7 +19,7 @@ describe('Realm Card Service', () => {
     cleanDatabase()
   })
 
-  xit('should query cards filtering by card search form', () => {
+  it('should query cards filtering by card search form', () => {
     const result = queryByForm(formFields)
     expect(result).toHaveLength(1)
   })
