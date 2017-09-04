@@ -3,7 +3,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import type { Dispatch } from 'redux'
 import { LoginScreen } from '../components/loginScreen'
 import { signInUser } from '../../../redux/thunks/authenticationThunks'
 import { inAppNotification } from '../../../constants/navigation'
@@ -42,7 +41,7 @@ class LoginScreenContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({ message: state.get('message') })
-const mapDispatchToProps = (dispatch: Dispatch<*>) => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   logUserIn: (email, password) => dispatch(signInUser(email, password))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(LoginScreenContainer)

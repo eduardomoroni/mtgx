@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import type { Dispatch } from 'redux'
 import { reduxForm, formValueSelector } from 'redux-form/immutable'
 
 import { distinctValues } from '../../../services/realm'
@@ -78,7 +77,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<*>) => {
+const mapDispatchToProps = (dispatch: Function) => {
   return { submitCardSearchForm: (form) => dispatch(queryCardByForm(form)) }
 }
 

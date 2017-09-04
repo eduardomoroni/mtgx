@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PureComponent } from 'react'
 import { View, TouchableOpacity } from 'react-native'
 import _ from 'lodash'
@@ -16,7 +18,7 @@ export class ManaSymbolBar extends PureComponent {
     })
   }
 
-  toggleColor = (color) => {
+  toggleColor = (color: string) => {
     const { onChange, value } = this.props.input
     return onChange(_.xor(value, [color]))
   }

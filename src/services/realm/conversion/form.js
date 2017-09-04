@@ -1,4 +1,6 @@
-import { Map } from 'immutable'
+// @flow
+
+import type { Map } from 'immutable'
 
 const mapFormToRealm = {
   CARD_NAME: 'name CONTAINS[c]',
@@ -18,21 +20,30 @@ const mapFormToRealm = {
   FORMAT: 'legalities.format ='
 }
 
-function arrayToQuery (array, selector, operator = 'OR') {
+function arrayQuery (array: Array<any>, selector: string, operator?: string = 'OR'): string {
   return array.reduce((acc, current) => {
     return acc ? `${acc} ${operator} ${selector} "${current}"` : `${selector} "${current}"`
   }, '')
 }
 
-export const convertCardFormToRealmQueries = (cardForm: Map): Array<String> => {
+function numericQuery (key: string, value: any): string {
+  return `${key} ${value.operator} ${value.number}`
+}
+
+function normalQuery (key: string, value: any): string {
+  return `${key} "${value}"`
+}
+
+export const convertCardFormToRealmQueries = (cardForm: Map): Array<string> => {
   return Object.entries(cardForm.toJS())
       .map(([key, value]) => {
+        const mappedKey = mapFormToRealm[key]
         if (Array.isArray(value)) {
-          return arrayToQuery(value, mapFormToRealm[key])
+          return arrayQuery(value, mappedKey)
         } else if (typeof value === 'object') {
-          return `${mapFormToRealm[key]} ${value.operator} ${value.number}`
+          return numericQuery(mappedKey, value)
         } else {
-          return `${mapFormToRealm[key]} "${value}"`
+          return normalQuery(mappedKey, value)
         }
       })
 }

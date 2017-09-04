@@ -1,3 +1,5 @@
+// @flow
+
 import { initialize } from '../services/firebase'
 
 export function initializeFirebase () {

@@ -1,3 +1,5 @@
+// @flow
+
 import { Record } from 'immutable'
 import { combineReducers } from 'redux-immutable'
 

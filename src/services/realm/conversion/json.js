@@ -1,3 +1,5 @@
+// @flow
+
 import _ from 'lodash'
 import { placeholdersToSymbols } from './placeholder'
 import { realmKeyValueObjectArray } from './'
