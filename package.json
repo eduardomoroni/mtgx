@@ -81,7 +81,8 @@
       "jest"
     ],
     "global": [
-      "__DEV__"
+      "__DEV__",
+      "fail"
     ],
     "ignore": [
       "flow-typed/"

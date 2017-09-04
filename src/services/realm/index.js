@@ -25,8 +25,6 @@ export {
 }
 
 function changeRealm (realmConfig: Object = defaultConfig) {
-  // TODO: Descobrir a diferença entre new Realm e Realm.open
-  // https://realm.io/docs/javascript/1.10.0/api/Realm.html
   realm = new Realm(realmConfig)
 }
 

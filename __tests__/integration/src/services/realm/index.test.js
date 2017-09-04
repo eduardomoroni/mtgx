@@ -1,5 +1,5 @@
-import { subTypeFixture, printingFixture } from '../fixture/realm'
-import { initializeDatabase, cleanDatabase } from '../configuration/realm'
+import { subTypeFixture, printingFixture } from '../../fixture/realm/index'
+import { initializeDatabase, cleanDatabase } from '../../configuration/realm/index'
 import {
   create,
   findAll,
@@ -7,7 +7,7 @@ import {
   objectForPrimaryKey,
   distinctValues,
   removeFromCollection
-} from '../../../../src/services/realm'
+} from '../../../../../src/services/realm/index'
 
 describe('Realm Service', () => {
   beforeAll(() => {

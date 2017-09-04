@@ -1,2 +1,21 @@
 // TODO: create this
 export const cardsFixture = {}
+
+export const cardFixture = {
+  artist: 'Jung Park',
+  cmc: 5,
+  colorIdentity: [{colorIdentity: 'W'}],
+  colors: [{color: 'White'}],
+  id: 'd6901a23503f4953dc3f643b193a7bdb31478fc2',
+  imageName: 'aerial modification',
+  layout: 'normal',
+  manaCost: '{4}{W}',
+  multiverseid: 423668,
+  name: 'Aerial Modification',
+  number: '1',
+  rarity: 'Uncommon',
+  subtypes: [{subType: 'Aura'}],
+  text: 'Enchant creature or Vehicle\nAs long as enchanted permanent is a Vehicle, it\'s a creature in addition to its other types.\nEnchanted creature gets +2/+2 and has flying.',
+  type: 'Enchantment — Aura',
+  types: [{type: 'Enchantment'}]
+}

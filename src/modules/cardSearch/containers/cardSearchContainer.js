@@ -4,9 +4,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import type { Dispatch } from 'redux'
 import { reduxForm, formValueSelector } from 'redux-form/immutable'
-import { distinctValues } from '../../../services/realm'
 
+import { distinctValues } from '../../../services/realm'
 import { CardSearchScreen } from '../components/cardSearchScreen'
+import { queryCardByForm } from '../../../redux/thunks/cardsThunks'
 
 class CardSearchScreenContainer extends Component {
   render () {
@@ -78,7 +79,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<*>) => {
-  return { submitCardSearchForm: (form) => console.log(form) }
+  return { submitCardSearchForm: (form) => dispatch(queryCardByForm(form)) }
 }
 
 const cardSearchContainerDecorated = reduxForm({ form })(CardSearchScreenContainer)
