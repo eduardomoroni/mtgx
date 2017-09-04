@@ -6,7 +6,7 @@ import { setCards } from '../actions/cardsActions'
 import type { Map } from 'immutable'
 import type { Dispatch } from 'redux'
 
-export function queryCardByForm (form: Map) {
+export async function queryCardByForm (form: Map): Promise<any> {
   return async (dispatch: Dispatch<*>) => {
     try {
       const cards = await queryByForm(form)

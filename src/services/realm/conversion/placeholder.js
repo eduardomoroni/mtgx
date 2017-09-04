@@ -1,6 +1,6 @@
 // @flow
 
-export const placeholdersToSymbols = (cardText) => {
+export const placeholdersToSymbols = (cardText: string) => {
   const curlyBracesRegex = /[{}]+/
   return (cardText || '').split(curlyBracesRegex)
     .map(a => convertionMap[a] || a)
