@@ -18,7 +18,7 @@ describe('Authentication thunks', () => {
   const mockDispatch = jest.fn()
 
   it('should send a message during user signout', async () => {
-    Authentication.signOut = jest.fn(() => Promise.resolve())
+    Authentication.signOut = jest.fn(Promise.resolve)
     const expectedAction = showMessage(I18n.t('USER_SIGNED_OUT'))
 
     const thunk = signOutUser()
@@ -28,7 +28,7 @@ describe('Authentication thunks', () => {
   })
 
   it('should send a message during user password reset', async () => {
-    Authentication.sendPasswordResetEmail = jest.fn(() => Promise.resolve())
+    Authentication.sendPasswordResetEmail = jest.fn(Promise.resolve)
     const expectedAction = showMessage(I18n.t('EMAIL_RESETED_SUCCESSFULLY'))
 
     const thunk = resetUserPassword()
