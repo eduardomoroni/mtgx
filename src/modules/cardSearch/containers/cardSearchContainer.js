@@ -4,14 +4,49 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import type { Dispatch } from 'redux'
 import { reduxForm, formValueSelector } from 'redux-form/immutable'
-import { distinctValues } from '../../../services/realm'
 
+import { distinctValues } from '../../../services/realm'
 import { CardSearchScreen } from '../components/cardSearchScreen'
+import { queryCardByForm } from '../../../redux/thunks/cardsThunks'
 
 class CardSearchScreenContainer extends Component {
   render () {
+    const {
+      set,
+      sets,
+      type,
+      types,
+      rarity,
+      colors,
+      format,
+      formats,
+      subType,
+      subTypes,
+      rarities,
+      handleSubmit,
+      colorsIdentity,
+      submitCardSearchForm
+    } = this.props
+
+    const cardSearchProps = {
+      set,
+      sets,
+      type,
+      types,
+      rarity,
+      colors,
+      format,
+      formats,
+      subType,
+      subTypes,
+      rarities,
+      handleSubmit,
+      colorsIdentity,
+      submitCardSearchForm
+    }
+
     return (
-      <CardSearchScreen {...this.props} />
+      <CardSearchScreen {...cardSearchProps} />
     )
   }
 }
@@ -39,12 +74,12 @@ const mapStateToProps = (state) => {
     colors: selector(state, 'colors'),
     subType: selector(state, 'subType'),
     formats: distinctValues('Legality'),
-    printings: distinctValues('Printing')
+    sets: distinctValues('Printing')
   }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<*>) => {
-  return {}
+  return { submitCardSearchForm: (form) => dispatch(queryCardByForm(form)) }
 }
 
 const cardSearchContainerDecorated = reduxForm({ form })(CardSearchScreenContainer)
