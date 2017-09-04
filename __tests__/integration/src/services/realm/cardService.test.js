@@ -5,7 +5,6 @@ import { formFields } from '../../../../fixtures/cardSearchFormFixture'
 import {
   queryByForm,
   findCardByID,
-  sortCards,
   saveCard,
   findAllCards,
   importFromJSON
@@ -23,10 +22,6 @@ describe('Realm Card Service', () => {
   xit('should query cards filtering by card search form', () => {
     const result = queryByForm(formFields)
     expect(result).toHaveLength(1)
-  })
-
-  xit('should sort query results', () => {
-    expect(sortCards(formFields)).toEqual(null)
   })
 
   it('should import cards from JSON file', async () => {

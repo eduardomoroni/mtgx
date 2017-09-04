@@ -20,9 +20,9 @@ export const initializeDatabase = () => {
 
 export const cleanDatabase = () => {
   processUsingRealm--
+  deleteAll()
 
   if (nobodyIsUsingRealm()) {
-    deleteAll()
     closeRealm()
   }
 }

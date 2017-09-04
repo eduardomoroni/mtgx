@@ -35,11 +35,6 @@ const findAllCards = () => {
   return RealmService.findAll(cardCollection)
 }
 
-const sortCards = (cards, sorting) => {
-  const { field, reversed } = sorting.sortBy
-  return cards.sorted(field, reversed)
-}
-
 const importFromJSON = (mtgJSON) => {
   mtgJSON.cards.forEach(card => {
     try {
@@ -53,7 +48,6 @@ const importFromJSON = (mtgJSON) => {
 
 export {
   findCardByID,
-  sortCards,
   queryByForm,
   importFromJSON,
   saveCard,
