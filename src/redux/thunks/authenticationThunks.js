@@ -1,3 +1,5 @@
+// @flow
+
 import I18n from 'react-native-i18n'
 import { setUser } from '../actions/authenticationActions'
 import { showMessage } from '../actions/alertActions'
@@ -8,9 +10,10 @@ import {
   sendPasswordResetEmail,
   signOut
 } from '../../services/firebase/authentication'
+import type { Dispatch } from 'redux'
 
-export function createUser (email, password) {
-  return async (dispatch) => {
+export async function createUser (email: string, password: string) {
+  return async (dispatch: Dispatch<*>) => {
     try {
       const user = await createUserWithEmailAndPassword(email, password)
       dispatch(setUser(user))
@@ -21,8 +24,8 @@ export function createUser (email, password) {
   }
 }
 
-export function signInUser (email, password) {
-  return async (dispatch) => {
+export async function signInUser (email: string, password: string) {
+  return async (dispatch: Dispatch<*>) => {
     try {
       const user = await signInWithEmailAndPassword(email, password)
       dispatch(setUser(user))
@@ -33,8 +36,8 @@ export function signInUser (email, password) {
   }
 }
 
-export function resetUserPassword (email) {
-  return async (dispatch) => {
+export async function resetUserPassword (email: string) {
+  return async (dispatch: Dispatch<*>) => {
     try {
       await sendPasswordResetEmail(email)
       dispatch(showMessage(I18n.t('EMAIL_RESETED_SUCCESSFULLY')))
@@ -45,8 +48,8 @@ export function resetUserPassword (email) {
   }
 }
 
-export function signOutUser () {
-  return async (dispatch) => {
+export async function signOutUser () {
+  return async (dispatch: Dispatch<*>) => {
     await signOut()
     dispatch(showMessage(I18n.t('USER_SIGNED_OUT')))
   }
