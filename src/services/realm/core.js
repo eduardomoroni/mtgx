@@ -74,7 +74,7 @@ function removeFromCollection (collection: string, key: keyType) {
   }
 }
 
+// WARNING: This will delete all objects in the Realm!
 function deleteAll () {
-  // WARNING: This will delete all objects in the Realm!
   write(() => { realm.deleteAll() })
 }

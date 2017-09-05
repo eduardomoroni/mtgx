@@ -4,7 +4,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { reduxForm, formValueSelector } from 'redux-form/immutable'
 
-import { distinctValues } from '../../../services/realm'
+// TODO: What about isolare realm/core access?
+import { distinctValues } from '../../../services/realm/core'
 import { CardSearchScreen } from '../components/cardSearchScreen'
 import { queryCardByForm } from '../../../redux/thunks/cardsThunks'
 

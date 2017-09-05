@@ -1,5 +1,5 @@
 import { convertCardFormToRealmQueries } from '../../../../../../src/services/realm/conversion/form'
-import { formFields, formFieldsQuery } from '../../../../../fixtures/cardSearchFormFixture'
+import { formFields, formFieldsQuery } from '../../../../../assets/fixtures/cardSearchFormFixture'
 import { Map } from 'immutable'
 
 describe('Realm form conversion', () => {

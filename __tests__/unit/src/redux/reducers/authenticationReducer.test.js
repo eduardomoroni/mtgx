@@ -1,5 +1,5 @@
 import { setUser } from '../../../../../src/redux/actions/authenticationActions'
-import { firebaseUser } from '../../../../fixtures/firebaseUserFixture'
+import { firebaseUser } from '../../../../assets/fixtures/firebaseUserFixture'
 import { User } from '../../../../../src/services/firebase/user'
 import AuthenticationReducer, { initialState } from '../../../../../src/redux/reducers/authenticationReducer'
 
