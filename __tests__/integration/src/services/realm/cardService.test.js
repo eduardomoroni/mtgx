@@ -1,7 +1,7 @@
-import { initializeDatabase, cleanDatabase } from '../../configuration/realm'
+import { connectDatabase, closeDatabase } from '../../configuration/realm'
 import CardsJSON from '../../../../assets/AER-X.json'
-import { cardFixture } from '../../../../fixtures/realmCardsFixture'
-import { aerialModificationForm } from '../../../../fixtures/cardSearchFormFixture'
+import { cardFixture } from '../../../../assets/fixtures/realmCardsFixture'
+import { aerialModificationForm } from '../../../../assets/fixtures/cardSearchFormFixture'
 import {
   queryByForm,
   findCardByID,
@@ -12,11 +12,11 @@ import {
 
 describe('Realm Card Service', () => {
   beforeAll(() => {
-    initializeDatabase()
+    connectDatabase()
   })
 
   afterAll(() => {
-    cleanDatabase()
+    closeDatabase()
   })
 
   it('should import cards from JSON file', async () => {

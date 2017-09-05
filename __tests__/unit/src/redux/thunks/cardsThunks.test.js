@@ -1,7 +1,7 @@
 import { setCards } from '../../../../../src/redux/actions/cardsActions'
-import { cardFixture } from '../../../../fixtures/realmCardsFixture'
+import { cardFixture } from '../../../../assets/fixtures/realmCardsFixture'
 import { queryCardByForm } from '../../../../../src/redux/thunks/cardsThunks'
-import { formFields } from '../../../../fixtures/cardSearchFormFixture'
+import { formFields } from '../../../../assets/fixtures/cardSearchFormFixture'
 
 import * as CardService from '../../../../../src/services/realm/cardService'
 jest.mock('../../../../../src/services/realm/cardService')

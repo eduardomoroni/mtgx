@@ -1,6 +1,6 @@
 // @flow
 
-import * as RealmService from './'
+import * as RealmService from './core'
 import {
   toRealmCard,
   convertCardFormToRealmQueries

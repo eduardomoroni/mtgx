@@ -1,5 +1,5 @@
-import { subTypeFixture, printingFixture } from '../../fixture/realm/index'
-import { initializeDatabase, cleanDatabase } from '../../configuration/realm/index'
+import { subTypeFixture, printingFixture } from '../../fixture/realm'
+import { connectDatabase, closeDatabase } from '../../configuration/realm'
 import {
   create,
   findAll,
@@ -7,15 +7,15 @@ import {
   objectForPrimaryKey,
   distinctValues,
   removeFromCollection
-} from '../../../../../src/services/realm/index'
+} from '../../../../../src/services/realm/core'
 
 describe('Realm Service', () => {
   beforeAll(() => {
-    initializeDatabase()
+    connectDatabase()
   })
 
   afterAll(() => {
-    cleanDatabase()
+    closeDatabase()
   })
 
   it('should create a new realm object', () => {

@@ -1,7 +1,7 @@
 import I18n from 'react-native-i18n'
 import { showMessage } from '../../../../../src/redux/actions/alertActions'
 import { setUser } from '../../../../../src/redux/actions/authenticationActions'
-import { firebaseUser } from '../../../../fixtures/firebaseUserFixture'
+import { firebaseUser } from '../../../../assets/fixtures/firebaseUserFixture'
 import { User } from '../../../../../src/services/firebase/user'
 import {
   signOutUser,
