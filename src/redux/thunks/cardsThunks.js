@@ -5,7 +5,7 @@ import { queryByForm } from '../../services/realm/cardService'
 import { setCards } from '../actions/cardsActions'
 import type { Map } from 'immutable'
 
-export async function queryCardByForm (form: Map) {
+export function queryCardByForm (form: Map) {
   return async (dispatch: Function) => {
     try {
       const cards = await queryByForm(form)

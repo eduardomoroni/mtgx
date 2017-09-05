@@ -12,7 +12,7 @@ import {
 } from '../../services/firebase/authentication'
 import type { Dispatch } from 'redux'
 
-export async function createUser (email: string, password: string) {
+export function createUser (email: string, password: string) {
   return async (dispatch: Dispatch<*>) => {
     try {
       const user = await createUserWithEmailAndPassword(email, password)
@@ -24,7 +24,7 @@ export async function createUser (email: string, password: string) {
   }
 }
 
-export async function signInUser (email: string, password: string) {
+export function signInUser (email: string, password: string) {
   return async (dispatch: Dispatch<*>) => {
     try {
       const user = await signInWithEmailAndPassword(email, password)
@@ -36,7 +36,7 @@ export async function signInUser (email: string, password: string) {
   }
 }
 
-export async function resetUserPassword (email: string) {
+export function resetUserPassword (email: string) {
   return async (dispatch: Dispatch<*>) => {
     try {
       await sendPasswordResetEmail(email)
@@ -48,7 +48,7 @@ export async function resetUserPassword (email: string) {
   }
 }
 
-export async function signOutUser () {
+export function signOutUser () {
   return async (dispatch: Dispatch<*>) => {
     await signOut()
     dispatch(showMessage(I18n.t('USER_SIGNED_OUT')))
