@@ -42,7 +42,8 @@ class CardSearchScreenContainer extends Component {
       rarities,
       handleSubmit,
       colorsIdentity,
-      submitCardSearchForm
+      submitCardSearchForm,
+      navigator: this.props.navigator
     }
 
     return (

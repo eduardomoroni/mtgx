@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import { string, arrayOf, func } from 'prop-types'
+import { string, arrayOf, func, object } from 'prop-types'
 import { View, Keyboard } from 'react-native'
 import { ManaSymbolBar } from './manaSymbolBar'
 import { Field } from 'redux-form/immutable'
@@ -42,6 +42,7 @@ export class CardSearchScreen extends Component {
     formats: arrayOf(string).isRequired,
     rarities: arrayOf(string).isRequired,
     subTypes: arrayOf(string).isRequired,
+    navigator: object.isRequired,
     handleSubmit: func.isRequired,
     submitCardSearchForm: func.isRequired
   }
@@ -101,6 +102,7 @@ export class CardSearchScreen extends Component {
   onSubmit = (formFields: Map) => {
     Keyboard.dismiss()
     this.props.submitCardSearchForm(formFields)
+    this.props.navigator.push({screen: 'card.results'})
   }
 
   render () {
