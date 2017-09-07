@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardImage /> should have a snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    onError={[Function]}
+    onLoad={[Function]}
+    resizeMethod="scale"
+    resizeMode="contain"
+    source={
+      Object {
+        "uri": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=123456&type=card",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <ActivityIndicator
+    animating={true}
+    color="#999999"
+    hidesWhenStopped={true}
+    size="large"
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  />
+</View>
+`;

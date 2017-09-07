@@ -1,13 +1,13 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import { View, Image, ActivityIndicator } from 'react-native'
-import { cardType } from '../types/cardType'
 import { styles } from './styles/cardImage.styles'
 
 export class CardImage extends PureComponent {
   static propTypes = {
-    card: cardType
+    multiverseid: PropTypes.number
   }
 
   state = { loading: true }
@@ -17,8 +17,8 @@ export class CardImage extends PureComponent {
   }
 
   render () {
-    const { multiverseid } = this.props.cardImage
-    const IMG_URL = `http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${multiverseid}&type=card`
+    const { multiverseId } = this.props
+    const IMG_URL = `http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${multiverseId}&type=card`
 
     return (
       <View style={styles.container}>
@@ -28,7 +28,7 @@ export class CardImage extends PureComponent {
           style={styles.image}
           source={{uri: IMG_URL}}
           onLoad={() => this.setState({loading: false})}
-          onError={(error) => console.error('Error while loading card image', error)} />
+          onError={() => console.error('Error while loading card image')} />
         {this.renderSpinner()}
       </View>
     )

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchResultsScreen /> should have a snapshot 1`] = `
+<ListViewMock
+  contentContainerStyle={null}
+  dataSource={Object {}}
+  renderRow={[Function]}
+  renderScrollComponent={[Function]}
+  renderSeparator={[Function]}
+  style={
+    Object {
+      "flex": 1,
+      "paddingTop": 64,
+    }
+  }
+/>
+`;

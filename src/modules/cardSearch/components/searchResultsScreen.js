@@ -16,18 +16,18 @@ export class SearchResultsScreen extends Component {
   }
 
   static defaultProps = {
-    showAsImage: false,
+    showAsImage: true,
     showCardText: true
   }
 
   renderRow = (card: Object, sectionID: number, rowID: number) => {
-    const { showCardText, showAsImage } = this.props
+    const { showAsImage } = this.props
     const style = showAsImage ? styles.cardImage : null
-    const cardComponent = showAsImage ? this.renderCardImage(card, rowID)
-                                      : this.renderCard(card, rowID, showCardText)
+    const cardComponent = showAsImage ? this.renderCardImage(card.multiverseid)
+                                      : this.renderCard(card)
 
     return (
-      <TouchableOpacity onPress={() => this.showDetails(card)} style={style} >
+      <TouchableOpacity onPress={() => this.showDetails(card)} style={style} key={rowID + sectionID} >
         {cardComponent}
       </TouchableOpacity>
     )
@@ -37,12 +37,13 @@ export class SearchResultsScreen extends Component {
     console.log('===> navigate to card details', card)
   }
 
-  renderCard = (card: Object, rowID: number, showCardText: boolean) => {
-    return <Card key={rowID} card={{...card}} showCardText={showCardText} />
+  renderCard = (card: Object) => {
+    const { showCardText } = this.props
+    return <Card card={{...card}} showCardText={showCardText} />
   }
 
-  renderCardImage = (card: Object, rowID: number) => {
-    return <CardImage key={rowID} card={{...card}} />
+  renderCardImage = (multiverseId: number) => {
+    return <CardImage multiverseId={multiverseId} />
   }
 
   render () {
