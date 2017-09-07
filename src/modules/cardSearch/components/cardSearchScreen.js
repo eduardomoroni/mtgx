@@ -58,9 +58,9 @@ export class CardSearchScreen extends Component {
 
     try {
       await submitCardSearchForm(formFields)
-      navigator.push({screen: 'cardImage.results'})
+      navigator.push({screen: 'card.results'})
     } catch (error) {
-      warn('Error occurred during cardImage search', error)
+      warn('Error occurred during card search', error)
     }
   }
 

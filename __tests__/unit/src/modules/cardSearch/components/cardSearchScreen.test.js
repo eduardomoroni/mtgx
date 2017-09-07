@@ -54,10 +54,10 @@ describe('<CardSearchScreen />', () => {
     await button.simulate('press')
 
     expect(props.submitCardSearchForm).toHaveBeenCalledWith(mockedForm)
-    expect(props.navigator.push).toHaveBeenCalledWith({screen: 'cardImage.results'})
+    expect(props.navigator.push).toHaveBeenCalledWith({screen: 'card.results'})
   })
 
-  it('should not navigate in case of exception during cardImage search', async () => {
+  it('should not navigate in case of exception during card search', async () => {
     const mockError = jest.fn((value) => Promise.reject(new Error('TEST ERROR - JUST IGNORE', value)))
     const wrapper = shallow(<CardSearchScreen {...props} submitCardSearchForm={mockError} />)
 

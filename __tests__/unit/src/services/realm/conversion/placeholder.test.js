@@ -9,7 +9,7 @@ describe('Realm placeholder conversion', () => {
     expect(placeholdersToSymbols(testString)).toBe(expectedString)
   })
 
-  it('should replace symbol placeholder for Unicode Symbol on cardImage text', () => {
+  it('should replace symbol placeholder for Unicode Symbol on card text', () => {
     const unicodeRep = String.fromCharCode(parseInt('e907', 16)) + String.fromCharCode(parseInt('e907', 16))
     const text = 'Text {E}{E} Text.'
     const expectedText = `Text ${unicodeRep} Text.`

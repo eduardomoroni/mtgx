@@ -11,7 +11,7 @@ export function queryCardByForm (form: Map) {
       const cards = await queryByForm(form)
       dispatch(setCards(cards))
     } catch (error) {
-      warn('Error occured during search a cardImage: ', error)
+      warn('Error occured during search a card: ', error)
       throw error
     }
   }
