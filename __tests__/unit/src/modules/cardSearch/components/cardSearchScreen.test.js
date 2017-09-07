@@ -13,7 +13,7 @@ const props = {
   rarities: ['rarity'],
   subTypes: ['subType'],
   submitCardSearchForm: jest.fn(() => Promise.resolve()),
-  handleSubmit: jest.fn(callback => callback(mockedForm)),
+  handleSubmit: (callback) => jest.fn(() => callback(mockedForm)),
   navigator: {
     push: jest.fn()
   }
@@ -58,7 +58,7 @@ describe('<CardSearchScreen />', () => {
   })
 
   it('should not navigate in case of exception during card search', async () => {
-    const mockError = jest.fn(() => Promise.reject(new Error('TEST ERROR - JUST IGNORE')))
+    const mockError = jest.fn((value) => Promise.reject(new Error('TEST ERROR - JUST IGNORE', value)))
     const wrapper = shallow(<CardSearchScreen {...props} submitCardSearchForm={mockError} />)
 
     await wrapper.find(Button).simulate('press')

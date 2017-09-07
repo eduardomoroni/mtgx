@@ -247,14 +247,7 @@ exports[`<CardSearchScreen /> should have a snapshot 1`] = `
       iconPosition="right"
       kind="squared"
       onLongPress={[Function]}
-      onPress={
-        Promise {
-          "_40": 0,
-          "_55": undefined,
-          "_65": 1,
-          "_72": null,
-        }
-      }
+      onPress={[Function]}
       onPressIn={[Function]}
       onPressOut={[Function]}
       type="primary"
