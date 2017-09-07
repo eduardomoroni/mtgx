@@ -7,7 +7,6 @@ import PropTypes from 'prop-types'
 import { CardImage } from '../components/cardImage'
 import { Card } from '../components/card'
 import { styles } from './styles/searchResultsScreen.styles'
-import { cardType } from '../types/cardType'
 
 export class SearchResultsScreen extends Component {
   static propTypes = {
@@ -21,29 +20,29 @@ export class SearchResultsScreen extends Component {
     showCardText: true
   }
 
-  renderRow = (rowData: cardType, sectionID: number, rowID: number) => {
+  renderRow = (card: Object, sectionID: number, rowID: number) => {
     const { showCardText, showAsImage } = this.props
     const style = showAsImage ? styles.cardImage : null
-    const cardComponent = showAsImage ? this.renderCardImage(rowData, rowID)
-                                      : this.renderCard(rowData, rowID, showCardText)
+    const cardComponent = showAsImage ? this.renderCardImage(card, rowID)
+                                      : this.renderCard(card, rowID, showCardText)
 
     return (
-      <TouchableOpacity onPress={() => this.showDetails(rowData)} style={style} >
+      <TouchableOpacity onPress={() => this.showDetails(card)} style={style} >
         {cardComponent}
       </TouchableOpacity>
     )
   }
 
-  showDetails = (card: cardType) => {
+  showDetails = (card: Object) => {
     console.log('===> navigate to card details', card)
   }
 
-  renderCard = (rowData, rowID, showCardText) => {
-    return <Card key={rowID} card={{...rowData}} showCardText={showCardText} />
+  renderCard = (card: Object, rowID: number, showCardText: boolean) => {
+    return <Card key={rowID} card={{...card}} showCardText={showCardText} />
   }
 
-  renderCardImage = (rowData, rowID) => {
-    return <CardImage key={rowID} card={{...rowData}} />
+  renderCardImage = (card: Object, rowID: number) => {
+    return <CardImage key={rowID} card={{...card}} />
   }
 
   render () {

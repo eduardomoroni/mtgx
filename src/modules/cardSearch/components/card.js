@@ -5,8 +5,12 @@ import PropTypes from 'prop-types'
 import { View, Text } from 'react-native'
 
 import { placeholdersToSymbols } from '../../../services/realm/conversion/placeholder' // TODO: REVISIT
-import { cardType, printingsType } from '../types/cardType'
+import { cardType } from '../types/cardType'
 import { styles } from './styles/card.styles'
+
+type printingsType = {
+  [string]: {[printing: string]: string}
+}
 
 // TODO: REVISIT
 export const getLastPrinting = (printings: printingsType) => {
