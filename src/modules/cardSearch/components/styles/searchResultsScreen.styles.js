@@ -6,11 +6,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingTop: metrics.navBarHeight
   },
-  contentContainer: {
+  imageContentStyle: {
     flexDirection: 'row',
     flexWrap: 'wrap'
   },
-  card: {
+  cardImage: {
     marginHorizontal: metrics.smallMargin,
     width: metrics.screenWidth / 2 - metrics.smallMargin * 2,
     // TODO: Try to get dynamically Height proportion
