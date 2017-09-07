@@ -46,6 +46,10 @@
 		6C4E5740A76E4FA69D0F5527 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C6B83CF039455B90ABFA05 /* libRealmReact.a */; };
 		4E5795A61EBC463A89656029 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8CB535010643E0A33177E7 /* libc++.tbd */; };
 		E03EA7E0F449403BA47532E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 573469D2D2E64B8AA4C20490 /* libz.tbd */; };
+		1084E386A76E49D5AB954C1D /* beleren.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B0D7C15917740C9BF8C7031 /* beleren.ttf */; };
+		84742DF4A1FA40AB8C5A18D9 /* mana.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 953997D528834A3F916A006E /* mana.ttf */; };
+		9E55E3E9C85C46D09C6FB498 /* mplantin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC264810F7B4A33A4FD4369 /* mplantin.ttf */; };
+		9173ADC73F154565ADE82A5B /* mtgx.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B193DB0ACD140119D087D37 /* mtgx.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,6 +341,10 @@
 		E2C6B83CF039455B90ABFA05 /* libRealmReact.a */ = {isa = PBXFileReference; name = "libRealmReact.a"; path = "libRealmReact.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		FF8CB535010643E0A33177E7 /* libc++.tbd */ = {isa = PBXFileReference; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 		573469D2D2E64B8AA4C20490 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		8B0D7C15917740C9BF8C7031 /* beleren.ttf */ = {isa = PBXFileReference; name = "beleren.ttf"; path = "../src/assets/fonts/beleren.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		953997D528834A3F916A006E /* mana.ttf */ = {isa = PBXFileReference; name = "mana.ttf"; path = "../src/assets/fonts/mana.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4DC264810F7B4A33A4FD4369 /* mplantin.ttf */ = {isa = PBXFileReference; name = "mplantin.ttf"; path = "../src/assets/fonts/mplantin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5B193DB0ACD140119D087D37 /* mtgx.ttf */ = {isa = PBXFileReference; name = "mtgx.ttf"; path = "../src/assets/fonts/mtgx.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,6 +578,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				CDC8B9D1C85A73897A5CB401 /* Pods */,
 				ACDBA0D85DC313C09CA16EF3 /* Frameworks */,
+				66B553D54B20434094D7A34B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -629,6 +638,18 @@
 			);
 			name = Pods;
 			sourceTree = "<group>";
+		};
+		66B553D54B20434094D7A34B /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				8B0D7C15917740C9BF8C7031 /* beleren.ttf */,
+				953997D528834A3F916A006E /* mana.ttf */,
+				4DC264810F7B4A33A4FD4369 /* mplantin.ttf */,
+				5B193DB0ACD140119D087D37 /* mtgx.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -1060,6 +1081,10 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				CDA2B3421F45393100DC1560 /* GoogleService-Info.plist in Resources */,
+				1084E386A76E49D5AB954C1D /* beleren.ttf in Resources */,
+				84742DF4A1FA40AB8C5A18D9 /* mana.ttf in Resources */,
+				9E55E3E9C85C46D09C6FB498 /* mplantin.ttf in Resources */,
+				9173ADC73F154565ADE82A5B /* mtgx.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

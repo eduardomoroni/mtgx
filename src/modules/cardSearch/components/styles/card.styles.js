@@ -8,29 +8,24 @@ export const styles = StyleSheet.create({
     flex: 1
   },
   text: {
-    // fontFamily: fonts.type.mtg,
-    // fontsize: fonts.size.regular,
-    // color: colors.black
+    fontFamily: fonts.type.mtg,
+    color: colors.black
   },
   cardPowerToughness: {
-    // fontFamily: fonts.type.mtg,
-    // fontsize: fonts.size.regular,
+    fontFamily: fonts.type.mtg,
     color: colors.black
   },
   cardNameText: {
-    // fontFamily: fonts.type.beleren,
-    // fontsize: fonts.size.regular,
+    fontFamily: fonts.type.beleren,
     color: colors.black
   },
   cardTypeText: {
-    // fontFamily: fonts.type.mtg,
-    // fontsize: fonts.size.medium,
+    fontFamily: fonts.type.mtg,
     color: colors.black
   },
   mana: {
-    // fontFamily: fonts.type.mtg,
+    fontFamily: fonts.type.mtg,
     color: colors.black
-    // fontsize: fonts.size.small
   },
   lineContainer: {
     flexDirection: 'row',
