@@ -20,9 +20,9 @@ class SearchResultsContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const cards = state.get('cards')
-  const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.id !== r2.id})
-  return { dataSource: ds.cloneWithRows(cards) }
+  const dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.id !== r2.id})
+                                 .cloneWithRows(state.get('cards'))
+  return { dataSource }
 }
 
 const mapDispatchToProps = (dispatch: Function) => {
