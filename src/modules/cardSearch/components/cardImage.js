@@ -1,32 +1,18 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import {
-  View,
-  StyleSheet,
-  Image,
-  ActivityIndicator
-} from 'react-native'
+import { View, Image, ActivityIndicator } from 'react-native'
 import { cardType } from '../types/cardType'
-
-type CardImageProps = {
-  card: cardType
-}
-
-type CardImageState = {
-  loading: boolean
-}
+import { styles } from './styles/cardImage.styles'
 
 export class CardImage extends PureComponent {
-  props: CardImageProps
-  state: CardImageState
-
-  constructor () {
-    super()
-    this.state = { loading: true }
+  static propTypes = {
+    card: cardType
   }
 
-  renderSpinner (isLoading: boolean) {
+  state = { loading: true }
+
+  renderSpinner = (isLoading: boolean) => {
     return isLoading ? <ActivityIndicator style={styles.spinner} size='large' /> : <View />
   }
 
@@ -43,21 +29,8 @@ export class CardImage extends PureComponent {
           style={styles.image}
           source={{uri: IMG_URL}}
           onLoad={() => this.setState({loading: false})}
-          onError={() => console.error('Error while loading card image')} />
+          onError={(error) => console.error('Error while loading card image', error)} />
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  image: {
-    flex: 1
-  },
-  spinner: {
-    flex: 1,
-    justifyContent: 'center'
-  }
-})

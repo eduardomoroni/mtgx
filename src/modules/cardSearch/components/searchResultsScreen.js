@@ -18,7 +18,7 @@ export class SearchResultsScreen extends Component {
   }
 
   static defaultProps = {
-    showCardsAs: 'list',
+    showCardsAs: 'image',
     showCardText: true
   }
 
