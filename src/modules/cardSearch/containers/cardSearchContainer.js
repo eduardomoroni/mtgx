@@ -23,6 +23,7 @@ class CardSearchScreenContainer extends Component {
       subType,
       subTypes,
       rarities,
+      navigator,
       handleSubmit,
       colorsIdentity,
       submitCardSearchForm
@@ -40,6 +41,7 @@ class CardSearchScreenContainer extends Component {
       subType,
       subTypes,
       rarities,
+      navigator,
       handleSubmit,
       colorsIdentity,
       submitCardSearchForm

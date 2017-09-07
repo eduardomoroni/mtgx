@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import { string, arrayOf, func } from 'prop-types'
+import { string, arrayOf, func, object } from 'prop-types'
 import { View, Keyboard } from 'react-native'
 import { ManaSymbolBar } from './manaSymbolBar'
 import { Field } from 'redux-form/immutable'
@@ -9,6 +9,7 @@ import { Button } from 'nachos-ui'
 import Modal from 'react-native-modal'
 import I18n from 'react-native-i18n'
 import { Map } from 'immutable'
+import { warn } from '../../../services/logger'
 
 import {
   TextInputForm,
@@ -42,6 +43,7 @@ export class CardSearchScreen extends Component {
     formats: arrayOf(string).isRequired,
     rarities: arrayOf(string).isRequired,
     subTypes: arrayOf(string).isRequired,
+    navigator: object.isRequired,
     handleSubmit: func.isRequired,
     submitCardSearchForm: func.isRequired
   }
@@ -49,6 +51,18 @@ export class CardSearchScreen extends Component {
   state = { visibleModal: '' }
   showModal = (modalId: string) => () => this.setState({ visibleModal: cardSearchModals[modalId] })
   hideModal = () => this.setState({ visibleModal: '' })
+
+  onSubmit = async (formFields: Map) => {
+    const { submitCardSearchForm, navigator } = this.props
+    Keyboard.dismiss()
+
+    try {
+      await submitCardSearchForm(formFields)
+      navigator.push({screen: 'card.results'})
+    } catch (error) {
+      warn('Error occurred during card search', error)
+    }
+  }
 
   openModal = (fieldName: string, items: Array<string>) => {
     // TODO: wix/react-native-navigation has built-in Modal, Why are we using an external one?
@@ -96,11 +110,6 @@ export class CardSearchScreen extends Component {
         <View style={styles.rightField}>{ secondColumn }</View>
       </View>
     )
-  }
-
-  onSubmit = (formFields: Map) => {
-    Keyboard.dismiss()
-    this.props.submitCardSearchForm(formFields)
   }
 
   render () {

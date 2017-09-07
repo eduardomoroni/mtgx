@@ -12,6 +12,7 @@ export function queryCardByForm (form: Map) {
       dispatch(setCards(cards))
     } catch (error) {
       warn('Error occured during search a card: ', error)
+      throw error
     }
   }
 }
