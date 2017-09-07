@@ -19,6 +19,6 @@ export function registerScreens () {
   Navigation.registerComponent('authentication.forgotpassword', () => ForgotPasswordScreen, store, Provider)
   Navigation.registerComponent('notification', () => NotificationScreen, store, Provider)
   Navigation.registerComponent('app.drawer', () => DrawerContainer, store, Provider)
-  Navigation.registerComponent('card.search', () => CardSearchScreen, store, Provider)
-  Navigation.registerComponent('card.results', () => SearchResultsScreen, store, Provider)
+  Navigation.registerComponent('cardImage.search', () => CardSearchScreen, store, Provider)
+  Navigation.registerComponent('cardImage.results', () => SearchResultsScreen, store, Provider)
 }

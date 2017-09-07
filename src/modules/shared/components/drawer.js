@@ -27,7 +27,7 @@ export class Drawer extends Component {
           kind='squared'
           type='success'
           style={{ width: 300 }}
-          onPress={() => this.props.navigateTo('card.search')}
+          onPress={() => this.props.navigateTo('cardImage.search')}
         >
           {I18n.t('SEARCH')}
         </Button>

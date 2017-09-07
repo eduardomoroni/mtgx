@@ -9,7 +9,7 @@ jest.mock('../../../../../src/services/realm/cardService')
 describe('Cards thunks', () => {
   const mockDispatch = jest.fn()
 
-  it('should query card by form', async () => {
+  it('should query cardImage by form', async () => {
     CardService.queryByForm = jest.fn(() => Promise.resolve(cardFixture))
     const expectedAction = setCards(cardFixture)
 

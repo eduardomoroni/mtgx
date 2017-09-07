@@ -24,19 +24,19 @@ describe('Realm Card Service', () => {
     expect(await findAllCards()).toHaveLength(194)
   })
 
-  it('should save a card', () => {
+  it('should save a cardImage', () => {
     const id = cardFixture.id
     saveCard(cardFixture)
     expect(findCardByID(id).id).toEqual(id)
   })
 
-  it('should find a card for its ID', () => {
+  it('should find a cardImage for its ID', () => {
     const id = cardFixture.id
     saveCard(cardFixture)
     expect(findCardByID(id).id).toEqual(id)
   })
 
-  it('should query cards filtering by card search form', async () => {
+  it('should query cards filtering by cardImage search form', async () => {
     importFromJSON(CardsJSON)
     const cardId = 'd6901a23503f4953dc3f643b193a7bdb31478fc2'
     const result = await queryByForm(aerialModificationForm)

@@ -12,17 +12,16 @@ export class CardImage extends PureComponent {
 
   state = { loading: true }
 
-  renderSpinner = (isLoading: boolean) => {
-    return isLoading ? <ActivityIndicator style={styles.spinner} size='large' /> : <View />
+  renderSpinner = () => {
+    return this.state.loading ? <ActivityIndicator style={styles.spinner} size='large' /> : <View />
   }
 
   render () {
-    const { multiverseid } = this.props.card
+    const { multiverseid } = this.props.cardImage
     const IMG_URL = `http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${multiverseid}&type=card`
 
     return (
       <View style={styles.container}>
-        {this.renderSpinner(this.state.loading)}
         <Image
           resizeMode='contain'
           resizeMethod='scale'
@@ -30,6 +29,7 @@ export class CardImage extends PureComponent {
           source={{uri: IMG_URL}}
           onLoad={() => this.setState({loading: false})}
           onError={(error) => console.error('Error while loading card image', error)} />
+        {this.renderSpinner()}
       </View>
     )
   }

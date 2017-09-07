@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react'
 import { View, ListView, TouchableOpacity } from 'react-native'
 import PropTypes from 'prop-types'
@@ -7,51 +9,52 @@ import { Card } from '../components/card'
 import { styles } from './styles/searchResultsScreen.styles'
 import { cardType } from '../types/cardType'
 
-const showDetails = (card: cardType, cards) => {
-}
-
 export class SearchResultsScreen extends Component {
   static propTypes = {
     dataSource: PropTypes.object.isRequired,
-    showCardsAs: PropTypes.string,
+    showAsImage: PropTypes.bool,
     showCardText: PropTypes.bool
   }
 
   static defaultProps = {
-    showCardsAs: 'image',
+    showAsImage: false,
     showCardText: true
   }
 
-  isDisplayingAsImage () {
-    return this.props.showCardsAs === 'image'
-  }
-
   renderRow = (rowData: cardType, sectionID: number, rowID: number) => {
-    const { showCardText, cards } = this.props
+    const { showCardText, showAsImage } = this.props
+    const style = showAsImage ? styles.cardImage : null
+    const cardComponent = showAsImage ? this.renderCardImage(rowData, rowID)
+                                      : this.renderCard(rowData, rowID, showCardText)
 
     return (
-      <TouchableOpacity
-        onPress={() => showDetails(rowData, cards)}
-        style={this.isDisplayingAsImage() ? styles.card : {}} >
-        {this.isDisplayingAsImage() ? <CardImage card={{...rowData}} key={rowID} /> : <Card card={{...rowData}} key={rowID} showCardText={showCardText} />}
+      <TouchableOpacity onPress={() => this.showDetails(rowData)} style={style} >
+        {cardComponent}
       </TouchableOpacity>
     )
   }
 
+  showDetails = (card: cardType) => {
+    console.log('===> navigate to card details', card)
+  }
+
+  renderCard = (rowData, rowID, showCardText) => {
+    return <Card key={rowID} card={{...rowData}} showCardText={showCardText} />
+  }
+
+  renderCardImage = (rowData, rowID) => {
+    return <CardImage key={rowID} card={{...rowData}} />
+  }
+
   render () {
-    const {
-      showCardsAs,
-      showCardText,
-      dataSource
-    } = this.props
+    const { dataSource, showAsImage } = this.props
 
     return (
       <ListView
-        key={showCardsAs + showCardText}
-        style={styles.container}
-        contentContainerStyle={this.isDisplayingAsImage() ? styles.contentContainer : {}}
-        renderRow={this.renderRow}
         dataSource={dataSource}
+        style={styles.container}
+        renderRow={this.renderRow}
+        contentContainerStyle={showAsImage ? styles.imageContentStyle : null}
         renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
       />
     )
