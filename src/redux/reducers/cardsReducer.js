@@ -9,6 +9,7 @@ export const initialState = Immutable.fromJS('')
 export default function (state: Map = initialState, action: { [string]: Map }) {
   switch (action.type) {
     case SET_CARDS:
+      console.log('===> action.cards is: ', action.cards)
       return action.cards
     default:
       return state
