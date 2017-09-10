@@ -34,7 +34,6 @@ export class SearchResultsScreen extends Component {
     )
   }
 
-  // TODO: TEST
   showDetails = (multiverseid: number) => {
     this.props.navigator.push({
       screen: 'card.details',
@@ -43,8 +42,7 @@ export class SearchResultsScreen extends Component {
   }
 
   renderCard = (card: Object) => {
-    const { showCardText } = this.props
-    return <Card card={{...card}} showCardText={showCardText} />
+    return <Card card={{...card}} showCardText={this.props.showCardText} />
   }
 
   renderCardImage = (multiverseId: number) => {

@@ -7,8 +7,7 @@ import { styles } from './styles/cardImage.styles'
 
 export class CardImage extends PureComponent {
   static propTypes = {
-    multiverseid: PropTypes.number,
-    style: PropTypes.number // TODO: This is a StyleSheet
+    multiverseid: PropTypes.number
   }
 
   state = { loading: true }

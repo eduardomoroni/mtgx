@@ -4,6 +4,7 @@ import { SearchResultsScreen } from '../../../../../../src/modules/cardSearch/co
 
 const props = {
   dataSource: {},
+  navigator: {},
   showAsImage: false,
   showCardText: true
 }
