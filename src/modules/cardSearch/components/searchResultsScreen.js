@@ -28,27 +28,17 @@ export class SearchResultsScreen extends Component {
                                       : this.renderCard(card)
 
     return (
-      <TouchableOpacity onPress={() => this.showDetails(card)} style={style} key={rowID + sectionID} >
+      <TouchableOpacity onPress={() => this.showDetails(card.multiverseid)} style={style} key={rowID} >
         {cardComponent}
       </TouchableOpacity>
     )
   }
 
-  // TODO: test
-  // This object is a Realm object, which contain value as JS proxies, during the convertion to passProps we get an
-  // error
-  showDetails = (card: Object) => {
-    let newCard = {}
-
-    for (const property in card) {
-      if (card.hasOwnProperty(property)) {
-        newCard[property] = String(card[property])
-      }
-    }
-
+  // TODO: TEST
+  showDetails = (multiverseid: number) => {
     this.props.navigator.push({
       screen: 'card.details',
-      passProps: {card: newCard}
+      passProps: {multiverseId: multiverseid}
     })
   }
 

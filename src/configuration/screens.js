@@ -11,7 +11,7 @@ import CardSearchScreen from '../modules/cardSearch/containers/cardSearchContain
 import SearchResultsScreen from '../modules/cardSearch/containers/searchResultsContainer'
 import NotificationScreen from '../modules/shared/containers/notificationContainer'
 import DrawerContainer from '../modules/shared/containers/drawerContainer'
-import { CardDetailsScreen } from '../modules/cardSearch/components/cardDetailsScreen'
+import CardDetailsScreen from '../modules/cardSearch/containers/cardDetailsContainer'
 
 export function registerScreens () {
   const store = createMtgxStore()
