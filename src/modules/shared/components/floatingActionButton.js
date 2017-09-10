@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ActionButton from 'react-native-action-button'
@@ -35,4 +37,3 @@ export class FloatingActionButton extends Component {
     )
   }
 }
-

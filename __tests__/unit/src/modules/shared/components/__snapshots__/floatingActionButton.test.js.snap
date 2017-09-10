@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FloatingActionButton /> Should render InputLabel Component 1`] = `
+<ActionButton
+  active={false}
+  activeOpacity={0.85}
+  autoInactive={true}
+  backdrop={false}
+  backgroundTappable={false}
+  bgColor="transparent"
+  bgOpacity={1}
+  buttonColor="rgba(231,76,60,1)"
+  buttonText="+"
+  buttonTextStyle={Object {}}
+  degrees={45}
+  fixNativeFeedbackRadius={false}
+  nativeFeedbackRippleColor="rgba(255,255,255,0.75)"
+  offsetX={30}
+  offsetY={30}
+  onPress={[Function]}
+  onPressIn={[Function]}
+  onPressOn={[Function]}
+  outRangeScale={1}
+  position="right"
+  resetToken={null}
+  size={56}
+  spacing={20}
+  useNativeFeedback={true}
+  verticalOrientation="up"
+>
+  <ActionButtonItem
+    active={true}
+    activeOpacity={0.85}
+    buttonColor="#9b59b6"
+    fixNativeFeedbackRadius={false}
+    nativeFeedbackRippleColor="rgba(255,255,255,0.75)"
+    onPress={[Function]}
+    spaceBetween={15}
+    title="Share"
+    useNativeFeedback={true}
+  >
+    <Icon
+      allowFontScaling={false}
+      name="md-share"
+      size={12}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 20,
+          "height": 22,
+        }
+      }
+    />
+  </ActionButtonItem>
+  <ActionButtonItem
+    active={true}
+    activeOpacity={0.85}
+    buttonColor="#3498db"
+    fixNativeFeedbackRadius={false}
+    nativeFeedbackRippleColor="rgba(255,255,255,0.75)"
+    onPress={[Function]}
+    spaceBetween={15}
+    title="Add to Deck"
+    useNativeFeedback={true}
+  >
+    <Icon
+      allowFontScaling={false}
+      name="md-folder-open"
+      size={12}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 20,
+          "height": 22,
+        }
+      }
+    />
+  </ActionButtonItem>
+  <ActionButtonItem
+    active={true}
+    activeOpacity={0.85}
+    buttonColor="#1abc9c"
+    fixNativeFeedbackRadius={false}
+    nativeFeedbackRippleColor="rgba(255,255,255,0.75)"
+    onPress={[Function]}
+    spaceBetween={15}
+    title="Add to TradeList"
+    useNativeFeedback={true}
+  >
+    <Icon
+      allowFontScaling={false}
+      name="md-swap"
+      size={12}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 20,
+          "height": 22,
+        }
+      }
+    />
+  </ActionButtonItem>
+</ActionButton>
+`;
