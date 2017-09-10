@@ -34,6 +34,7 @@
     "react": "next",
     "react-dom": "next",
     "react-native": "0.47.1",
+    "react-native-action-button": "^2.8.0",
     "react-native-config": "0.6.0",
     "react-native-firebase": "^2.1.2",
     "react-native-i18n": "1.0.0",

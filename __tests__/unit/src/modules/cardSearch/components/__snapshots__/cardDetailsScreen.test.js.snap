@@ -5,7 +5,6 @@ exports[`<CardDetailsScreen /> should have a snapshot 1`] = `
   style={
     Object {
       "flex": 1,
-      "paddingTop": 64,
     }
   }
 >
@@ -286,5 +285,29 @@ exports[`<CardDetailsScreen /> should have a snapshot 1`] = `
       </Text>
     </Text>
   </View>
+  <FloatingActionButton
+    items={
+      Array [
+        Object {
+          "buttonColor": "#9b59b6",
+          "name": "md-share",
+          "onPress": [Function],
+          "title": "Share",
+        },
+        Object {
+          "buttonColor": "#3498db",
+          "name": "md-folder-open",
+          "onPress": [Function],
+          "title": "Add to Deck",
+        },
+        Object {
+          "buttonColor": "#1abc9c",
+          "name": "md-swap",
+          "onPress": [Function],
+          "title": "Add to TradeList",
+        },
+      ]
+    }
+  />
 </ScrollViewMock>
 `;

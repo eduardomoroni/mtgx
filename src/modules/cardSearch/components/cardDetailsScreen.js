@@ -7,6 +7,25 @@ import { Text, View, ScrollView } from 'react-native'
 import { styles } from './styles/cardDetailsScreen.styles'
 import { CardImage } from './cardImage'
 import { cardType } from '../types/cardType'
+import { FloatingActionButton } from '../../shared/components/floatingActionButton'
+
+const fabItems = [
+  { name: 'md-share',
+    buttonColor: '#9b59b6',
+    title: 'Share',
+    onPress: () => null
+  }, {
+    name: 'md-folder-open',
+    buttonColor: '#3498db',
+    title: 'Add to Deck',
+    onPress: () => null
+  }, {
+    name: 'md-swap',
+    buttonColor: '#1abc9c',
+    title: 'Add to TradeList',
+    onPress: () => null
+  }
+]
 
 export class CardDetailsScreen extends Component {
   static propTypes = {
@@ -41,6 +60,7 @@ export class CardDetailsScreen extends Component {
         {this.renderRow('RARITY', card.rarity)}
         {this.renderRow('CARD_TEXT', card.text)}
         {this.renderRow('FLAVOR_TEXT', card.flavor)}
+        <FloatingActionButton items={fabItems} />
       </ScrollView>
     )
   }
