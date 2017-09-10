@@ -11,6 +11,7 @@ import CardSearchScreen from '../modules/cardSearch/containers/cardSearchContain
 import SearchResultsScreen from '../modules/cardSearch/containers/searchResultsContainer'
 import NotificationScreen from '../modules/shared/containers/notificationContainer'
 import DrawerContainer from '../modules/shared/containers/drawerContainer'
+import { CardDetailsScreen } from '../modules/cardSearch/components/cardDetailsScreen'
 
 export function registerScreens () {
   const store = createMtgxStore()
@@ -21,4 +22,5 @@ export function registerScreens () {
   Navigation.registerComponent('app.drawer', () => DrawerContainer, store, Provider)
   Navigation.registerComponent('card.search', () => CardSearchScreen, store, Provider)
   Navigation.registerComponent('card.results', () => SearchResultsScreen, store, Provider)
+  Navigation.registerComponent('card.details', () => CardDetailsScreen, store, Provider)
 }

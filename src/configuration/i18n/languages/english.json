@@ -1,5 +1,4 @@
 {
-  "test": "Testing",
   "EMAIL_RESETED_SUCCESSFULLY": "EMAIL_RESETED_SUCCESSFULLY",
   "USER_SIGNED_OUT": "USER_SIGNED_OUT",
   "EMAIL": "Email",
@@ -24,5 +23,7 @@
   "RARITY": "Rarity",
   "SET": "Set",
   "FORMAT": "Format",
-  "CLOSE": "Close"
+  "CLOSE": "Close",
+  "POWER_TOUGHNESS": "Power/Toughness",
+  "MANA_COST": "Mana Cost"
 }

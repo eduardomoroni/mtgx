@@ -11,6 +11,7 @@ import { styles } from './styles/searchResultsScreen.styles'
 export class SearchResultsScreen extends Component {
   static propTypes = {
     dataSource: PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired,
     showAsImage: PropTypes.bool,
     showCardText: PropTypes.bool
   }
@@ -33,8 +34,22 @@ export class SearchResultsScreen extends Component {
     )
   }
 
+  // TODO: test
+  // This object is a Realm object, which contain value as JS proxies, during the convertion to passProps we get an
+  // error
   showDetails = (card: Object) => {
-    console.log('===> navigate to card details', card)
+    let newCard = {}
+
+    for (const property in card) {
+      if (card.hasOwnProperty(property)) {
+        newCard[property] = String(card[property])
+      }
+    }
+
+    this.props.navigator.push({
+      screen: 'card.details',
+      passProps: {card: newCard}
+    })
   }
 
   renderCard = (card: Object) => {

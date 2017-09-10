@@ -14,7 +14,10 @@ class SearchResultsContainer extends Component {
 
   render () {
     return (
-      <SearchResultsScreen dataSource={this.props.dataSource} />
+      <SearchResultsScreen
+        dataSource={this.props.dataSource}
+        navigator={this.props.navigator}
+      />
     )
   }
 }
@@ -25,8 +28,4 @@ const mapStateToProps = (state) => {
   return { dataSource }
 }
 
-const mapDispatchToProps = (dispatch: Function) => {
-  return { }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(SearchResultsContainer)
+export default connect(mapStateToProps)(SearchResultsContainer)
