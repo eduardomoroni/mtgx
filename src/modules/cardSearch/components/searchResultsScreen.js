@@ -11,6 +11,7 @@ import { styles } from './styles/searchResultsScreen.styles'
 export class SearchResultsScreen extends Component {
   static propTypes = {
     dataSource: PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired,
     showAsImage: PropTypes.bool,
     showCardText: PropTypes.bool
   }
@@ -27,19 +28,21 @@ export class SearchResultsScreen extends Component {
                                       : this.renderCard(card)
 
     return (
-      <TouchableOpacity onPress={() => this.showDetails(card)} style={style} key={rowID + sectionID} >
+      <TouchableOpacity onPress={() => this.showDetails(card.multiverseid)} style={style} key={rowID} >
         {cardComponent}
       </TouchableOpacity>
     )
   }
 
-  showDetails = (card: Object) => {
-    console.log('===> navigate to card details', card)
+  showDetails = (multiverseid: number) => {
+    this.props.navigator.push({
+      screen: 'card.details',
+      passProps: {multiverseId: multiverseid}
+    })
   }
 
   renderCard = (card: Object) => {
-    const { showCardText } = this.props
-    return <Card card={{...card}} showCardText={showCardText} />
+    return <Card card={{...card}} showCardText={this.props.showCardText} />
   }
 
   renderCardImage = (multiverseId: number) => {

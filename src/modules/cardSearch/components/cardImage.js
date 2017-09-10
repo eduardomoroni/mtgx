@@ -17,11 +17,11 @@ export class CardImage extends PureComponent {
   }
 
   render () {
-    const { multiverseId } = this.props
+    const { multiverseId, style } = this.props
     const IMG_URL = `http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${multiverseId}&type=card`
 
     return (
-      <View style={styles.container}>
+      <View style={style || styles.container}>
         <Image
           resizeMode='contain'
           resizeMethod='scale'

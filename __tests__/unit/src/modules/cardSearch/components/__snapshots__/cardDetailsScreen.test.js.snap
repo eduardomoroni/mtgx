@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardDetailsScreen /> should have a snapshot 1`] = `
+<ScrollViewMock
+  style={
+    Object {
+      "flex": 1,
+      "paddingTop": 64,
+    }
+  }
+>
+  <CardImage
+    multiverseId={423668}
+    style={
+      Object {
+        "height": 1036,
+        "marginHorizontal": 5,
+        "width": 740,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "mtgx",
+          "fontSize": 17,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        I18n.t(CARD_NAME): 
+      </Text>
+      Aerial Modification
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "mtgx",
+          "fontSize": 17,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        I18n.t(TYPE): 
+      </Text>
+      Enchantment — Aura
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "mtgx",
+          "fontSize": 17,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        I18n.t(POWER_TOUGHNESS): 
+      </Text>
+      undefined/undefined
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "mtgx",
+          "fontSize": 17,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        I18n.t(MANA_COST): 
+      </Text>
+      {4}{W} (5)
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "mtgx",
+          "fontSize": 17,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        I18n.t(RARITY): 
+      </Text>
+      Uncommon
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "mtgx",
+          "fontSize": 17,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        I18n.t(CARD_TEXT): 
+      </Text>
+      Enchant creature or Vehicle
+      As long as enchanted permanent is a Vehicle, it's a creature in addition to its other types.
+      Enchanted creature gets +2/+2 and has flying.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontFamily": "mtgx",
+          "fontSize": 17,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        I18n.t(FLAVOR_TEXT): 
+      </Text>
+    </Text>
+  </View>
+</ScrollViewMock>
+`;
