@@ -7,16 +7,21 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 import { styles } from './styles/floatingActionButton.styles'
 
-const ItemType = {
-  name: PropTypes.string.isRequired,
-  buttonColor: PropTypes.string,
-  title: PropTypes.string,
-  onPress: PropTypes.func
+type ItemType = {
+  name: string,
+  buttonColor: string,
+  title: string,
+  onPress: Function
 }
 
 export class FloatingActionButton extends Component {
   static propTypes = {
-    items: PropTypes.arrayOf(PropTypes.shape(ItemType)).isRequired
+    items: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      buttonColor: PropTypes.string,
+      title: PropTypes.string,
+      onPress: PropTypes.func
+    })).isRequired
   }
 
   renderItem (item: ItemType, key: number) {
