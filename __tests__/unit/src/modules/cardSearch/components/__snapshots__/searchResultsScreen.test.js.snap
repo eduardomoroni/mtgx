@@ -10,7 +10,6 @@ exports[`<SearchResultsScreen /> should have a snapshot 1`] = `
   style={
     Object {
       "flex": 1,
-      "paddingTop": 64,
     }
   }
 />

@@ -3,8 +3,7 @@ import { metrics, fonts, colors } from '../../../../constants/theme'
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: metrics.navBarHeight
+    flex: 1
   },
   card: {
     marginHorizontal: metrics.smallMargin,

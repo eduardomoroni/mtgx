@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   },
   formContainer: {
     marginHorizontal: metrics.marginHorizontal,
-    paddingTop: metrics.navBarHeight + metrics.smallMargin
+    paddingTop: metrics.navBarHeight
   },
   containerFooter: {
     position: 'absolute',

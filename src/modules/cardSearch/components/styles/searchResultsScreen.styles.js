@@ -3,8 +3,7 @@ import { metrics, colors } from '../../../../constants/theme'
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: metrics.navBarHeight
+    flex: 1
   },
   imageContentStyle: {
     flexDirection: 'row',

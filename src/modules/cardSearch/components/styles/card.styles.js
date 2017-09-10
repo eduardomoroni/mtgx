@@ -47,7 +47,6 @@ export const styles = StyleSheet.create({
   },
   cardText: {
     flex: 1,
-    paddingTop: 6,
     flexDirection: 'row'
   },
   cardPower: {

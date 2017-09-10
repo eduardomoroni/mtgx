@@ -5,7 +5,6 @@ exports[`<CardDetailsScreen /> should have a snapshot 1`] = `
   style={
     Object {
       "flex": 1,
-      "paddingTop": 64,
     }
   }
 >

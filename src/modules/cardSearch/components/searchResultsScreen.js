@@ -17,7 +17,7 @@ export class SearchResultsScreen extends Component {
   }
 
   static defaultProps = {
-    showAsImage: true,
+    showAsImage: false,
     showCardText: true
   }
 
