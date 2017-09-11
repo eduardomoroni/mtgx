@@ -1,13 +1,13 @@
 // @flow
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { ForgotPasswordScreen } from '../components/forgotPasswordScreen'
 import { resetUserPassword } from '../../../redux/thunks/authenticationThunks'
 import { inAppNotification } from '../../../constants/navigation'
 
-class ForgotPasswordContainer extends Component {
+class ForgotPasswordContainer extends PureComponent {
   static propTypes = {
     resetPassword: PropTypes.func.isRequired,
     message: PropTypes.string

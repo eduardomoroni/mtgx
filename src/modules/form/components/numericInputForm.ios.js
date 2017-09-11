@@ -1,12 +1,12 @@
 // @flow
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { TextInput, Text, View } from 'react-native'
 import I18n from 'react-native-i18n'
 import { sharedStyles } from './styles/shared.styles'
 
 // TODO: Need to refactor hard this component
-export class NumericInputForm extends Component {
+export class NumericInputForm extends PureComponent {
   changeNumber = (newValue: string) => {
     const { onChange, value } = this.props.input
 
@@ -18,7 +18,7 @@ export class NumericInputForm extends Component {
     onChange(newInput)
   }
 
-  changeOperator = (newValue: string, index: string) => {
+  changeOperator = (newValue: string) => {
     const { onChange, value } = this.props.input
 
     const newInput = {

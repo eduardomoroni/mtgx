@@ -16,12 +16,14 @@ type ItemType = {
 
 export class FloatingActionButton extends Component {
   static propTypes = {
-    items: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      buttonColor: PropTypes.string,
-      title: PropTypes.string,
-      onPress: PropTypes.func
-    })).isRequired
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        buttonColor: PropTypes.string,
+        title: PropTypes.string,
+        onPress: PropTypes.func
+      })
+    ).isRequired
   }
 
   renderItem (item: ItemType, key: number) {

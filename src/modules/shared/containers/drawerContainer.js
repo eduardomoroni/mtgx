@@ -1,11 +1,10 @@
 // @flow
 
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { PureComponent } from 'react'
 import { Drawer } from '../components/drawer'
 import { menuDrawer } from '../../../constants/navigation'
 
-export class DrawerContainer extends Component {
+export class DrawerContainer extends PureComponent {
   navigateTo = (link: string) => {
     this.props.navigator.toggleDrawer(menuDrawer)
     this.props.navigator.handleDeepLink({ link })
@@ -13,9 +12,9 @@ export class DrawerContainer extends Component {
 
   render () {
     return (
-      <Drawer navigateTo={this.navigateTo} />
+      <Drawer navigateTo={this.navigateTo} navigator={this.props.navigator} />
     )
   }
 }
 
-export default connect()(DrawerContainer)
+export default DrawerContainer
