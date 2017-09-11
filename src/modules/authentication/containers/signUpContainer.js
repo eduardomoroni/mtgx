@@ -1,13 +1,13 @@
 // @flow
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { SignUpScreen } from '../components/signUpScreen'
 import { createUser } from '../../../redux/thunks/authenticationThunks'
 import { inAppNotification } from '../../../constants/navigation'
 
-class SignUpScreenContainer extends Component {
+class SignUpScreenContainer extends PureComponent {
   static propTypes = {
     signUpUser: PropTypes.func.isRequired,
     message: PropTypes.string

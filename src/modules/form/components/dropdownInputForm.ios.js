@@ -1,12 +1,12 @@
 // @flow
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { View, TextInput } from 'react-native'
 import { InputLabel } from './index'
 import { sharedStyles } from './styles/shared.styles'
 
 // TODO: This dropdown needs to be implemented
-export class DropdownInputForm extends Component {
+export class DropdownInputForm extends PureComponent {
   render () {
     const { onChange, name } = this.props.input
 

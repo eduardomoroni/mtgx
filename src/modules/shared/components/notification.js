@@ -1,12 +1,12 @@
 // @flow
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
 import { styles } from './styles/notification.style'
 
-export class Notification extends Component {
+export class Notification extends PureComponent {
   static propTypes = {
     message: PropTypes.string.isRequired
   }
