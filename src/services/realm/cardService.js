@@ -32,6 +32,7 @@ const importFromJSON = (mtgJSON: Object) => {
       saveCard(toRealmCard(card), true)
     } catch (e) {
       console.error(`Failed to insert ${card.name}:`, e)
+      console.warn(toRealmCard(card))
       throw (e)
     }
   })
