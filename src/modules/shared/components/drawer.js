@@ -5,12 +5,18 @@ import I18n from 'react-native-i18n'
 import PropTypes from 'prop-types'
 import { View } from 'react-native'
 import { Button } from 'nachos-ui'
+import { menuDrawer } from '../../../constants/navigation'
+
 import { styles } from './styles/drawer.style'
 
 export class Drawer extends PureComponent {
   static propTypes = {
-    navigateTo: PropTypes.func.isRequired,
     navigator: PropTypes.object.isRequired
+  }
+
+  navigateTo = (link: string) => () => {
+    this.props.navigator.handleDeepLink({ link })
+    this.props.navigator.toggleDrawer(menuDrawer)
   }
 
   render () {
@@ -20,7 +26,7 @@ export class Drawer extends PureComponent {
           kind='squared'
           type='success'
           style={{ width: 300 }}
-          onPress={() => this.props.navigateTo('authentication.login')}
+          onPress={this.navigateTo('authentication.login')}
         >
           {I18n.t('LOGIN')}
         </Button>
@@ -28,7 +34,7 @@ export class Drawer extends PureComponent {
           kind='squared'
           type='success'
           style={{ width: 300 }}
-          onPress={() => this.props.navigateTo('card.search')}
+          onPress={this.navigateTo('card.search')}
         >
           {I18n.t('SEARCH')}
         </Button>

@@ -1,18 +1,17 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import { Drawer } from '../components/drawer'
-import { menuDrawer } from '../../../constants/navigation'
 
-export class DrawerContainer extends PureComponent {
-  navigateTo = (link: string) => {
-    this.props.navigator.toggleDrawer(menuDrawer)
-    this.props.navigator.handleDeepLink({ link })
+class DrawerContainer extends PureComponent {
+  static propTypes = {
+    navigator: PropTypes.object.isRequired
   }
 
   render () {
     return (
-      <Drawer navigateTo={this.navigateTo} navigator={this.props.navigator} />
+      <Drawer navigator={this.props.navigator} />
     )
   }
 }
