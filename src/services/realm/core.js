@@ -21,11 +21,16 @@ export {
   findBy,
   objectForPrimaryKey,
   distinctValues,
-  removeFromCollection
+  removeFromCollection,
+  isEmpty
 }
 
 function changeRealm (realmConfig: Object = defaultConfig) {
   realm = new Realm(realmConfig)
+}
+
+function isEmpty (): bool {
+  return realm.empty
 }
 
 function write (callback: Function): void {
