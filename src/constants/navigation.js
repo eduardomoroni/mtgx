@@ -1,24 +1,25 @@
 // @flow
 
-type eventType = {
-  type: string,
-  id?: string,
-  link?: string
-}
+import { screens } from '../configuration/navigation/screens'
 
 export const inAppNotification = {
-  screen: 'notification',
+  screen: screens.notification.id,
   autoDismissTimerSec: 1
 }
 
 export const menuDrawer = { side: 'left' }
 
-export function onNavigatorEvent (event: eventType) {
-  if (event.type === 'DeepLink') {
-    if (event.link === 'authentication.login') {
-      this.props.navigator.resetTo({ screen: event.link })
-    } else if (event.link === 'card.search') {
-      this.props.navigator.resetTo({ screen: event.link })
-    }
-  }
+export const navigatorStyle = {
+  statusBarColor: 'blue',
+  statusBarTextColorScheme: 'light',
+  navigationBarColor: 'blue',
+  navBarBackgroundColor: '#2b96bd',
+  navBarTextColor: 'white',
+  navBarButtonColor: 'white',
+  tabBarButtonColor: 'red',
+  tabBarSelectedButtonColor: 'red',
+  tabBarBackgroundColor: 'white',
+  topBarElevationShadowEnabled: false,
+  navBarHideOnScroll: true,
+  tabBarHidden: true
 }
