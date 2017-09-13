@@ -6,8 +6,10 @@ import { Button } from 'nachos-ui'
 import { Drawer } from '../../../../../../src/modules/shared/components/drawer'
 
 const props = {
-  navigateTo: jest.fn(),
-  navigator: {}
+  navigator: {
+    handleDeepLink: jest.fn(),
+    toggleDrawer: jest.fn()
+  }
 }
 
 describe('<Drawer />', () => {
@@ -19,6 +21,7 @@ describe('<Drawer />', () => {
 
   it('should navigate to signin on press', () => {
     wrapper.find(Button).at(0).simulate('press')
-    expect(props.navigateTo).toHaveBeenCalledWith('authentication.login')
+    expect(props.navigator.handleDeepLink).toHaveBeenCalledWith({'link': 'authentication.login'})
+    expect(props.navigator.toggleDrawer).toHaveBeenCalledWith({'side': 'left'})
   })
 })
