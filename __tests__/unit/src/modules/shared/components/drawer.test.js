@@ -5,7 +5,10 @@ import { shallow } from 'enzyme'
 import { Button } from 'nachos-ui'
 import { Drawer } from '../../../../../../src/modules/shared/components/drawer'
 
-const props = { navigateTo: jest.fn() }
+const props = {
+  navigateTo: jest.fn(),
+  navigator: {}
+}
 
 describe('<Drawer />', () => {
   const wrapper = shallow(<Drawer {...props} />)
