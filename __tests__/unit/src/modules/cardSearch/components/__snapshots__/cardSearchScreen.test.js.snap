@@ -12,7 +12,7 @@ exports[`<CardSearchScreen /> should have a snapshot 1`] = `
     style={
       Object {
         "marginHorizontal": 10,
-        "paddingTop": 64,
+        "paddingTop": 5,
       }
     }
   >

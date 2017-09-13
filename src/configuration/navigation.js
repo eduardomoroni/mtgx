@@ -1,41 +1,33 @@
 // @flow
 
 import { Navigation } from 'react-native-navigation'
+import i18n from 'react-native-i18n'
 
-const theme = {
-  tabBarBackgroundColor: 'white',
-  navBarButtonColor: 'white',
-  tabBarButtonColor: 'white',
+const navigatorStyle = {
+  statusBarColor: 'blue',
+  statusBarTextColorScheme: 'light',
+  navigationBarColor: 'blue',
+  navBarBackgroundColor: '#2b96bd',
   navBarTextColor: 'white',
+  navBarButtonColor: 'white',
+  tabBarButtonColor: 'red',
   tabBarSelectedButtonColor: 'red',
-  navigationBarColor: 'black',
-  navBarBackgroundColor: 'white',
-  statusBarColor: 'orange',
-  tabFontFamily: 14
-}
-
-const tabs = [
-  {
-    label: 'Card Search Screen',
-    screen: 'card.search',
-    // $FlowFixMe -> Figure out how to stub this
-    icon: require('../assets/icons/swap.png'),
-    navigatorStyle: {
-      navBarHidden: true
-    }
-  }
-]
-
-export const tabBasedAppParams = {
-  tabs,
-  animationType: 'fade',
-  tabsStyle: theme,
-  appStyle: theme,
-  drawer: {
-    left: { screen: 'app.drawer' }
-  }
+  tabBarBackgroundColor: 'white',
+  topBarElevationShadowEnabled: false,
+  navBarHideOnScroll: true,
+  tabBarHidden: true,
+  drawUnderTabBar: true
 }
 
 export function startApp () {
-  Navigation.startTabBasedApp(tabBasedAppParams)
+  Navigation.startSingleScreenApp({
+    screen: {
+      screen: 'card.search',
+      title: i18n.t('CARD_SEARCH'),
+      navigatorStyle
+    },
+    drawer: {
+      left: { screen: 'app.drawer' }
+    }
+  })
 }

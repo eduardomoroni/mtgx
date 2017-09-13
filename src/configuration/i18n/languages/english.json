@@ -25,5 +25,6 @@
   "FORMAT": "Format",
   "CLOSE": "Close",
   "POWER_TOUGHNESS": "Power/Toughness",
-  "MANA_COST": "Mana Cost"
+  "MANA_COST": "Mana Cost",
+  "CARD_SEARCH": "Card Search"
 }

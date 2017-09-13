@@ -8,8 +8,14 @@ import { reduxForm, formValueSelector } from 'redux-form/immutable'
 import { distinctValues } from '../../../services/realm/core'
 import { CardSearchScreen } from '../components/cardSearchScreen'
 import { queryCardByForm } from '../../../redux/thunks/cardsThunks'
+import { onNavigatorEvent } from '../../../constants/navigation'
 
 class CardSearchScreenContainer extends Component {
+  constructor (props) {
+    super(props)
+    this.props.navigator.setOnNavigatorEvent(onNavigatorEvent.bind(this))
+  }
+
   render () {
     const {
       set,
