@@ -4,17 +4,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { reduxForm, formValueSelector } from 'redux-form/immutable'
 
-// TODO: What about isolare realm/core access?
+// TODO: What about isolate realm/core access?
 import { distinctValues } from '../../../services/realm/core'
 import { CardSearchScreen } from '../components/cardSearchScreen'
 import { queryCardByForm } from '../../../redux/thunks/cardsThunks'
-import { onNavigatorEvent } from '../../../constants/navigation'
+import { navigatorStyle } from '../../../constants/navigation'
+import { onNavigatorEvent } from '../../../configuration/navigation/deeplinks'
 
 class CardSearchScreenContainer extends Component {
   constructor (props) {
     super(props)
     this.props.navigator.setOnNavigatorEvent(onNavigatorEvent.bind(this))
   }
+
+  static navigatorStyle = navigatorStyle
 
   render () {
     const {

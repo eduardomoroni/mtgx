@@ -5,13 +5,16 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { LoginScreen } from '../components/loginScreen'
 import { signInUser } from '../../../redux/thunks/authenticationThunks'
-import { inAppNotification, onNavigatorEvent } from '../../../constants/navigation'
+import { inAppNotification, navigatorStyle } from '../../../constants/navigation'
+import { onNavigatorEvent } from '../../../configuration/navigation/deeplinks'
 
 class LoginScreenContainer extends PureComponent {
   static propTypes = {
     logUserIn: PropTypes.func.isRequired,
     message: PropTypes.string
   }
+
+  static navigatorStyle = navigatorStyle
 
   constructor (props) {
     super(props)
