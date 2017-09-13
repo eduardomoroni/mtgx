@@ -8,7 +8,7 @@ let processUsingRealm
 // TODO: THIS TEST IS FLAKY, SOLVE THIS
 export const connectDatabase = () => {
   // eslint-disable-next-line no-unmodified-loop-condition
-  while (processUsingRealm) { /* I'm waiting until realm gets free */ }
+  while (processUsingRealm) { /* wait until realm gets free */ }
   processUsingRealm = true
   changeRealm({ schema, path: `database/INTEGRATION_TEST.realm` })
 }

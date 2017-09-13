@@ -26,5 +26,8 @@ export const toRealmCard = (jsonCard: Object) => {
       }
     })
 
+  delete realmObject.foreignNames
+  delete realmObject.rulings
+
   return realmObject
 }
