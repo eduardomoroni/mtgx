@@ -10,13 +10,13 @@ const props = {
     text: 'CardText',
     manaCost: '{1}{W}{B}',
     type: 'CardType',
-    power: 2,
+    power: '2',
     artist: 'EduardoMoroni',
     id: 'id',
-    number: 123,
+    number: '123',
     rarity: 'Common',
     multiverseid: 12903,
-    toughness: 4,
+    toughness: '4',
     printings: { '0': { printing: 'AER' }, '1': { printing: 'AST' } }
   }
 }
