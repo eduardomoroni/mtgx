@@ -7,3 +7,9 @@ export const warn = (message: string, ...rest: Array<*>) => {
     console.warn(message, ...rest)
   }
 }
+
+export const log = (message: string, ...rest: Array<*>) => {
+  if (hasToShowLog) {
+    console.log(message, ...rest)
+  }
+}

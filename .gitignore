@@ -69,3 +69,4 @@ ios/Pods/
 # Realm
 realm-object-server/
 database/
+/src/assets/cards/AllSets-x.json

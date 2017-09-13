@@ -6,6 +6,6 @@ export const foreignNameSchema = {
   properties: {
     'language': 'string',
     'name': 'string',
-    'multiverseid': 'int'
+    'multiverseid': {type: 'int', optional: true}
   }
 }
