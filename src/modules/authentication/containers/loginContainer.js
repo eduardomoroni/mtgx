@@ -11,7 +11,8 @@ import { onNavigatorEvent } from '../../../configuration/navigation/deeplinks'
 class LoginScreenContainer extends PureComponent {
   static propTypes = {
     logUserIn: PropTypes.func.isRequired,
-    message: PropTypes.string
+    message: PropTypes.string,
+    navigator: PropTypes.object.isRequired
   }
 
   static navigatorStyle = navigatorStyle

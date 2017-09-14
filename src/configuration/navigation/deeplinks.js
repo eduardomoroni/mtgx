@@ -10,17 +10,17 @@ type eventType = {
 
 export function onNavigatorEvent ({type, link}: eventType) {
   if (type === 'DeepLink') {
+    let title
+
     switch (link) {
       case screens.login.id:
-        this.props.navigator.resetTo(
-          {title: i18n.t('LOGIN'), screen: link}
-        )
+        title = i18n.t('LOGIN')
         break
       case screens.cardSearch.id:
-        this.props.navigator.resetTo(
-          {title: i18n.t('CARD_SEARCH'), screen: link}
-        )
+        title = i18n.t('CARD_SEARCH')
         break
     }
+
+    this.props.navigator.resetTo({title, screen: link})
   }
 }

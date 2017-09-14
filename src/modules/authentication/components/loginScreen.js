@@ -10,7 +10,8 @@ import { EmailPasswordForm } from './emailPasswordForm'
 
 export class LoginScreen extends Component {
   static propTypes = {
-    logUserIn: PropTypes.func.isRequired
+    logUserIn: PropTypes.func.isRequired,
+    navigator: PropTypes.object.isRequired
   }
 
   onSignInPressed = async (email: string, password: string) => {

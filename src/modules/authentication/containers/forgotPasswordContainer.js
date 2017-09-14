@@ -10,7 +10,8 @@ import { inAppNotification } from '../../../constants/navigation'
 class ForgotPasswordContainer extends PureComponent {
   static propTypes = {
     resetPassword: PropTypes.func.isRequired,
-    message: PropTypes.string
+    message: PropTypes.string,
+    navigator: PropTypes.object.isRequired
   }
 
   componentWillReceiveProps (nextProps) {

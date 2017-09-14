@@ -18,10 +18,6 @@ export class NotificationContainer extends PureComponent {
   }
 
   render () {
-    if (!this.props.message) {
-      return null
-    }
-
     return (
       <Notification message={this.props.message} />
     )

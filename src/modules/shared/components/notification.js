@@ -12,6 +12,8 @@ export class Notification extends PureComponent {
   }
 
   render () {
+    if (!this.props.message) { return null }
+
     return (
       <View style={styles.container}>
         <Text style={styles.title}>In-App Notification</Text>
