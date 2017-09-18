@@ -4,7 +4,8 @@ import { LoginScreen } from '../../../../../../src/modules/authentication/compon
 import { EmailPasswordForm } from '../../../../../../src/modules/authentication/components/emailPasswordForm'
 
 const props = {
-  logUserIn: jest.fn()
+  logUserIn: jest.fn(),
+  navigator: {}
 }
 
 describe('<LoginScreen />', () => {

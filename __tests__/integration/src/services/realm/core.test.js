@@ -10,8 +10,8 @@ import {
 } from '../../../../../src/services/realm/core'
 
 describe('Realm Service', () => {
-  beforeAll(() => {
-    connectDatabase()
+  beforeAll(async () => {
+    await connectDatabase()
   })
 
   afterAll(() => {

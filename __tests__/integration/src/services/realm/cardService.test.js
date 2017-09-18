@@ -11,8 +11,8 @@ import {
 } from '../../../../../src/services/realm/cardService'
 
 describe('Realm Card Service', () => {
-  beforeAll(() => {
-    connectDatabase()
+  beforeAll(async () => {
+    await connectDatabase()
   })
 
   afterAll(() => {
