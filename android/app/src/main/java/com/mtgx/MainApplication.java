@@ -21,6 +21,7 @@ public class MainApplication extends NavigationApplication {
     return BuildConfig.DEBUG;
   }
 
+<<<<<<< ours
   protected List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
@@ -32,6 +33,20 @@ public class MainApplication extends NavigationApplication {
         new RNFirebaseAuthPackage()
     );
   }
+=======
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage()
+      );
+    }
+
+    @Override
+    protected String getJSMainModuleName() {
+      return "index";
+    }
+  };
+>>>>>>> theirs
 
   @Override
   public List<ReactPackage> createAdditionalReactPackages() {
