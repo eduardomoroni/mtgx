@@ -35,6 +35,16 @@ Deploy a new version to the Google Play
 fastlane ios certificates
 ```
 Fetch certificates and provisioning profiles
+### ios clean
+```
+fastlane ios clean
+```
+Clean project medatata
+### ios build
+```
+fastlane ios build
+```
+Build the iOS application.
 ### ios release
 ```
 fastlane ios release

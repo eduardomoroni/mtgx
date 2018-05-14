@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -12,6 +13,7 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* mtgxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* mtgxTests.m */; };
+		1084E386A76E49D5AB954C1D /* beleren.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B0D7C15917740C9BF8C7031 /* beleren.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -36,20 +38,19 @@
 		3FE5570C506140F79B0B1005 /* libcxxreact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B1E59D8A334D169AFC0F90 /* libcxxreact.a */; };
 		4361D83FA7B9B8192B2EF23E /* libPods-mtgx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AEBBBC7D101A1961DD1D0C /* libPods-mtgx.a */; };
 		4738E327AAA145ABBC010C53 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92630AD2E1A6435FB3D107AC /* libReact.a */; };
+		4E5795A61EBC463A89656029 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8CB535010643E0A33177E7 /* libc++.tbd */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		6C4E5740A76E4FA69D0F5527 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C6B83CF039455B90ABFA05 /* libRealmReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		84742DF4A1FA40AB8C5A18D9 /* mana.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 953997D528834A3F916A006E /* mana.ttf */; };
+		9173ADC73F154565ADE82A5B /* mtgx.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B193DB0ACD140119D087D37 /* mtgx.ttf */; };
+		9E55E3E9C85C46D09C6FB498 /* mplantin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC264810F7B4A33A4FD4369 /* mplantin.ttf */; };
 		A791516C9F2149459BB0440A /* libjschelpers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8DA3884E694611A16F9E3C /* libjschelpers.a */; };
 		B0BF6379A2B043B6A4105EBB /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68445A1117734BE5AF956452 /* libReactNativeConfig.a */; };
 		B6D9CD6BF0FB4DD594AC4D88 /* libyoga.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C90FE9F4944029AD5616B9 /* libyoga.a */; };
 		CD7FC4361F420A710073A03E /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7FC4351F4207D40073A03E /* libReactNativeNavigation.a */; };
 		CDA2B3421F45393100DC1560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDA2B3411F45393000DC1560 /* GoogleService-Info.plist */; };
-		6C4E5740A76E4FA69D0F5527 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C6B83CF039455B90ABFA05 /* libRealmReact.a */; };
-		4E5795A61EBC463A89656029 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8CB535010643E0A33177E7 /* libc++.tbd */; };
 		E03EA7E0F449403BA47532E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 573469D2D2E64B8AA4C20490 /* libz.tbd */; };
-		1084E386A76E49D5AB954C1D /* beleren.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B0D7C15917740C9BF8C7031 /* beleren.ttf */; };
-		84742DF4A1FA40AB8C5A18D9 /* mana.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 953997D528834A3F916A006E /* mana.ttf */; };
-		9E55E3E9C85C46D09C6FB498 /* mplantin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC264810F7B4A33A4FD4369 /* mplantin.ttf */; };
-		9173ADC73F154565ADE82A5B /* mtgx.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B193DB0ACD140119D087D37 /* mtgx.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +299,13 @@
 			remoteGlobalIDString = EB2648DF1C7BE17A00B8F155;
 			remoteInfo = ReactNativeConfig;
 		};
+		D2D8D64320AA49230015E860 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 731BA20EBC2648598E84BA23 /* RealmReact.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F60690131CA2766F0003FB26;
+			remoteInfo = RealmReact;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -322,29 +330,29 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* mtgx-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mtgx-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* mtgx-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mtgx-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC264810F7B4A33A4FD4369 /* mplantin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = mplantin.ttf; path = ../src/assets/fonts/mplantin.ttf; sourceTree = "<group>"; };
 		4F646E6AB1C78D87DF74905A /* Pods-mtgx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mtgx.release.xcconfig"; path = "Pods/Target Support Files/Pods-mtgx/Pods-mtgx.release.xcconfig"; sourceTree = "<group>"; };
+		573469D2D2E64B8AA4C20490 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5B193DB0ACD140119D087D37 /* mtgx.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = mtgx.ttf; path = ../src/assets/fonts/mtgx.ttf; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		63645B43B7EF4AA893FAF70E /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
 		68445A1117734BE5AF956452 /* libReactNativeConfig.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeConfig.a; sourceTree = "<group>"; };
+		731BA20EBC2648598E84BA23 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
 		734E4CDE71244190A4F792AF /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		81AEBBBC7D101A1961DD1D0C /* libPods-mtgx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mtgx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8B0D7C15917740C9BF8C7031 /* beleren.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = beleren.ttf; path = ../src/assets/fonts/beleren.ttf; sourceTree = "<group>"; };
 		92630AD2E1A6435FB3D107AC /* libReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReact.a; sourceTree = "<group>"; };
+		953997D528834A3F916A006E /* mana.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = mana.ttf; path = ../src/assets/fonts/mana.ttf; sourceTree = "<group>"; };
 		95C90FE9F4944029AD5616B9 /* libyoga.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libyoga.a; sourceTree = "<group>"; };
 		CD7FC4301F4207D40073A03E /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		CDA2B3411F45393000DC1560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "mtgx/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2C6B83CF039455B90ABFA05 /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
 		E3B1E59D8A334D169AFC0F90 /* libcxxreact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libcxxreact.a; sourceTree = "<group>"; };
 		EAE930D3CB42A2B10944E4E9 /* Pods-mtgx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mtgx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mtgx/Pods-mtgx.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8DA3884E694611A16F9E3C /* libjschelpers.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libjschelpers.a; sourceTree = "<group>"; };
-		731BA20EBC2648598E84BA23 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; name = "RealmReact.xcodeproj"; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		E2C6B83CF039455B90ABFA05 /* libRealmReact.a */ = {isa = PBXFileReference; name = "libRealmReact.a"; path = "libRealmReact.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		FF8CB535010643E0A33177E7 /* libc++.tbd */ = {isa = PBXFileReference; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		573469D2D2E64B8AA4C20490 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		8B0D7C15917740C9BF8C7031 /* beleren.ttf */ = {isa = PBXFileReference; name = "beleren.ttf"; path = "../src/assets/fonts/beleren.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		953997D528834A3F916A006E /* mana.ttf */ = {isa = PBXFileReference; name = "mana.ttf"; path = "../src/assets/fonts/mana.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4DC264810F7B4A33A4FD4369 /* mplantin.ttf */ = {isa = PBXFileReference; name = "mplantin.ttf"; path = "../src/assets/fonts/mplantin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5B193DB0ACD140119D087D37 /* mtgx.ttf */ = {isa = PBXFileReference; name = "mtgx.ttf"; path = "../src/assets/fonts/mtgx.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF8CB535010643E0A33177E7 /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,6 +536,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		66B553D54B20434094D7A34B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D7C15917740C9BF8C7031 /* beleren.ttf */,
+				953997D528834A3F916A006E /* mana.ttf */,
+				4DC264810F7B4A33A4FD4369 /* mplantin.ttf */,
+				5B193DB0ACD140119D087D37 /* mtgx.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +598,7 @@
 				CDC8B9D1C85A73897A5CB401 /* Pods */,
 				ACDBA0D85DC313C09CA16EF3 /* Frameworks */,
 				66B553D54B20434094D7A34B /* Resources */,
+				D2D8D61D20AA49230015E860 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -639,17 +659,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		66B553D54B20434094D7A34B /* Resources */ = {
-			isa = "PBXGroup";
+		D2D8D61D20AA49230015E860 /* Recovered References */ = {
+			isa = PBXGroup;
 			children = (
-				8B0D7C15917740C9BF8C7031 /* beleren.ttf */,
-				953997D528834A3F916A006E /* mana.ttf */,
-				4DC264810F7B4A33A4FD4369 /* mplantin.ttf */,
-				5B193DB0ACD140119D087D37 /* mtgx.ttf */,
+				68445A1117734BE5AF956452 /* libReactNativeConfig.a */,
+				92630AD2E1A6435FB3D107AC /* libReact.a */,
+				95C90FE9F4944029AD5616B9 /* libyoga.a */,
+				E3B1E59D8A334D169AFC0F90 /* libcxxreact.a */,
+				FB8DA3884E694611A16F9E3C /* libjschelpers.a */,
+				E2C6B83CF039455B90ABFA05 /* libRealmReact.a */,
 			);
-			name = Resources;
+			name = "Recovered References";
 			sourceTree = "<group>";
-			path = "";
+		};
+		D2D8D64020AA49230015E860 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2D8D64420AA49230015E860 /* libRealmReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -742,6 +771,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = S5YX896FEY;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -816,6 +848,10 @@
 				{
 					ProductGroup = CD7FC4311F4207D40073A03E /* Products */;
 					ProjectRef = CD7FC4301F4207D40073A03E /* ReactNativeNavigation.xcodeproj */;
+				},
+				{
+					ProductGroup = D2D8D64020AA49230015E860 /* Products */;
+					ProjectRef = 731BA20EBC2648598E84BA23 /* RealmReact.xcodeproj */;
 				},
 				{
 					ProductGroup = CD7FC40A1F42078C0073A03E /* Products */;
@@ -1062,6 +1098,13 @@
 			fileType = archive.ar;
 			path = libReactNativeConfig.a;
 			remoteRef = CDBF35DF1F3F4582006E717C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2D8D64420AA49230015E860 /* libRealmReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRealmReact.a;
+			remoteRef = D2D8D64320AA49230015E860 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1333,6 +1376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = S5YX896FEY;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
@@ -1361,6 +1405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S5YX896FEY;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",

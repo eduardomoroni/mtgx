@@ -1,5 +1,5 @@
 #iOS
-app_identifier("")
+app_identifier("org.reactjs.native.example.mtgx")
 apple_id("")
 
 itc_team_id("")

@@ -1,23 +1,33 @@
 platform :ios do
   desc 'Fetch certificates and provisioning profiles'
   lane :certificates do
-    match(app_identifier: 'org.reactjs.native.example.brisbane', type: 'development', readonly: true)
-    match(app_identifier: 'org.reactjs.native.example.brisbane', type: 'appstore', readonly: true)
+    match(
+      app_identifier: 'org.reactjs.native.example.brisbane',
+      type: 'development',
+      readonly: false
+      )
+    match(
+      app_identifier: 'org.reactjs.native.example.brisbane',
+      type: 'appstore',
+      readonly: false
+      )
   end
 
   desc 'Clean project medatata'
-  private_lane :clean do
+  lane :clean do
     clear_derived_data
-    xcclean
     clean_build_artifacts
   end
 
   desc 'Build the iOS application.'
-  private_lane :build do
+  lane :build do
     clean
     certificates
     increment_build_number(xcodeproj: './ios/brisbane.xcodeproj')
-    gym(scheme: 'brisbane', project: './ios/brisbane.xcodeproj')
+    gym(
+      scheme: 'brisbane', 
+      project: './ios/brisbane.xcodeproj'
+    )
   end
 
   desc "Push a new release build to the App Store"
