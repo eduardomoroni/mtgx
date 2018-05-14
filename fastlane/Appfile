@@ -1,2 +1,10 @@
-json_key_file "../secrets/google-secret-file.json" # Path to the json secret file - Follow https://github.com/fastlane/supply#setup to get one
+#iOS
+app_identifier("")
+apple_id("")
+
+itc_team_id("")
+team_id("")
+
+# Android
+json_key_file "../secrets/google-secret-file.json"
 package_name "com.mtgx"

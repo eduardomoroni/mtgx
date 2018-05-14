@@ -2,6 +2,15 @@ setup_travis
 fastlane_require 'httparty'
 fastlane_version '2.50.1'
 
+import "./android.Fastfile"
+import "./ios.Fastfile"
+
+before_all do
+  ensure_git_branch
+  ensure_git_status_clean
+  git_pull
+end
+
 before_all do
   ENV["GIT_COMMIT"] = last_git_commit[:commit_hash]
   ENV["GIT_BRANCH"] = git_branch
