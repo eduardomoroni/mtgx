@@ -1,99 +1,95 @@
-  ---
-  format_version: '4'
-  default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-  project_type: react-native
-  trigger_map:
-  - push_branch: "*"
-    workflow: javascript
-  - pull_request_source_branch: "*"
-    workflow: javascript
-  workflows:
-    setup:
-      steps:
-      - activate-ssh-key@3.1.1:
-          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-      - git-clone: {}
-      - ensure-clean-git@0.9.1: {}
-      - nvm@1.2.1: {}
-      - npm@0.9.1:
-          inputs:
-          - command: install
-          title: NPM Install
-    bitrise_default_deploy:
-      steps:
-      - gradle-runner@1.8.3:
-          inputs:
-          - gradle_file: "$GRADLE_BUILD_FILE_PATH"
-          - gradle_task: assembleRelease
-          - gradlew_path: "$GRADLEW_PATH"
-      - certificate-and-profile-installer@1.9.2: {}
-      - cocoapods-install@1.7.2: {}
-      - xcode-archive@2.4.6:
-          inputs:
-          - project_path: "$BITRISE_PROJECT_PATH"
-          - scheme: "$BITRISE_SCHEME"
-          - export_method: "$BITRISE_EXPORT_METHOD"
-          - configuration: Release
-      - deploy-to-bitrise-io@1.3.10: {}
-    javascript:
-      steps:
-      - npm@0.9.1:
-          title: Lint Check
-          inputs:
-          - command: lint:check
-      - npm@0.9.1:
-          title: Flow Check
-          inputs:
-          - command: flow:check
-      - npm@0.9.1:
-          title: Unit Tests
-          inputs:
-          - command: test:unit
-          is_always_run: true
-      - npm@0.9.1:
-          title: Integration Tests
-          is_always_run: true
-          inputs:
-          - command: test:integration
-      - deploy-to-bitrise-io@1.3.10: {}
-      before_run:
-      - setup
-      after_run:
-      - ios
-      - android
-    ios:
-      steps:
-      - deploy-to-bitrise-io@1.3.10: {}
-      before_run: []
-      meta:
-        bitrise.io:
-          stack: osx-xcode-9.3.x
-    android:
-      steps:
-      - install-missing-android-tools@2.1.1: {}
-      - android-lint@0.9.1: {}
-      - gradle-runner@1.8.3:
-          inputs:
-          - gradle_task: clean build
-      - deploy-to-bitrise-io@1.3.10: {}
-      before_run: []
-      meta:
-        bitrise.io:
-          stack: linux-docker-android-lts
-  app:
-    envs:
-    - opts:
-        is_expand: false
-      GRADLE_BUILD_FILE_PATH: android/build.gradle
-    - opts:
-        is_expand: false
-      GRADLEW_PATH: android/gradlew
-    - opts:
-        is_expand: false
-      BITRISE_PROJECT_PATH: ios/mtgx.xcworkspace
-    - opts:
-        is_expand: false
-      BITRISE_SCHEME: mtgx
-    - opts:
-        is_expand: false
-      BITRISE_EXPORT_METHOD: app-store
+---
+format_version: '4'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: react-native
+trigger_map:
+- push_branch: "*"
+  workflow: javascript
+- pull_request_source_branch: "*"
+  workflow: javascript
+workflows:
+  setup:
+    steps:
+    - activate-ssh-key@3.1.1:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone: {}
+    - ensure-clean-git@0.9.1: {}
+    - nvm@1.2.1: {}
+    - npm@0.9.1:
+        inputs:
+        - command: install
+        title: NPM Install
+  javascript:
+    steps:
+    - npm@0.9.1:
+        title: Lint Check
+        inputs:
+        - command: run test
+    - npm@0.9.1:
+        title: Flow Check
+        inputs:
+        - command: run test
+    - npm@0.9.1:
+        title: Unit Tests
+        inputs:
+        - command: run test
+        is_always_run: true
+    - npm@0.9.1:
+        title: Integration Tests
+        is_always_run: true
+        inputs:
+        - command: run test
+    - deploy-to-bitrise-io@1.3.10: {}
+    before_run:
+    - setup
+    after_run:
+    - android
+    - ios
+  ios:
+    steps:
+    - certificate-and-profile-installer@1.9.2: {}
+    - cocoapods-install@1.7.2: {}
+    - xcode-archive@2.4.6:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - scheme: "$BITRISE_SCHEME"
+        - export_method: "$BITRISE_EXPORT_METHOD"
+        - configuration: Release
+    - deploy-to-bitrise-io@1.3.10: {}
+    before_run: []
+  android:
+    steps:
+    - gradle-runner@1.8.3:
+        inputs:
+        - gradle_file: "$GRADLE_BUILD_FILE_PATH"
+        - gradle_task: assembleRelease
+        - gradlew_path: "$GRADLEW_PATH"
+    - deploy-to-bitrise-io@1.3.10: {}
+    before_run: []
+  beta_release:
+    steps:
+    - applivery-ios@0.2.1:
+        inputs:
+        - notify: 'false'
+    - applivery-android@0.2.1:
+        inputs:
+        - notify: 'false'
+    - appetize-deploy@0.1.3: {}
+    - deploy-to-bitrise-io@1.3.10: {}
+app:
+  envs:
+  - opts:
+      is_expand: false
+    GRADLE_BUILD_FILE_PATH: android/build.gradle
+  - opts:
+      is_expand: false
+    GRADLEW_PATH: android/gradlew
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: ios/mtgx.xcworkspace
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: mtgx
+  - opts:
+      is_expand: false
+    BITRISE_EXPORT_METHOD: app-store
