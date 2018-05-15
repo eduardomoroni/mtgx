@@ -1,39 +1,41 @@
 platform :ios do
-  desc 'Fetch certificates and provisioning profiles'
-  lane :certificates do
-    match(
-      app_identifier: 'org.reactjs.native.example.brisbane',
-      type: 'development',
-      readonly: false
-      )
-    match(
-      app_identifier: 'org.reactjs.native.example.brisbane',
-      type: 'appstore',
-      readonly: false
-      )
-  end
-
   desc 'Clean project medatata'
   lane :clean do
     clear_derived_data
     clean_build_artifacts
   end
 
+  desc 'Fetch certificates and provisioning profiles'
+  lane :certificates do
+    match(
+      app_identifier: 'org.reactjs.native.example.mtgx',
+      clone_branch_directly: true,
+      shallow_clone: true,
+      readonly: false
+    )
+    match(
+      app_identifier: 'org.reactjs.native.example.mtgx',
+      clone_branch_directly: true,
+      shallow_clone: true,
+      type: 'appstore',
+      readonly: false
+    )
+  end
+
   desc 'Build the iOS application.'
   lane :build do
     clean
-    certificates
-    increment_build_number(xcodeproj: './ios/brisbane.xcodeproj')
     gym(
-      scheme: 'brisbane', 
-      project: './ios/brisbane.xcodeproj'
+      scheme: 'mtgx', 
+      workspace: './ios/mtgx.xcworkspace'
     )
   end
 
   desc "Push a new release build to the App Store"
   lane :release do
-    increment_build_number(xcodeproj: "./ios/brisbane.xcodeproj")
-    build_app(scheme: "brisbane", project: './ios/brisbane.xcodeproj')
+    certificates
+    build
+    increment_build_number(xcodeproj: "./ios/mtgx.xcodeproj")
     upload_to_app_store
   end
 end

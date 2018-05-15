@@ -3,8 +3,8 @@ fastlane_version '2.95.0'
 import "./android.Fastfile"
 import "./ios.Fastfile"
 
-before_all do
-  ensure_git_branch
-  ensure_git_status_clean
-  git_pull
-end
+#before_all do
+#  ensure_git_branch
+#  ensure_git_status_clean
+#  git_pull
+#end

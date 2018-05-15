@@ -30,16 +30,16 @@ Deploy a new version to the Google Play
 ----
 
 ## iOS
-### ios certificates
-```
-fastlane ios certificates
-```
-Fetch certificates and provisioning profiles
 ### ios clean
 ```
 fastlane ios clean
 ```
 Clean project medatata
+### ios certificates
+```
+fastlane ios certificates
+```
+Fetch certificates and provisioning profiles
 ### ios build
 ```
 fastlane ios build
