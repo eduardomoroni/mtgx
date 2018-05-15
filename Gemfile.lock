@@ -174,10 +174,11 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   danger
-  fastlane
+  fastlane (~> 2.95)
   httparty
 
 BUNDLED WITH

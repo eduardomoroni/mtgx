@@ -1,7 +1,5 @@
 apply plugin: "com.android.application"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
-apply plugin: 'com.google.gms.google-services'
-
 
 import com.android.build.OutputFile
 
@@ -106,6 +104,11 @@ android {
             abiFilters "armeabi-v7a", "x86"
         }
     }
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
     splits {
         abi {
             reset()
@@ -140,7 +143,6 @@ dependencies {
     compile(project(':react-native-firebase')) {
       transitive = false
     }
-
     compile "com.google.firebase:firebase-core:11.0.4"
     compile "com.google.firebase:firebase-auth:11.0.4"
     compile project(':react-native-navigation')
@@ -158,3 +160,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+ apply plugin: 'com.google.gms.google-services'
